@@ -1,7 +1,8 @@
 import Head from 'next/head';
+import Button from './button/Button';
 const Navbar = () => {
     return (
-      <nav className="flex justify-between items-center p-6 bg-black px-20 text-white">
+      <nav className="flex top-0 sticky justify-between items-center p-6 bg-black px-20 text-white">
         <div className="text-2xl font-bold">WebTechStudio</div>
         <div className="space-x-6">
           <a href="#" className="hover:text-gray-400">About</a>
@@ -11,7 +12,7 @@ const Navbar = () => {
           <a href="#" className="hover:text-gray-400">Blog</a>
           <a href="#" className="hover:text-gray-400">Shop</a>
         </div>
-        <button className="bg-green-500 text-white px-4 py-2 rounded-full">Let's Talk</button>
+        <Button text="Let's Talk" mode="light" href="/contact" />
       </nav>
     );
   };

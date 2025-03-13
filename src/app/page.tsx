@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Navbar from "./components/main/Navbar";
 import HeroSection from "./components/main/HeroSection";
-// import AboutSection from "./components/About";
+import AboutSection from "./components/main/About";
 // import DevelopmentSection from "./components/DevelopmentSection";
 // import ShowcaseExpertise from "./components/ShowcaseExpertise";
 // import PricingPage from "./components/Pricing";
@@ -16,7 +15,7 @@ export default function Home() {
    <div className="bg-black min-h-screen">
          <Navbar />
          <HeroSection />
-         {/* <AboutSection /> */}
+         <AboutSection />
          {/* <DevelopmentSection /> */}
          {/* <ShowcaseExpertise /> */}
          {/* <PricingPage /> */}

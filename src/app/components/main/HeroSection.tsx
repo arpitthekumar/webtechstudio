@@ -35,8 +35,6 @@ const HeroSection = () => {
             elevate their brands and achieve remarkable growth.
           </p>
           <Button text="Let's Get Started" mode="light" href="/contact" />
-          <Button text="Let's Get Started" mode="dark" href="/contact" />
-
         </div>
       </div>
     </section>
