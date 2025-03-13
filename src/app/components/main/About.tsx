@@ -8,7 +8,7 @@ const AboutSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="bg-section-bg text-white h-screen py-20 px-20 flex flex-col md:flex-row items-center gap-10">
+    <section className="bg-section-bg text-white h-screen py-20 md:px-20 px-2 flex flex-col md:flex-row items-center gap-10">
       {/* Left Side */}
       <div className="flex-1 ">
         <div className="text-sm flex bg-white/30 text-white px-4 py-2 rounded-full mb-4 w-fit">
@@ -24,15 +24,15 @@ const AboutSection = () => {
 
         <div className="flex space-x-10 mb-6">
           <div className="text-center">
-            <h3 className="text-3xl font-bold">700+</h3>
+            <h3 className="text-4xl font-bold">700+</h3>
             <p className="text-acua-marine">Projects Delivered</p>
           </div>
           <div className="text-center">
-            <h3 className="text-3xl font-bold">98%</h3>
+            <h3 className="text-4xl font-bold">98%</h3>
             <p className="text-acua-marine">Client Satisfaction</p>
           </div>
           <div className="text-center">
-            <h3 className="text-3xl font-bold">10+</h3>
+            <h3 className="text-4xl font-bold">10+</h3>
             <p className="text-acua-marine">Industry Experience</p>
           </div>
         </div>
@@ -68,7 +68,7 @@ const AboutSection = () => {
         <div className="fixed inset-0 bg-black/80 bg-opacity-80 flex items-center justify-center z-50">
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-white text-3xl z-50"
+              className="absolute top-4 right-4 text- text-3xl z-50"
             >
               ✖
             </button>
