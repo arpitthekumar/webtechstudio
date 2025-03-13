@@ -1,3 +1,5 @@
+import Button from "./button/Button";
+
 const HeroSection = () => {
   return (
     <section
@@ -13,9 +15,9 @@ const HeroSection = () => {
       <div className="absolute inset-0  bg-black/20 pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative flex flex-row top-100 justify-between items-center text-white text-center px-16">
+      <div className="relative flex flex-row top-100 justify-between items-center text-white text-center px-20">
         {/* Left Side */}
-        <div className="flex flex-col justify-center items-start pl-16">
+        <div className="flex flex-col justify-center items-start ">
           <div className="text-sm bg-white text-black px-4 py-1 rounded-full mb-4">
             Empowering Agencies
           </div>
@@ -32,9 +34,9 @@ const HeroSection = () => {
             We deliver custom-crafted digital solutions that help agencies
             elevate their brands and achieve remarkable growth.
           </p>
-          <button className="bg-green-500 text-white px-6 py-3 rounded-full">
-            Let's Get Started
-          </button>
+          <Button text="Let's Get Started" mode="light" href="/contact" />
+          <Button text="Let's Get Started" mode="dark" href="/contact" />
+
         </div>
       </div>
     </section>

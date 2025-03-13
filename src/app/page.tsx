@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
+import Navbar from "./components/main/Navbar";
+import HeroSection from "./components/main/HeroSection";
 // import AboutSection from "./components/About";
 // import DevelopmentSection from "./components/DevelopmentSection";
 // import ShowcaseExpertise from "./components/ShowcaseExpertise";
