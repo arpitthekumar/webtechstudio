@@ -36,7 +36,11 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="text-lg mb-4"
         >
-          At <span className="font-bold">Kairos</span>, we provide custom digital solutions designed to help agencies grow. Our team blends creativity, innovation, and expertise to deliver exceptional results, empowering brands to succeed in a rapidly evolving digital world.
+          At
+          <span className="font-bold text-2xl"> WebTechStudio</span>, we provide custom digital
+          solutions designed to help agencies grow. Our team blends creativity,
+          innovation, and expertise to deliver exceptional results, empowering
+          brands to succeed in a rapidly evolving digital world.
         </motion.p>
 
         {/* Stats */}
@@ -47,7 +51,11 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="flex space-x-10 mb-6"
         >
-          {[{ value: "700+", label: "Projects Delivered" }, { value: "98%", label: "Client Satisfaction" }, { value: "10+", label: "Industry Experience" }].map((item, index) => (
+          {[
+            { value: "700+", label: "Projects Delivered" },
+            { value: "98%", label: "Client Satisfaction" },
+            { value: "10+", label: "Industry Experience" },
+          ].map((item, index) => (
             <motion.div key={index} className="text-center">
               <motion.h3
                 initial={{ opacity: 0, y: 10 }}

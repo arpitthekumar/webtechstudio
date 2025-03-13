@@ -1,7 +1,7 @@
 import Navbar from "./components/main/Navbar";
 import HeroSection from "./components/main/HeroSection";
 import AboutSection from "./components/main/About";
-// import DevelopmentSection from "./components/DevelopmentSection";
+import DevelopmentSection from "./components/main/DevelopmentSection";
 // import ShowcaseExpertise from "./components/ShowcaseExpertise";
 // import PricingPage from "./components/Pricing";
 // import ClientSuccessStories from "./components/ClientStories";
@@ -16,7 +16,7 @@ export default function Home() {
          <Navbar />
          <HeroSection />
          <AboutSection />
-         {/* <DevelopmentSection /> */}
+         <DevelopmentSection />
          {/* <ShowcaseExpertise /> */}
          {/* <PricingPage /> */}
          {/* <ClientSuccessStories /> */}
