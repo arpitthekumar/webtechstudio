@@ -8,9 +8,9 @@ const AboutSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="bg-black text-white py-20 px-20 flex flex-col md:flex-row items-center gap-10">
+    <section className="bg-section-bg text-white h-screen py-20 px-20 flex flex-col md:flex-row items-center gap-10">
       {/* Left Side */}
-      <div className="flex-1">
+      <div className="flex-1 ">
         <div className="text-sm flex bg-white/30 text-white px-4 py-2 rounded-full mb-4 w-fit">
           <div className="h-2 w-2 mt-1 mr-2 rounded-full bg-acua-marine"></div>
           Who We Are

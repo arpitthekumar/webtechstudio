@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Button from './button/Button';
 const Navbar = () => {
     return (
-      <nav className="flex top-0 sticky justify-between items-center p-6 bg-black px-20 text-white">
+      <nav className="flex top-0 sticky z-20 justify-between items-center p-6 bg-black px-20 text-white">
         <div className="text-2xl font-bold">WebTechStudio</div>
         <div className="space-x-6">
           <a href="#" className="hover:text-gray-400">About</a>
