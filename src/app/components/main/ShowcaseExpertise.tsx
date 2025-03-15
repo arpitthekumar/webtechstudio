@@ -64,7 +64,7 @@ const ShowcaseExpertise = () => {
           const [isHovered, setIsHovered] = useState(false);
 
           return (
-            <Link key={index} href={project.link} className="relative block rounded-2xl overflow-hidden group">
+            <Link key={index} href={project.link} className="relative block rounded-4xl  overflow-hidden group">
               {/* ✅ Image (Stays Still) */}
               <motion.div
                 onHoverStart={() => setIsHovered(true)}
@@ -84,10 +84,14 @@ const ShowcaseExpertise = () => {
                   initial={{ y: "100%", opacity: 0 }}
                   animate={isHovered ? { y: "0%", opacity: 1 } : { y: "100%", opacity: 0 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[85%] flex flex-col items-cter justify-center gap-6 backdrop-blur-lg bg-black/30 rounded-3xl px-5 py-8 "
+                  className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[85%] flex flex-col items-cter justify-center gap-6 backdrop-blur-lg bg-black/20 rounded-3xl px-5 py-8 "
                 >
-                  <p className="text-sm  text-acua-marine">{project.category}</p>
+                  <p className="text-sm border-2 rounded-4xl px-3 py-3 w-fit   text-white border-[var(--acua-marine)] hover:bg-[var(--acua-marine)]">{project.category}</p>
+                  <div className="flex  items-center justify-center gap-2">
+
                   <h3 className="text-2xl font-semibold underline">{project.title}</h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32" fill="none" className="h-8 w-8 overflow-hidden"><path d="M3.11924 19.4526C1.93134 15.0043 3.08225 10.0615 6.57198 6.57175C11.779 1.36476 20.2212 1.36476 25.4282 6.57175C30.6351 11.7787 30.6351 20.2209 25.4282 25.4279C21.9384 28.9177 16.9956 30.0686 12.5473 28.8807M20.0002 20V12M20.0002 12H12.0002M20.0002 12L6.66667 25.3332" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </div>
                 </motion.div>
               </motion.div>
             </Link>
