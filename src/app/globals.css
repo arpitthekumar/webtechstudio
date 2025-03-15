@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -15,83 +18,86 @@
   --bluish-gray: #c0cae3;
 }
 
-/* Background Colors */
-.bg-main-bg {
-  background-color: var(--main-bg);
-}
-.bg-white {
-  background-color: var(--white);
-}
-.bg-section-bg {
-  background-color: var(--section-bg);
-}
-.bg-transparent {
-  background-color: var(--transparent);
-}
-.bg-acua-marine {
-  background-color: var(--acua-marine);
-}
-.bg-text-bg {
-  background-color: var(--text-bg);
-}
-.bg-dune {
-  background-color: var(--dune);
-}
-.bg-pastel-gray {
-  background-color: var(--pastel-gray);
-}
-.bg-silver-chalice {
-  background-color: var(--silver-chalice);
-}
-.bg-bluish-gray {
-  background-color: var(--bluish-gray);
-}
 
-/* Text Colors */
-.text-main-bg {
-  color: var(--main-bg);
-}
-.text-white {
-  color: var(--white);
-}
-.text-section-bg {
-  color: var(--section-bg);
-}
-.text-acua-marine {
-  color: var(--acua-marine);
-}
-.text-text-bg {
-  color: var(--text-bg);
-}
-.text-dune {
-  color: var(--dune);
-}
-.text-pastel-gray {
-  color: var(--pastel-gray);
-}
-.text-silver-chalice {
-  color: var(--silver-chalice);
-}
-.text-bluish-gray {
-  color: var(--bluish-gray);
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  /* Background Colors */
+  .bg-main-bg {
+    background-color: var(--main-bg);
   }
-}
+  .bg-white {
+    background-color: var(--white);
+  }
+  .bg-section-bg {
+    background-color: var(--section-bg);
+  }
+  .bg-transparent {
+    background-color: var(--transparent);
+  }
+  .bg-acua-marine {
+    background-color: var(--acua-marine);
+  }
+  .bg-text-bg {
+    background-color: var(--text-bg);
+  }
+  .bg-dune {
+    background-color: var(--dune);
+  }
+  .bg-pastel-gray {
+    background-color: var(--pastel-gray);
+  }
+  .bg-silver-chalice {
+    background-color: var(--silver-chalice);
+  }
+  .bg-bluish-gray {
+    background-color: var(--bluish-gray);
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Text Colors */
+  .text-main-bg {
+    color: var(--main-bg);
+  }
+  .text-white {
+    color: var(--white);
+  }
+  .text-section-bg {
+    color: var(--section-bg);
+  }
+  .text-acua-marine {
+    color: var(--acua-marine);
+  }
+  .text-text-bg {
+    color: var(--text-bg);
+  }
+  .text-dune {
+    color: var(--dune);
+  }
+  .text-pastel-gray {
+    color: var(--pastel-gray);
+  }
+  .text-silver-chalice {
+    color: var(--silver-chalice);
+  }
+  .text-bluish-gray {
+    color: var(--bluish-gray);
+  }
+  @theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+  
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }

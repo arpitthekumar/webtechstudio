@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
 import Image from "next/image";
+import Button from "./button/Button";
+import Chip from "./chip/chip";
 
 const sections = [
   {
@@ -55,7 +57,7 @@ const Section = ({ title, description, features, image, reverse }: any) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 1 }}
-    className="group flex flex-col md:flex-row items-center justify-between bg-section-bg text-white p-12 rounded-3xl mx-10 border border-transparent transition-all duration-300 hover:border-acua-marine"
+    className="group flex flex-col md:flex-row items-center justify-between bg-section-bg text-white p-12 rounded-3xl md:mx-10 border border-transparent transition-all duration-300 hover:border-acua-marine"
   >
     {!reverse && (
       <div className="max-w-lg group space-y-6">
@@ -64,6 +66,7 @@ const Section = ({ title, description, features, image, reverse }: any) => (
         {features.map((item: string, index: number) => (
           <FeatureItem key={index} text={item} />
         ))}
+        <Button text="Discover Our Story" mode="light" href="/contact" />
       </div>
     )}
 
@@ -90,6 +93,7 @@ const Section = ({ title, description, features, image, reverse }: any) => (
         {features.map((item: string, index: number) => (
           <FeatureItem key={index} text={item} />
         ))}
+        <Button text="Discover Our Story" mode="light" href="/contact" />
       </div>
     )}
   </motion.section>
@@ -99,16 +103,7 @@ const DevelopmentSection = () => {
   return (
     <div className="bg-black text-white py-20 px-6 space-y-10">
       <div className="flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="group text-sm flex items-center bg-white/30 text-white px-4 py-2 rounded-full mb-4 w-fit border border-transparent hover:border-acua-marine transition-all"
-        >
-          <div className="h-2 w-2 mt-0 mr-2 rounded-full bg-acua-marine"></div>
-          Who We Are
-        </motion.div>
+        <Chip text="Who We Are" isDark={true} />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -117,7 +112,8 @@ const DevelopmentSection = () => {
           transition={{ duration: 0.9, delay: 0.3 }}
           className="text-lg mb-4 text-bluish-gray"
         >
-          Our expertise spans across development, UI/UX design, and branding, providing everything agencies need to thrive in the digital space.
+          Our expertise spans across development, UI/UX design, and branding,
+          providing everything agencies need to thrive in the digital space.
         </motion.p>
       </div>
 

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface ButtonProps {
   text: string;
@@ -12,28 +13,31 @@ const Button: React.FC<ButtonProps> = ({
   mode = "light",
   href = "#",
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const isDark = mode === "dark";
 
   return (
     <motion.a
       href={href}
-      whileHover={{
-        backgroundColor: isDark ? "#56dcad" : "#fff", // Changes background to white for dark mode or acua for light mode
-        color: isDark ? "#000" : "#000", // Changes text color to black for dark mode or white for light mode
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      whileTap={{ scale: 0.9 }}
+      animate={{
+        backgroundColor: isHovered ? (isDark ? "#56dcad" : "#fff") : isDark ? "#fff" : "#56dcad",
+        color: isHovered ? "#000" : "#000",
       }}
-      whileTap={{ scale: 0.2 }}
       className={`inline-flex items-center gap-3 px-6 py-3 group rounded-full transition-all duration-300 
         ${isDark ? "bg-white text-black" : "bg-acua-marine text-black"}
       `}
     >
       <span>{text}</span>
       <motion.div
-        whileHover={{
-            rotate:50,
-          backgroundColor: isDark ? "#000" : "#56dcad", // Changes background to white for dark mode or acua for light mode
-          color: isDark ? "#fff" : "#000", // Changes text color to black for dark mode or white for light mode
+        animate={{
+          rotate: isHovered ? 50 : 0, // Rotate arrow on hover
+          backgroundColor: isHovered ? (isDark ? "#000" : "#56dcad") : isDark ? "#56dcad" : "#000",
+          color: isHovered ? (isDark ? "#fff" : "#000") : isDark ? "#000" : "#fff",
         }}
-        whileTap={{ scale: 0.2 }}
+        whileTap={{ scale: 0.9 }}
         className={`w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 
           ${isDark ? "bg-acua-marine text-black" : "bg-black text-white"}
         `}

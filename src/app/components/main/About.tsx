@@ -4,12 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "./button/Button";
+import Chip from "./chip/chip";
 
 const AboutSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="bg-section-bg text-white h-screen py-20 md:px-20 px-2 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
+    <section className="bg-section-bg text-white  py-20 md:px-20 px-2 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -18,16 +19,8 @@ const AboutSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="flex-1"
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-sm flex bg-white/30 text-white px-4 py-2 rounded-full mb-4 w-fit"
-        >
-          <div className="h-2 w-2 mt-1 mr-2 rounded-full bg-acua-marine"></div>
-          Who We Are
-        </motion.div>
+                <Chip text="Who We Are" isDark={true} />
+        
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

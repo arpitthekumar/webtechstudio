@@ -2,7 +2,8 @@ import Navbar from "./components/main/Navbar";
 import HeroSection from "./components/main/HeroSection";
 import AboutSection from "./components/main/About";
 import DevelopmentSection from "./components/main/DevelopmentSection";
-// import ShowcaseExpertise from "./components/ShowcaseExpertise";
+import ShowcaseExpertise from "./components/main/ShowcaseExpertise";
+import ProcessSection from "./components/main/processsection/ProcessSection";
 // import PricingPage from "./components/Pricing";
 // import ClientSuccessStories from "./components/ClientStories";
 // import FAQ from "./components/faq";
@@ -17,7 +18,8 @@ export default function Home() {
          <HeroSection />
          <AboutSection />
          <DevelopmentSection />
-         {/* <ShowcaseExpertise /> */}
+         <ShowcaseExpertise />
+         <ProcessSection/>
          {/* <PricingPage /> */}
          {/* <ClientSuccessStories /> */}
          {/* <FAQ /> */}
