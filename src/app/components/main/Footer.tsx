@@ -35,46 +35,81 @@ const Footer = () => {
   return (
     <motion.footer
       className="bg-acua-marine text-black py-12 px-6 md:px-20"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div className="max-w-9xl mx-auto grid gap-6 md:gap-24 grid-cols-1 md:grid-cols-5">
+      <motion.div 
+        className="max-w-9xl mx-auto grid gap-6 md:gap-24 grid-cols-1 md:grid-cols-5"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+        }}
+      >
         {/* ✅ Brand Section */}
-        <div className="md:col-span-2 md:text-left">
+        <motion.div 
+          className="md:col-span-2 md:text-left"
+          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+        >
           <h2 className="text-4xl md:text-6xl font-bold text-black">WebTechStudio</h2>
           <p className="text-sm text-gray-900 mt-4 md:mt-8 max-w-md mx-auto md:mx-0">
             We deliver custom-crafted digital solutions that help agencies elevate their brands and achieve remarkable growth.
           </p>
-          <div className="flex :justify-start gap-4 mt-6">
+          <motion.div 
+            className="flex justify-start gap-4 mt-6"
+            variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } } }}
+          >
             {socialIcons.map((item, index) => (
-              <a key={index} href={item.href} className="text-gray-900 text-2xl">
+              <motion.a 
+                key={index} 
+                href={item.href} 
+                className="text-gray-900 text-2xl"
+                variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
+              >
                 {item.icon}
-              </a>
+              </motion.a>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* ✅ Dynamic Link Sections */}
         {links.map((section, index) => (
-          <div key={index} className="text-left">
+          <motion.div 
+            key={index} 
+            className="text-left"
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+          >
             <h3 className="text-xl font-bold">{section.title}</h3>
             <hr className="my-3" />
             <ul className="text-lg md:text-sm space-y-3 md:space-y-5 mt-2">
               {section.items.map((link, i) => (
-                <li 
+                <motion.li 
                   key={i} 
                   className="transition cursor-pointer hover:translate-x-1"
+                  variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}
+                  whileHover={{ scale: 1.05, x: 3 }}
                 >
                   {link}
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
-      </div>
-<p className="text-2xl mt-8 md:min-w-2xl   md:text-4xl">All Rights Reserved.</p>
+      </motion.div>
+
+      <motion.p 
+        className="text-2xl mt-8 md:min-w-2xl md:text-4xl"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        All Rights Reserved.
+      </motion.p>
     </motion.footer>
   );
 };

@@ -16,14 +16,18 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       {/* border-bottom: 1px solid var(--transparent); */}
-      <div className="hidden md:flex space-x-6">
-        <Link href="#" className="hover:text-gray-400">About</Link>
-        <Link href="#" className="hover:text-gray-400">Project</Link>
-        <Link href="#" className="hover:text-gray-400">Services</Link>
-        <Link href="#" className="hover:text-gray-400">Pricing</Link>
-        <Link href="#" className="hover:text-gray-400">Blog</Link>
-        <Link href="#" className="hover:text-gray-400">Shop</Link>
-      </div>
+      <div className="hidden md:flex ">
+  {["About", "Project", "Services", "Pricing", "Blog", "Shop"].map((item, index) => (
+    <Link 
+      key={index} 
+      href="#" 
+      className="border-b-2 border-transparent hover:border-[var(--acua-marine)] px-4 pb-2 transition-all"
+    >
+      {item}
+    </Link>
+  ))}
+</div>
+
 
       {/* Desktop Button */}
       <div className="hidden md:block">
