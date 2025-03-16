@@ -68,7 +68,7 @@ const testimonials = [
 
 const ClientSuccessStories = () => {
   return (
-    <div className="bg-black text-white py-20 px-6 md:px-20">
+    <div className="bg-black text-white overflow-auto py-20 px-6 md:px-20">
       {/* ✅ Section Header */}
       <div className="flex flex-col items-center text-center pb-12">
         <Chip text="What Our Clients Say" isDark={true} />
@@ -81,12 +81,17 @@ const ClientSuccessStories = () => {
 
       {/* ✅ Testimonials Box */}
       <div className="relative w-full max-w-9xl mx-auto overflow-hidden  rounded-4xl">
+      <div className="absolute top-0 left-0 h-full w-12 md:w-96 bg-gradient-to-r from-black via-transparent to-transparent z-10 pointer-events-none" />
+        
+        {/* ✅ Right Gradient Shadow */}
+        <div className="absolute top-0 right-0 h-full w-12 md:w-96 bg-gradient-to-l from-black via-transparent to-transparent z-10 pointer-events-none" />
+
         <motion.div
           className="flex space-x-6"
           animate={{ x: ["0%", "-100%"] }}
           transition={{
             repeat: Infinity,
-            duration: 15,
+            duration: 10,
             ease: "linear",
           }}
         >
