@@ -49,12 +49,14 @@ const ProcessCard: React.FC<{ icon: React.ReactNode; title: string; description:
 
 const ProcessSection: React.FC = () => {
   return (
-    <div className="text-white py-20 px-6 bg-section-bg text-center">
+    <div className="text-white py-20 px-3  md:px-20 bg-section-bg text-center">
+      <div className="flex flex-col items-center text-center">
       <Chip text="How We Work" isDark={true} />
       <h2 className="text-4xl font-bold mt-4">Our Simple Process for Success</h2>
       <p className="text-gray-400 mt-2">We follow a streamlined, three-step approach to ensure every project's success.</p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-8xl mx-auto">
         {steps.map((step, index) => (
           <ProcessCard key={index} {...step} offset={index === 1 ? "mt-10" : index === 2 ? "mt-20" : ""} />
         ))}

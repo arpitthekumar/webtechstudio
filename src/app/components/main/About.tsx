@@ -10,7 +10,7 @@ const AboutSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="bg-section-bg text-white  py-20 md:px-20 px-2 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
+    <section className="bg-section-bg text-white  py-20 md:px-20 px-3 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}

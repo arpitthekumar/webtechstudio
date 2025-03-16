@@ -79,7 +79,7 @@ const ShowcaseExpertise = () => {
           visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
         }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-12 max-w-7xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-12 max-w-9xl mx-auto"
       >
         {projects.map((project, index) => {
           const [isHovered, setIsHovered] = useState(false);
@@ -94,7 +94,7 @@ const ShowcaseExpertise = () => {
             >
               <Link
                 href={project.link}
-                className="relative block rounded-3xl overflow-hidden group"
+                className="relative block rounded-4xl overflow-hidden group"
               >
                 {/* ✅ Image Section */}
                 <motion.div
