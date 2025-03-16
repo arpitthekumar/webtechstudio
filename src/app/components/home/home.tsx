@@ -1,6 +1,7 @@
 import AboutSection from "../main/About";
 import ClientSuccessStories from "../main/ClientStories";
 import DevelopmentSection from "../main/DevelopmentSection";
+import FAQ from "../main/faq";
 import HeroSection from "../main/HeroSection";
 import Navbar from "../main/Navbar";
 import PricingPage from "../main/Pricing";
@@ -21,7 +22,7 @@ const HomePage: React.FC = () => {
          <PricingPage />
          <Team />
          <ClientSuccessStories />
-         {/* <FAQ /> */}
+         <FAQ />
          {/* <HomePage /> */}
        </div></>
     );

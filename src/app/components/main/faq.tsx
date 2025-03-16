@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import React, { FC } from 'react';
+"use client";
+import React, { FC, useState } from 'react';
 
 const FAQ = () => {
   const [faqs, setFaqs] = useState([
