@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
         backgroundColor: isHovered ? (isDark ? "#56dcad" : "#fff") : isDark ? "#fff" : "#56dcad",
         color: isHovered ? "#000" : "#000",
       }}
-      className={`inline-flex items-center gap-3 px-6 py-3 group rounded-full transition-all duration-300 
+      className={`inline-flex items-center justify-center gap-3 px-6 py-3 group rounded-full transition-all duration-300 
         ${isDark ? "bg-white text-black" : "bg-acua-marine text-black"}
       `}
     >

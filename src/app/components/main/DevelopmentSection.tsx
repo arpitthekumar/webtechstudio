@@ -57,7 +57,7 @@ const Section = ({ title, description, features, image, reverse }: any) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 1 }}
-    className="group flex flex-col md:flex-row items-center justify-between bg-section-bg text-white p-12 rounded-3xl md:mx-10 border border-transparent transition-all duration-300 hover:border-acua-marine"
+    className="group flex flex-col md:flex-row items-center justify-between bg-section-bg text-white p-12 rounded-3xl md:mx-10 border border-transparent transition-all duration-300 hover:border-[var(--acua-marine)]"
   >
     {!reverse && (
       <div className="max-w-lg group space-y-6">
