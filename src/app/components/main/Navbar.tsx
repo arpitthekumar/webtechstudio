@@ -15,6 +15,7 @@ const Navbar = () => {
       <div className="text-2xl font-bold">WebTechStudio</div>
 
       {/* Desktop Menu */}
+      {/* border-bottom: 1px solid var(--transparent); */}
       <div className="hidden md:flex space-x-6">
         <Link href="#" className="hover:text-gray-400">About</Link>
         <Link href="#" className="hover:text-gray-400">Project</Link>
