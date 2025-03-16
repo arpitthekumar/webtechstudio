@@ -1,5 +1,6 @@
 import AboutSection from "../main/About";
 import ClientSuccessStories from "../main/ClientStories";
+import Cta from "../main/cta/Cta";
 import DevelopmentSection from "../main/DevelopmentSection";
 import FAQ from "../main/faq";
 import Footer from "../main/Footer";
@@ -24,6 +25,7 @@ const HomePage: React.FC = () => {
          <Team />
          <ClientSuccessStories />
          <FAQ />
+         <Cta/>
          <Footer />
        </div></>
     );
