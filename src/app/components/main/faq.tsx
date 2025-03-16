@@ -1,70 +1,105 @@
 "use client";
-import React, { FC, useState } from 'react';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Chip from "./chip/chip";
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
 const FAQ = () => {
-  const [faqs, setFaqs] = useState([
-    { question: 'What services does Kairos offer?', answer: 'Kairos offers web development, UI/UX design, branding, and more.', isOpen: false },
-    { question: 'How long does it take to complete a project?', answer: 'The project timeline varies depending on the scope and complexity.', isOpen: false },
-    { question: 'Can I customize my pricing plan?', answer: 'Yes, we offer flexible pricing plans.', isOpen: false },
-    { question: 'Do you provide ongoing support after project completion?', answer: 'Yes, we offer ongoing support and maintenance.', isOpen: false },
-    { question: 'What makes Kairos different from other agencies?', answer: 'Kairos focuses on tailored solutions and high-quality delivery.', isOpen: false }
+  const [faqs, setFaqs] = useState<FAQItem[]>([
+    {
+      question: "What services does Kairos offer?",
+      answer:
+        "Kairos offers web development, UI/UX design, branding, and more.",
+    },
+    {
+      question: "How long does it take to complete a project?",
+      answer:
+        "The project timeline varies depending on the scope and complexity.",
+    },
+    {
+      question: "Can I customize my pricing plan?",
+      answer: "Yes, we offer flexible pricing plans.",
+    },
+    {
+      question: "Do you provide ongoing support after project completion?",
+      answer: "Yes, we offer ongoing support and maintenance.",
+    },
+    {
+      question: "What makes Kairos different from other agencies?",
+      answer: "Kairos focuses on tailored solutions and high-quality delivery.",
+    },
   ]);
 
-  const toggleFAQ = (index) => {
-    setFaqs(faqs.map((faq, i) => i === index ? { ...faq, isOpen: !faq.isOpen } : faq));
-  };
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const [newQuestion, setNewQuestion] = useState('');
-  const [newAnswer, setNewAnswer] = useState('');
-
-  const addFAQ = () => {
-    if (newQuestion && newAnswer) {
-      setFaqs([...faqs, { question: newQuestion, answer: newAnswer, isOpen: false }]);
-      setNewQuestion('');
-      setNewAnswer('');
-    }
+  const toggleFAQ = (index: number) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
-    <div className="bg-black text-white min-h-screen p-10">
-      <h1 className="text-4xl font-bold text-center">Answers to Your Questions</h1>
-      <p className="text-gray-400 text-center mb-10">Find answers to common questions about our services, processes, and pricing.</p>
+    <div className="bg-black text-white py-20 px-6 md:px-20">
+      <div className="flex flex-col items-center text-center pb-12">
+        <Chip text="What Our Clients Say" isDark={true} />
+        <motion.h1
+          className="text-5xl font-bold text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          Answers to Your Questions
+        </motion.h1>
+        <motion.p
+          className="text-bluish-gray  max-w-2xl text-center mt-3"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
+          Find answers to common questions about our services, processes, and pricing. If you need further information, feel free to reach out.
+        </motion.p>
+      </div>
 
       <div className="max-w-4xl mx-auto space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-gray-800 rounded-lg p-4">
+          <motion.div
+            key={index}
+            className="bg-[linear-gradient(#181823,#101017)] rounded-3xl p-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+          >
             <div
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
               <h3 className="text-lg">{faq.question}</h3>
-              <span className="text-xl">{faq.isOpen ? '-' : '+'}</span>
+              <motion.span
+                className="text-2xl border border-bluish-gray rounded-full px-3 py-1"
+                animate={{ rotate: activeIndex === index ? 180 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                {activeIndex === index ? "−" : "+"}
+              </motion.span>
             </div>
-            {faq.isOpen && <p className="text-gray-400 mt-2">{faq.answer}</p>}
-          </div>
+            <AnimatePresence>
+              {activeIndex === index && (
+                <motion.p
+                  className="text-gray-400 mt-2"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  {faq.answer}
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
-      </div>
-
-      <div className="max-w-4xl mx-auto mt-10 space-y-4">
-        <input
-          type="text"
-          placeholder="Add a new question"
-          value={newQuestion}
-          onChange={(e) => setNewQuestion(e.target.value)}
-          className="w-full p-2 rounded bg-gray-800 text-white"
-        />
-        <textarea
-          placeholder="Add an answer"
-          value={newAnswer}
-          onChange={(e) => setNewAnswer(e.target.value)}
-          className="w-full p-2 rounded bg-gray-800 text-white"
-        ></textarea>
-        <button
-          onClick={addFAQ}
-          className="bg-green-500 text-white px-4 py-2 rounded"
-        >
-          Add Question
-        </button>
       </div>
     </div>
   );
