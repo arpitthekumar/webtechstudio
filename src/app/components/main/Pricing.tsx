@@ -1,16 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaCheck, FaTimes, FaArrowRight } from "react-icons/fa";
+import { FaCheck, FaTimes } from "react-icons/fa";
 import Chip from "./chip/chip";
 import Button from "./button/Button";
 
-const FeatureItem = ({
-  text,
-  included,
-}: {
-  text: string;
-  included: boolean;
-}) => (
+const FeatureItem = ({ text, included }: { text: string; included: boolean }) => (
   <motion.div className="flex items-center space-x-3 bg-text-bg px-4 w-fit py-2 rounded-full">
     {included ? (
       <FaCheck className="text-green-400 text-2xl" />
@@ -62,50 +56,45 @@ const PricingPage = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-20 px-6">
+    <div className="bg-black text-white py-20 px-6 md:px-20">
       <div className="flex flex-col items-center text-center">
         <Chip text="Our Plans" isDark={true} />
-        <h1 className="text-5xl font-bold pb-3">
+        <h1 className="text-3xl md:text-5xl font-bold pb-3">
           Flexible Pricing for Every Need
         </h1>
-        <p className="max-w-2xl mx-auto">
+        <p className="max-w-2xl mx-auto text-sm md:text-base">
           Choose a plan that fits your project's scale and budget. Whether you
           need essential services or a complete digital solution, we've got you
           covered.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mt-12 max-w-8xl mx-auto">
         {plans.map((plan, index) => (
           <motion.div
             key={index}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            whileHover={{
-              boxShadow: "0 20px 30px rgba(0,0,0,0.2)",
-            }}
-            className="bg-linear-gradient(#181823,#101017) rounded-4xl p-6 flex flex-col space-y-6 shadow-lg border border-gray-800 hover:border-green-400 transition-all"
+            whileHover={{ boxShadow: "0 20px 30px rgba(0,0,0,0.2)" }}
+            className={`bg-gradient-to-b from-[#181823] to-[#101017] rounded-3xl p-6 md:p-8 py-8 md:py-12 flex flex-col space-y-6 md:space-y-8 shadow-lg border 
+              ${index === 1 ? "border-green-400" : "border-gray-800 hover:border-green-400 transition-all"}`}
           >
-            <div className=" border text-xl border-[var(--acua-marine)] px-4 py-2 rounded-full w-fit">
+            <div className="border text-lg md:text-xl border-[var(--acua-marine)] px-3 py-1 md:px-4 md:py-2 rounded-full w-fit">
               {plan.plan}
             </div>
-            <h2 className="text-2xl font-semibold">{plan.title}</h2>
-            <h3 className="text-xl font-bold">
-              <span className="text-acua-marine text-6xl">{plan.price}</span>
+            <h2 className="text-lg md:text-2xl font-semibold">{plan.title}</h2>
+            <h3 className="text-lg md:text-xl font-bold">
+              <span className="text-acua-marine text-4xl md:text-6xl">{plan.price}</span>
               /month
             </h3>
 
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {plan.features.map((feature, idx) => (
-                <FeatureItem
-                  key={idx}
-                  text={feature.text}
-                  included={feature.included}
-                />
+                <FeatureItem key={idx} text={feature.text} included={feature.included} />
               ))}
             </div>
 
-            <Button text="Choose Plan" mode="light" href="/contact"  />
+            <Button text="Choose Plan" mode={index === 1 ? "light" : "dark"} href="/contact" />
           </motion.div>
         ))}
       </div>
