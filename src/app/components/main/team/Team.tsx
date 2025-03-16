@@ -55,19 +55,27 @@ const cardVariants = {
 
 const Team: React.FC = () => {
   return (
-    <section className="max-w-9xl bg-black  text-white mx-auto py-20 md:px-20 px-6 text-center">
+    <motion.section 
+      className="max-w-9xl bg-black text-white mx-auto py-20 md:px-20 px-6 text-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       {/* Section Header */}
-      <div className="flex flex-col items-center">
+      <motion.div 
+        className="flex flex-col items-center"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <Chip text="Meet Our Team" isDark={true} />
-
-        <h2 className="text-5xl text-white font-bold">
-          Meet Our Kairos Expertise
-        </h2>
-        <p className="text-whiet max-w-xl mt-2">
-          Our team is a diverse group of professionals, each bringing their
-          unique skills to deliver exceptional results for your projects.
+        <h2 className="text-5xl text-white font-bold">Meet Our Kairos Expertise</h2>
+        <p className="text-gray-200 max-w-xl mt-2">
+          Our team is a diverse group of professionals, each bringing their unique skills to deliver exceptional results for your projects.
         </p>
-      </div>
+      </motion.div>
 
       {/* Team Members */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
@@ -76,13 +84,14 @@ const Team: React.FC = () => {
             key={index}
             variants={cardVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
             whileHover="hover"
-            className="relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border border-gray-600/60 hover:border-[var(--acua-marine)]  duration-300 group"
+            transition={{ delay: index * 0.2 }}
+            className="relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border border-gray-600/60 hover:border-[var(--acua-marine)] duration-300 group"
           >
             {/* Member Image */}
             <div className="relative group">
-              {/* Image */}
               <Image
                 src={member.image}
                 alt={member.name}
@@ -92,38 +101,31 @@ const Team: React.FC = () => {
               />
 
               {/* Gradient Overlay (Appears on Hover) */}
-              <div className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <motion.div 
+                className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+              ></motion.div>
             </div>
 
             {/* Social Links (Appear on Hover) */}
-            <div className="absolute top-23 left-29 w-full h-full  flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <motion.div 
+              className="absolute top-23 left-29 w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+            >
               <div className="flex flex-col bg-[#121212] p-2 rounded-3xl gap-2">
-                <a
-                  href={member.socials.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white  rounded-full hover:text-[var(--acua-marine)]"
-                >
+                <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-white rounded-full hover:text-[var(--acua-marine)]">
                   <FaGithub size={20} />
                 </a>
-                <a
-                  href={member.socials.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white  rounded-full hover:text-[var(--acua-marine)]"
-                >
+                <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-white rounded-full hover:text-[var(--acua-marine)]">
                   <FaInstagram size={20} />
                 </a>
-                <a
-                  href={member.socials.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white  rounded-full hover:text-[var(--acua-marine)]"
-                >
+                <a href={member.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-white rounded-full hover:text-[var(--acua-marine)]">
                   <FaYoutube size={20} />
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Member Info */}
             <div className="p-4 text-center">
@@ -133,7 +135,7 @@ const Team: React.FC = () => {
           </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

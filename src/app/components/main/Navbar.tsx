@@ -17,17 +17,18 @@ const Navbar = () => {
       {/* Desktop Menu */}
       {/* border-bottom: 1px solid var(--transparent); */}
       <div className="hidden md:flex ">
-  {["About", "Project", "Services", "Pricing", "Blog", "Shop"].map((item, index) => (
-    <Link 
-      key={index} 
-      href="#" 
-      className="border-b-2 border-transparent hover:border-[var(--acua-marine)] px-4 pb-2 transition-all"
-    >
-      {item}
-    </Link>
-  ))}
-</div>
-
+        {["About", "Project", "Services", "Pricing", "Blog", "Shop"].map(
+          (item, index) => (
+            <Link
+              key={index}
+              href="#"
+              className="border-b-2 border-transparent hover:border-[var(--acua-marine)] px-4 pb-2 transition-all"
+            >
+              {item}
+            </Link>
+          )
+        )}
+      </div>
 
       {/* Desktop Button */}
       <div className="hidden md:block">
@@ -54,12 +55,48 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center space-y-6 py-6 shadow-lg md:hidden"
           >
-            <Link href="#" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>About</Link>
-            <Link href="#" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Project</Link>
-            <Link href="#" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Services</Link>
-            <Link href="#" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Pricing</Link>
-            <Link href="#" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Blog</Link>
-            <Link href="#" className="hover:text-gray-400" onClick={() => setIsOpen(false)}>Shop</Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400"
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400"
+              onClick={() => setIsOpen(false)}
+            >
+              Project
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400"
+              onClick={() => setIsOpen(false)}
+            >
+              Pricing
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400"
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-gray-400"
+              onClick={() => setIsOpen(false)}
+            >
+              Shop
+            </Link>
             <Button text="Let's Talk" mode="light" href="/contact" />
           </motion.div>
         )}

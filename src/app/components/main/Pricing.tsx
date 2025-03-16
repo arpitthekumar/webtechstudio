@@ -5,7 +5,13 @@ import Chip from "./chip/chip";
 import Button from "./button/Button";
 
 const FeatureItem = ({ text, included }: { text: string; included: boolean }) => (
-  <motion.div className="flex items-center space-x-3 bg-text-bg px-4 w-fit py-2 rounded-full">
+  <motion.div 
+    className="flex items-center space-x-3 bg-text-bg px-4 w-fit py-2 rounded-full"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.4 }}
+  >
     {included ? (
       <FaCheck className="text-green-400 text-2xl" />
     ) : (
@@ -56,7 +62,13 @@ const PricingPage = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-20 px-6 md:px-20">
+    <motion.div 
+      className="bg-black text-white py-20 px-6 md:px-20"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="flex flex-col items-center text-center">
         <Chip text="Our Plans" isDark={true} />
         <h1 className="text-3xl md:text-5xl font-bold pb-3">
@@ -73,18 +85,34 @@ const PricingPage = () => {
         {plans.map((plan, index) => (
           <motion.div
             key={index}
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.2 }}
             whileHover={{ boxShadow: "0 20px 30px rgba(0,0,0,0.2)" }}
             className={`bg-gradient-to-b from-[#181823] to-[#101017] rounded-3xl p-6 md:p-8 py-8 md:py-12 flex flex-col space-y-6 md:space-y-8 shadow-lg border 
               ${index === 1 ? "border-green-400" : "border-gray-800 hover:border-green-400 transition-all"}`}
           >
-            <div className="border text-lg md:text-xl border-[var(--acua-marine)] px-3 py-1 md:px-4 md:py-2 rounded-full w-fit">
+            <motion.div 
+              className="border text-lg md:text-xl border-[var(--acua-marine)] px-3 py-1 md:px-4 md:py-2 rounded-full w-fit"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
               {plan.plan}
-            </div>
+            </motion.div>
             <h2 className="text-lg md:text-2xl font-semibold">{plan.title}</h2>
             <h3 className="text-lg md:text-xl font-bold">
-              <span className="text-acua-marine text-4xl md:text-6xl">{plan.price}</span>
+              <motion.span 
+                className="text-acua-marine text-4xl md:text-6xl"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+              >
+                {plan.price}
+              </motion.span>
               /month
             </h3>
 
@@ -98,7 +126,7 @@ const PricingPage = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
