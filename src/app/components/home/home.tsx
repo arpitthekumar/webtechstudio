@@ -1,4 +1,5 @@
 import AboutSection from "../main/About";
+import ClientSuccessStories from "../main/ClientStories";
 import DevelopmentSection from "../main/DevelopmentSection";
 import HeroSection from "../main/HeroSection";
 import Navbar from "../main/Navbar";
@@ -19,7 +20,7 @@ const HomePage: React.FC = () => {
          <ProcessSection />
          <PricingPage />
          <Team />
-         {/* <ClientSuccessStories /> */}
+         <ClientSuccessStories />
          {/* <FAQ /> */}
          {/* <HomePage /> */}
        </div></>

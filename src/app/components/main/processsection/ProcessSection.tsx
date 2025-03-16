@@ -39,7 +39,7 @@ const ProcessCard: React.FC<{ icon: React.ReactNode; title: string; description:
 }) => (
   <div className={`bg-[#c1d3ff14] rounded-2xl px-6 py-10 h-fit flex flex-col space-y-4 shadow-lg relative ${offset}`}>
     <div className="relative flex ">
-      <div className="text-green-400 text-8xl">{icon}</div>
+      <div className="text-acua-marine text-8xl">{icon}</div>
       <div className="text-bluish-gray text-6xl font-bold absolute top-4 right-4 opacity-20">{stepNumber}</div>
     </div>
     <h2 className="text-xl font-semibold">{title}</h2>
