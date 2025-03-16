@@ -49,7 +49,7 @@ const ProcessCard: React.FC<{ icon: React.ReactNode; title: string; description:
 
 const ProcessSection: React.FC = () => {
   return (
-    <div className="text-white py-20 px-3  md:px-20 bg-section-bg text-center">
+    <div className="text-white py-20 px-6  md:px-20 bg-section-bg text-center">
       <div className="flex flex-col items-center text-center">
       <Chip text="How We Work" isDark={true} />
       <h2 className="text-4xl font-bold mt-4">Our Simple Process for Success</h2>

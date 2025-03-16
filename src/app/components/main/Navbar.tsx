@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-20 bg-black text-white p-6 px-10 md:px-20 flex justify-between items-center">
+    <nav className="sticky top-0 z-20 bg-black text-white p-6 px-6 md:px-20 flex justify-between items-center">
       {/* Logo */}
       <div className="text-2xl font-bold">WebTechStudio</div>
 

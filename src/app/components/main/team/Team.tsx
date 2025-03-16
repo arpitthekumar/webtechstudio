@@ -50,12 +50,12 @@ const teamMembers = [
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { scale: 1.05, boxShadow: "0px 10px 30px rgba(0,0,0,0.2)" },
+  hover: { boxShadow: "0px 10px 30px rgba(0,0,0,0.2)" },
 };
 
 const Team: React.FC = () => {
   return (
-    <section className="max-w-9xl bg-black  text-white mx-auto py-20 px-20 text-center">
+    <section className="max-w-9xl bg-black  text-white mx-auto py-20 md:px-20 px-6 text-center">
       {/* Section Header */}
       <div className="flex flex-col items-center">
         <Chip text="Meet Our Team" isDark={true} />
@@ -78,19 +78,25 @@ const Team: React.FC = () => {
             initial="hidden"
             animate="visible"
             whileHover="hover"
-            className="relative bg-[#121212] rounded-2xl overflow-hidden shadow-lg transition-all border border-gray-600/60 duration-300 group"
+            className="relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border border-gray-600/60 hover:border-[var(--acua-marine)]  duration-300 group"
           >
             {/* Member Image */}
-            <Image
-              src={member.image}
-              alt={member.name}
-              width={400}
-              height={300}
-              className="w-full p-5 h-[400px] rounded-4xl object-cover"
-            />
+            <div className="relative group">
+              {/* Image */}
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={400}
+                height={300}
+                className="w-full p-5 h-[400px] rounded-4xl object-cover"
+              />
+
+              {/* Gradient Overlay (Appears on Hover) */}
+              <div className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
 
             {/* Social Links (Appear on Hover) */}
-            <div className="absolute top-23 left-29 w-full h-full bg-linear-gradient(#0000, #000); flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <div className="absolute top-23 left-29 w-full h-full  flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
               <div className="flex flex-col bg-[#121212] p-2 rounded-3xl gap-2">
                 <a
                   href={member.socials.github}
