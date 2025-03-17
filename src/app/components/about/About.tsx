@@ -4,6 +4,7 @@ import FAQ from "../main/faq";
 import Footer from "../main/Footer";
 import Navbar from "../main/Navbar";
 import Team from "../main/team/Team";
+import AboutCards from "./components/AboutCards";
 import HeroSection from "./components/HeroSection";
 
 const AboutPage: React.FC = () => {
@@ -12,6 +13,7 @@ const AboutPage: React.FC = () => {
       <div className="bg-black min-h-screen">
         <Navbar />
         <HeroSection />
+        <AboutCards/>
         <Team />
         <ClientSuccessStories />
         <FAQ />
