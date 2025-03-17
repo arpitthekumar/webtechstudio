@@ -6,6 +6,7 @@ import Navbar from "../main/Navbar";
 import Team from "../main/team/Team";
 import AboutCards from "./components/AboutCards";
 import HeroSection from "./components/HeroSection";
+import Journey from "./components/Journey";
 
 const AboutPage: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const AboutPage: React.FC = () => {
         <Navbar />
         <HeroSection />
         <AboutCards/>
+        <Journey/>
         <Team />
         <ClientSuccessStories />
         <FAQ />
