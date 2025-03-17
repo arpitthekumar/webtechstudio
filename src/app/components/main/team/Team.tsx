@@ -101,19 +101,13 @@ const Team: React.FC = () => {
               />
 
               {/* Gradient Overlay (Appears on Hover) */}
-              <motion.div 
-                className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-              ></motion.div>
+              <div className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
             </div>
 
             {/* Social Links (Appear on Hover) */}
-            <motion.div 
-              className="absolute top-23 left-29 w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
-            >
+            <div className="absolute top-23 left-29 w-full h-full inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
               <div className="flex flex-col bg-[#121212] p-2 rounded-3xl gap-2">
                 <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-white rounded-full hover:text-[var(--acua-marine)]">
                   <FaGithub size={20} />
@@ -125,7 +119,7 @@ const Team: React.FC = () => {
                   <FaYoutube size={20} />
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Member Info */}
             <div className="p-4 text-center">

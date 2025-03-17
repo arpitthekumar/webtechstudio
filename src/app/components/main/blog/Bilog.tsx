@@ -71,25 +71,30 @@ export default function BlogSection() {
               viewport={{ once: true }}
               className="bg-[linear-gradient(#181823,#101017)] rounded-4xl group  border border-transparent hover:border-[var(--acua-marine)] overflow-hidden"
             >
-              <div className="relative w-full h-[600px] ">
+                <div className="p-6">
+
+              <div className="relative w-full h-[600px] overflow-hidden rounded-4xl">
                 <Image
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  className="object-cover  transition-transform duration-500 ease-in-out group-hover:scale-110 rounded-4xl p-4"
+                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
+              </div>
               </div>
               <div className="p-6">
                 <div className="flex justify-between text-bluish-gray text-lg mb-8">
-                  <span className="bg-text-bg px-4 py-2 text-base rounded-4xl text-white">{blog.category}</span>
-                  <span >{blog.date}</span>
+                  <span className="bg-text-bg px-4 py-2 text-base rounded-4xl text-white">
+                    {blog.category}
+                  </span>
+                  <span>{blog.date}</span>
                 </div>
                 <h3 className="text-lg font-semibold">{blog.title}</h3>
                 <Link
                   href={blog.link}
                   className="text-acua-marine font-bold text-lg mt-2 inline-block"
                 >
-                  Read More 
+                  Read More
                 </Link>
               </div>
             </motion.div>
