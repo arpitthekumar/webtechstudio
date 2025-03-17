@@ -16,7 +16,7 @@ export default function Chip({ text, isDark = true, className = "" }: ChipProps)
       transition={{ duration: 0.8, delay: 0.2 }}
       viewport={{ once: true }}
       className={`text-sm flex px-4 py-2 rounded-full mb-4 w-fit ${
-        isDark ? "bg-text-bg text-white" : "bg-pastel-gray text-black"
+        isDark ? "bg-text-bg text-white" : " border-2 border-white text-white"
       } ${className}`}
     >
       <div className="h-2 w-2 mt-1 mr-2 rounded-full bg-acua-marine"></div>

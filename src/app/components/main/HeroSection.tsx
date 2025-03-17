@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Button from "./button/Button";
+import Chip from "./chip/chip";
 
 const HeroSection = () => {
   return (
@@ -27,15 +28,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col justify-center items-center md:items-start mb-6 md:mb-0"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm bg-white text-black px-4 py-1 rounded-full mb-4"
-          >
-            Empowering Agencies
-          </motion.div>
+          
+                  <Chip text="Empowering Agencies" isDark={false} className="z-10 font-bold" />
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

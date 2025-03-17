@@ -42,7 +42,7 @@ const Cta: React.FC = () => {
 
       {/* ✅ Buttons */}
       <motion.div
-        className="flex justify-center gap-4 mt-6"
+        className="flex justify-center flex-col md:flex-row gap-4 mt-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
