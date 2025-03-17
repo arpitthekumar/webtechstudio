@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "./button/Button";
-import Chip from "./chip/chip";
+import Button from "../../main/button/Button";
+import Chip from "../../main/chip/chip";
+
 
 const projects = [
   {
@@ -43,31 +44,19 @@ const ShowcaseExpertise = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="flex flex-col md:flex-row items-start md:items-center text-left space-y-6 md:space-y-0 md:space-x-8 lg:space-x-24 relative"
+        className="flex flex-col  items-center text-center   relative"
       >
         <Chip text="Our Work" isDark={true} />
 
-        <div className="flex-1">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Showcasing Our Expertise
           </h1>
-          <p className="text-bluish-gray max-w-lg text-sm md:text-base">
+          <p className="text-white max-w-3xl  mt-3 text-sm md:text-base">
             Explore some of our recent projects where we’ve transformed ideas
             into powerful digital experiences. From web development to branding,
             our work speaks for itself.
           </p>
-        </div>
 
-        {/* ✅ Button Animation */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-4 md:absolute md:bottom-0 md:right-0"
-        >
-          <Button text="View All Projects" mode="light" href="/contact" />
-        </motion.div>
       </motion.div>
 
       {/* ✅ Animated Projects Section */}

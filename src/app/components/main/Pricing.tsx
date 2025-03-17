@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import Chip from "./chip/chip";
@@ -8,8 +9,7 @@ const FeatureItem = ({ text, included }: { text: string; included: boolean }) =>
   <motion.div 
     className="flex items-center space-x-3 bg-text-bg px-4 w-fit py-2 rounded-full"
     initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
+    animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4 }}
   >
     {included ? (
@@ -22,6 +22,12 @@ const FeatureItem = ({ text, included }: { text: string; included: boolean }) =>
 );
 
 const PricingPage = () => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    setHasAnimated(true);
+  }, []);
+
   const plans = [
     {
       title: "Essentials for Small Projects",
@@ -64,9 +70,9 @@ const PricingPage = () => {
   return (
     <motion.div 
       className="bg-black text-white py-20 px-6 md:px-20"
+      key={hasAnimated ? "Prising-section" : ""}
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="flex flex-col items-center text-center">
@@ -86,8 +92,7 @@ const PricingPage = () => {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.2 }}
             whileHover={{ boxShadow: "0 20px 30px rgba(0,0,0,0.2)" }}
             className={`bg-gradient-to-b from-[#181823] to-[#101017] rounded-3xl p-6 md:p-8 py-8 md:py-12 flex flex-col space-y-6 md:space-y-8 shadow-lg border 
@@ -96,8 +101,7 @@ const PricingPage = () => {
             <motion.div 
               className="border text-lg md:text-xl border-[var(--acua-marine)] px-3 py-1 md:px-4 md:py-2 rounded-full w-fit"
               initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
               {plan.plan}
@@ -107,8 +111,7 @@ const PricingPage = () => {
               <motion.span 
                 className="text-acua-marine text-4xl md:text-6xl"
                 initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
                 {plan.price}
