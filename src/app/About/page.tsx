@@ -3,34 +3,34 @@ import { Metadata } from "next";
 import AboutPage from "../components/about/About";
 
 export const metadata: Metadata = {
-  title: "WebTechStudio - Best Web Development Agency in Agra",
-  description:
-    "WebTechStudio is a professional web development agency in Agra, India, specializing in UI/UX design, SEO, and branding solutions.",
-  openGraph: {
-    title: "WebTechStudio - Best Web Development Agency in Agra",
+    title: "About WebTechStudio - Leading Web Development Agency",
     description:
-      "We provide expert web development, SEO, and branding solutions for businesses in Agra.",
-    url: "https://webtechstudio.site",
-    images: [
-      {
-        url: "https://webtechstudio.site/home-og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "WebTechStudio - Homepage",
-      },
-    ],
-  },
-};
+      "Learn more about WebTechStudio, a top-rated web development agency in Agra, India. We create modern websites, UI/UX designs, and branding solutions.",
+    openGraph: {
+      title: "About WebTechStudio - Leading Web Development Agency",
+      description:
+        "Get to know WebTechStudio, a trusted web development company specializing in modern web solutions.",
+      url: "https://webtechstudio.in/about",
+      images: [
+        {
+          url: "https://webtechstudio.in/about-og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "WebTechStudio - About Page",
+        },
+      ],
+    },
+  };
 
 export default function About() {
   return (
     <>
       {/* ✅ SEO Metadata */}
       <Head>
-        <title>WebTechStudio - Best Web Development Agency in Agra, India</title>
+        <title>About WebTechStudio - Leading Web Development Agency</title>
         <meta
           name="description"
-          content="WebTechStudio is a leading web development agency in Agra, India, providing high-quality websites, UI/UX design, and SEO-friendly digital solutions."
+          content="Learn more about WebTechStudio, a top-rated web development agency in Agra, India. We create modern websites, UI/UX designs, and branding solutions."
         />
         <meta
           name="keywords"
