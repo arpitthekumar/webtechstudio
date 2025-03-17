@@ -88,7 +88,7 @@ const Team: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             whileHover="hover"
             transition={{ delay: index * 0.2 }}
-            className="relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border border-gray-600/60 hover:border-[var(--acua-marine)] duration-300 group"
+            className="relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border group border-gray-600/60 hover:border-[var(--acua-marine)] duration-300 group"
           >
             {/* Member Image */}
             <div className="relative group">
@@ -97,7 +97,7 @@ const Team: React.FC = () => {
                 alt={member.name}
                 width={400}
                 height={300}
-                className="w-full p-5 h-[400px] rounded-4xl object-cover"
+                className="w-full p-5 h-[400px] rounded-4xl group object-cover"
               />
 
               {/* Gradient Overlay (Appears on Hover) */}
