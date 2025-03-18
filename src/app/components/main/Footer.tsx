@@ -24,11 +24,11 @@ const Footer = () => {
     {
       title: "Utility",
       items: [
-        { name: "Styleguide", href: "/Styleguide" },
-        { name: "Changelog", href: "/Changelog" },
+        // { name: "Styleguide", href: "/Styleguide" },
+        // { name: "Changelog", href: "/Changelog" },
         { name: "Privacy Policy", href: "/ Privacypolicy" },
         { name: "License", href: "/License" },
-        { name: "YouTube", href: "https://youtube.com" },
+        // { name: "YouTube", href: "https://youtube.com" },
       ],
     },
     {
