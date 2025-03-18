@@ -65,7 +65,7 @@ const Navbar = () => {
             className="absolute top-16 left-0 w-full bg-black text-white flex flex-col items-center space-y-6 py-6 shadow-lg md:hidden"
           >
             {navItems.map((item, index) => {
-              const href = `/${item.toLowerCase()}`;
+              const href = `/${item}`;
               const isActive = pathname === href;
               return (
                 <Link
