@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     title: "Our Blog - WebTechStudio",
     description:
       "Explore WebTechStudio's blog for the latest trends, tips, and insights in web development and design.",
-    url: "https://webtechstudio.in/blog",
+    url: "https://webtechstudio.site/Blog",
     images: [
       {
-        url: "https://webtechstudio.in/blog-og-image.jpg",
+        url: "https://webtechstudio.site/blog-og-image.jpg",
         width: 1200,
         height: 630,
         alt: "WebTechStudio - Blog Page",
@@ -42,7 +42,7 @@ export default function Blog() {
           content="Explore WebTechStudio's blog for the latest trends, tips, and insights in web development and design."
         />
         <meta property="og:image" content="/blog/blog-og-image.jpg" />
-        <meta property="og:url" content="https://webtechstudio.in/blog" />
+        <meta property="og:url" content="https://webtechstudio.site/Blog" />
         <meta property="og:type" content="website" />
 
         {/* ✅ Twitter Meta Tags */}

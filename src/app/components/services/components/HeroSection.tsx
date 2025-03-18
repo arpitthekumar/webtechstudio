@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Button from "../../main/button/Button";
 import Chip from "../../main/chip/chip";
 import Image from "next/image";
 import { useEffect, useState } from "react";

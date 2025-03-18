@@ -3,10 +3,10 @@ import Cta from "../main/cta/Cta";
 import FAQ from "../main/faq";
 import Footer from "../main/Footer";
 import Navbar from "../main/Navbar";
-import HeroSection from "./component/Herosection";
+import HeroSection from "./component/HeroSection";
 
 
-const BlogPage: React.FC = () => {
+const ContactPage: React.FC = () => {
   return (
     <>
       <div className="bg-black min-h-screen">
@@ -21,4 +21,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage;
+export default ContactPage;
