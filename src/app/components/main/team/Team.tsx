@@ -55,7 +55,7 @@ const cardVariants = {
 
 const Team: React.FC = () => {
   return (
-    <motion.section 
+    <motion.section
       className="max-w-9xl bg-black text-white mx-auto py-20 md:px-20 px-6 text-center"
       initial="hidden"
       whileInView="visible"
@@ -63,7 +63,7 @@ const Team: React.FC = () => {
       transition={{ duration: 0.6 }}
     >
       {/* Section Header */}
-      <motion.div 
+      <motion.div
         className="flex flex-col items-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,9 +71,12 @@ const Team: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <Chip text="Meet Our Team" isDark={true} />
-        <h2 className="text-5xl text-white font-bold">Meet Our Kairos Expertise</h2>
+        <h2 className="text-5xl text-white font-bold">
+          Meet Our Kairos Expertise
+        </h2>
         <p className="text-gray-200 max-w-xl mt-2">
-          Our team is a diverse group of professionals, each bringing their unique skills to deliver exceptional results for your projects.
+          Our team is a diverse group of professionals, each bringing their
+          unique skills to deliver exceptional results for your projects.
         </p>
       </motion.div>
 
@@ -103,23 +106,37 @@ const Team: React.FC = () => {
               {/* Gradient Overlay (Appears on Hover) */}
               <div className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
+              <div className="absolute top-32 left-29 w-full h-full inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="flex flex-col bg-[#121212] p-2 rounded-3xl gap-2">
+                  <a
+                    href={member.socials.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white rounded-full hover:text-[var(--acua-marine)]"
+                  >
+                    <FaGithub size={20} />
+                  </a>
+                  <a
+                    href={member.socials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white rounded-full hover:text-[var(--acua-marine)]"
+                  >
+                    <FaInstagram size={20} />
+                  </a>
+                  <a
+                    href={member.socials.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white rounded-full hover:text-[var(--acua-marine)]"
+                  >
+                    <FaYoutube size={20} />
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Social Links (Appear on Hover) */}
-            <div className="absolute top-23 left-29 w-full h-full inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-
-              <div className="flex flex-col bg-[#121212] p-2 rounded-3xl gap-2">
-                <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-white rounded-full hover:text-[var(--acua-marine)]">
-                  <FaGithub size={20} />
-                </a>
-                <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-white rounded-full hover:text-[var(--acua-marine)]">
-                  <FaInstagram size={20} />
-                </a>
-                <a href={member.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-white rounded-full hover:text-[var(--acua-marine)]">
-                  <FaYoutube size={20} />
-                </a>
-              </div>
-            </div>
 
             {/* Member Info */}
             <div className="p-4 text-center">
