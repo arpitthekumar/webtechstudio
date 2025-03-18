@@ -3,14 +3,22 @@ import { motion } from "framer-motion";
 import Button from "../../main/button/Button";
 import Chip from "../../main/chip/chip";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const HeroSection: React.FC = () => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    setHasAnimated(true);
+  }, []); // Runs only once when component mounts
+
   return (
     <>
       <div className="bg-black text-white py-20 px-6 md:px-20">
         <motion.div
+          key={hasAnimated ? "hero-section" : ""}
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
           className="flex flex-col  items-start  text-left space-y-6 md:space-y-0 md:space-x-8 lg:space-x-24 relative"
@@ -18,7 +26,7 @@ const HeroSection: React.FC = () => {
           <Chip text="Our Work" isDark={true} />
 
           <div className="flex-1">
-            <h1 className="text-4xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
               Innovative Projects, Real Results
             </h1>
           </div>
@@ -26,7 +34,7 @@ const HeroSection: React.FC = () => {
           {/* ✅ Button Animation */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
             className="mt-4 md:absolute md:bottom-0 md:right-0"
@@ -41,7 +49,7 @@ const HeroSection: React.FC = () => {
         </motion.div>
         <motion.div
           initial={{ scale: 0.9 }}
-          whileInView={{ scale: 1 }}
+          animate={{ scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
           className="mt-20 group"
