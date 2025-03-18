@@ -7,7 +7,6 @@ import Image from "next/image";
 import Button from "../../main/button/Button";
 import Chip from "../../main/chip/chip";
 
-
 const projects = [
   {
     image: "/mainpage/image8.png",
@@ -34,8 +33,22 @@ const projects = [
     link: "/projects/cloudsync",
   },
 ];
+const categories = [
+    "All",
+    "Web Development",
+    "Branding",
+    "E-commerce",
+    "SaaS Platform",
+];
 
 const ShowcaseExpertise = () => {
+    const [isHovered, setIsHovered] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
   return (
     <div className="bg-black text-white py-20 px-6 md:px-20">
       {/* ✅ Animated Header Section */}
@@ -48,17 +61,30 @@ const ShowcaseExpertise = () => {
       >
         <Chip text="Our Work" isDark={true} />
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Showcasing Our Expertise
-          </h1>
-          <p className="text-white max-w-3xl  mt-3 text-sm md:text-base">
-            Explore some of our recent projects where we’ve transformed ideas
-            into powerful digital experiences. From web development to branding,
-            our work speaks for itself.
-          </p>
-
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          Showcasing Our Expertise
+        </h1>
+        <p className="text-white max-w-3xl  mt-3 text-sm md:text-base">
+          Explore some of our recent projects where we’ve transformed ideas into
+          powerful digital experiences. From web development to branding, our
+          work speaks for itself.
+        </p>
       </motion.div>
-
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveCategory(category)}
+            className={`px-5 py-2 rounded-full border-2 ${
+              activeCategory === category
+                ? "bg-[var(--acua-marine)] text-black"
+                : "border-gray-400 text-gray-400 hover:bg-gray-700"
+            } transition-all`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
       {/* ✅ Animated Projects Section */}
       <motion.div
         initial="hidden"
@@ -70,8 +96,7 @@ const ShowcaseExpertise = () => {
         viewport={{ once: true }}
         className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-12 max-w-9xl mx-auto"
       >
-        {projects.map((project, index) => {
-          const [isHovered, setIsHovered] = useState(false);
+        {filteredProjects.map((project, index) => {
 
           return (
             <motion.div

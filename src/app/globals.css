@@ -101,3 +101,13 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 }
+/* NProgress Loader */
+#nprogress .bar {
+  background: #56dcad !important; /* Change to your preferred color */
+  height: 3px;
+}
+
+/* Optional: Customize the spinner color */
+#nprogress .peg {
+  box-shadow: 0 0 10px #56dcad, 0 0 5px #56dcad !important;
+}
