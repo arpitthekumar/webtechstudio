@@ -70,7 +70,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            <Button text="Let's Get Started" mode="light" href="/contact" />
+            <Button text="Let's Get Started" mode="light" href="/Contact" />
           </motion.div>
         </motion.div>
       </div>

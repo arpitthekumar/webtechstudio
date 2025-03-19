@@ -66,7 +66,7 @@ const ShowcaseExpertise = () => {
           viewport={{ once: true }}
           className="mt-4 md:absolute md:bottom-0 md:right-0"
         >
-          <Button text="View All Projects" mode="light" href="/contact" />
+          <Button text="View All Projects" mode="light" href="/Contact" />
         </motion.div>
       </motion.div>
 

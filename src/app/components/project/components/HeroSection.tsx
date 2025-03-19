@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
               websites to branding, each project showcases our dedication to
               quality and creativity.
             </p>
-            <Button text="View All Projects" mode="light" href="/contact" />
+            <Button text="View All Projects" mode="light" href="/Contact" />
           </motion.div>
         </motion.div>
         <motion.div

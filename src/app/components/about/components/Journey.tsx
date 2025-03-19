@@ -33,7 +33,7 @@ const Journey = () => {
           </p>
           <div className="mt-8">
 
-          <Button text="Work With Us" mode="light" href="/contact" />
+          <Button text="Work With Us" mode="light" href="/Contact" />
           </div>
 
         </motion.div>

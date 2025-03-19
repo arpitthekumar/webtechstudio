@@ -49,10 +49,10 @@ const Cta: React.FC = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 200 }}>
-          <Button text="Get Started" mode="light" href="/contact" />
+          <Button text="Get Started" mode="light" href="/Contact" />
         </motion.div>
         <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 200 }}>
-          <Button text="Get A Quote" mode="dark" href="/contact" />
+          <Button text="Get A Quote" mode="dark" href="/Contact" />
         </motion.div>
       </motion.div>
     </motion.div>

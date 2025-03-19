@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://webtechstudio.site"),
+  robots: {
+    index: true, // Allow search engines to index your site
+    follow: true, // Allow following links
+  },
   title: {
     default: "WebTechStudio - Best Web Development Agency in Agra, India",
     template: "%s | WebTechStudio",

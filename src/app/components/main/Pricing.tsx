@@ -125,7 +125,7 @@ const PricingPage = () => {
               ))}
             </div>
 
-            <Button text="Choose Plan" mode={index === 1 ? "light" : "dark"} href="/contact" />
+            <Button text="Choose Plan" mode={index === 1 ? "light" : "dark"} href="/Contact" />
           </motion.div>
         ))}
       </div>

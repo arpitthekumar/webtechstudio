@@ -80,7 +80,7 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <Button text="Let's Talk" mode="light" href="/contact" />
+            <Button text="Let's Talk" mode="light" href="/Contact" />
           </motion.div>
         )}
       </AnimatePresence>

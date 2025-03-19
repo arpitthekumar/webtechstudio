@@ -56,7 +56,7 @@ export default function BlogSection() {
             viewport={{ once: true }}
             className="mt-4 md:absolute md:bottom-0 md:right-0"
           >
-            <Button text="View All Blogs" mode="light" href="/contact" />
+            <Button text="See All Blogs" mode="light" href="/Blog" />
           </motion.div>
         </motion.div>
 
