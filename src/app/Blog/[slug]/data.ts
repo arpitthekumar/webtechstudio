@@ -4,7 +4,7 @@ const blogs = [
     title: "Mastering Next.js Performance Optimization",
     date: "March 20, 2025",
     category: "Next.js",
-    image: "/blogs/nextjs-performance.png",
+    image: "/pricing/image.webp",
     sections: [
       {
         heading: "Introduction",

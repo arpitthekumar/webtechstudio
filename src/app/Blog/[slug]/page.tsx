@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import blogs from "./data";
+import Navbar from "@/app/components/main/Navbar";
+import Footer from "@/app/components/main/Footer";
+import Cta from "@/app/components/main/cta/Cta";
 
 type BlogType = {
   slug: string;
@@ -40,34 +43,41 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
   if (!blog) return notFound();
 
   return (
-    <section className="py-20 bg-black text-white">
-      <div className="container mx-auto px-6 md:px-16 max-w-5xl">
-        {/* Header */}
-        <header className="text-center">
-          <h1 className="text-3xl md:text-5xl font-bold">{blog.title}</h1>
-          <p className="text-gray-400 mt-2">
-            {blog.date} - {blog.category}
-          </p>
-        </header>
+    <><Navbar/>
+      <section className="py-20 bg-black text-white">
+        <div className="container mx-auto px-6 md:px-20 max-w-9xl">
+          {/* Header */}
+          <header className="text-center">
+            <h1 className="text-3xl md:text-5xl font-bold">{blog.title}</h1>
+            <div className="text-bluish-gray text-lg flex justify-between mt-2">
+              <h3 className=" px-4 py-2 bg-text-bg text-white rounded-full">
+                {blog.category}
+              </h3>
+              <h4>{blog.date}</h4>
+            </div>
+          </header>
 
-        {/* Blog Image */}
-        <div className="mt-6 relative w-full h-[400px] rounded-xl overflow-hidden">
-          <Image
-            src={blog.image}
-            alt={blog.title}
-            fill
-            className="object-cover"
-          />
-        </div>
+          {/* Blog Image */}
+          <div className="mt-6 relative w-full h-[400px] rounded-4xl overflow-hidden">
+            <Image
+              src={blog.image}
+              alt={blog.title}
+              fill
+              className="object-cover"
+            />
+          </div>
 
-        {/* Blog Content */}
-        <div className="mt-10 space-y-10">
-          {blog.sections.map((section, index) => (
-            <BlogSection key={index} section={section} />
-          ))}
+          {/* Blog Content */}
+          <div className="mt-10 space-y-10">
+            {blog.sections.map((section, index) => (
+              <BlogSection key={index} section={section} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      <Cta/>
+      </section>
+      <Footer/>
+    </>
   );
 }
 
@@ -75,7 +85,7 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
 const BlogSection = ({ section }: { section: BlogType["sections"][0] }) => (
   <div className="space-y-4">
     {section.heading && (
-      <h2 className="text-2xl font-semibold text-white">{section.heading}</h2>
+      <h2 className="text-4xl font-semibold text-white">{section.heading}</h2>
     )}
     {section.content && <p className="text-gray-300">{section.content}</p>}
 
