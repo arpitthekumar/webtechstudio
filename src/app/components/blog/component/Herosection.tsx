@@ -13,7 +13,7 @@ const blogs = [
         date: "December 28, 2024",
         title: "Essential Web Design Trends to Follow",
         image: "/mainpage/image.png",
-        link: "/Blogs/essential-web-design-trends-to-follow",
+        link: "/Blog/essential-web-design-trends-to-follow",
       },
       {
         id: 2,
@@ -21,7 +21,7 @@ const blogs = [
         date: "December 28, 2024",
         title: "Essential Web Development Trends to Win for Business",
         image: "/mainpage/image1.png",
-        link: "/Blogs/essential-web-development-trends-to-win-for-business",
+        link: "/Blog/essential-web-development-trends-to-win-for-business",
       },
       {
         id: 3,
@@ -29,7 +29,7 @@ const blogs = [
         date: "January 5, 2025",
         title: "Top UI/UX Practices for a Better User Experience",
         image: "/mainpage/image2.png",
-        link: "/Blogs/top-ui-ux-practices-for-better-user-experience",
+        link: "/Blog/top-ui-ux-practices-for-better-user-experience",
       },
       {
         id: 4,
@@ -37,7 +37,7 @@ const blogs = [
         date: "January 12, 2025",
         title: "SEO Strategies to Rank Higher in 2025",
         image: "/mainpage/image3.png",
-        link: "/Blogs/seo-strategies-to-rank-higher-in-2025",
+        link: "/Blog/seo-strategies-to-rank-higher-in-2025",
       },
       {
         id: 5,
@@ -45,7 +45,7 @@ const blogs = [
         date: "January 20, 2025",
         title: "Best E-Commerce Platforms for Your Online Store",
         image: "/mainpage/image6.png",
-        link: "/Blogs/best-ecommerce-platforms-for-online-store",
+        link: "/Blog/best-ecommerce-platforms-for-online-store",
       },
       {
         id: 6,
@@ -53,7 +53,7 @@ const blogs = [
         date: "January 28, 2025",
         title: "How to Optimize Your Website for Speed and Performance",
         image: "/mainpage/image7.png",
-        link: "/Blogs/optimize-website-speed-performance",
+        link: "/Blog/optimize-website-speed-performance",
       },
 ];
 
