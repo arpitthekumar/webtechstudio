@@ -16,27 +16,42 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://webtechstudio.site"),
   robots: {
-    index: true, // Allow search engines to index your site
-    follow: true, // Allow following links
+    index: true,
+    follow: true,
   },
   title: {
-    default: "WebTechStudio - Best Web Development Agency in Agra, India",
-    template: "%s | WebTechStudio",
+    default: "Web Tech Studio - Best Web Development Company in Agra, India",
+    template: "%s | Web Tech Studio",
   },
+  keywords: [
+    "web development agency",
+    "website design company",
+    "SEO services",
+    "webtechstudio",
+    "Webtechstudio",
+    "webTechsStudio",
+    "web techs Studio",
+    "UI/UX design",
+    "custom web development",
+    "e-commerce website development",
+    "web tech studio",
+    "best web development company",
+    "website development services",
+  ],
   description:
-    "WebTechStudio is a leading web development agency in Agra, India. We specialize in modern websites, UI/UX design, SEO, and branding.",
+    "Web Tech Studio is a top-rated web development agency specializing in modern website design, UI/UX, SEO, and branding. Build your dream website with us!",
   openGraph: {
-    title: "WebTechStudio - Best Web Development Agency in Agra, India",
+    title: "Web Tech Studio - Professional Website Design & SEO Services",
     description:
-      "We provide high-quality websites, UI/UX design, and SEO solutions in Agra, India.",
+      "We provide expert web development, UI/UX design, and SEO solutions worldwide. Let's create a powerful online presence for your business!",
     url: "https://webtechstudio.site",
-    siteName: "WebTechStudio",
+    siteName: "Web Tech Studio",
     images: [
       {
         url: "https://webtechstudio.site/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "WebTechStudio - Web Development Agency",
+        alt: "Web Tech Studio - Website Design & Development Agency",
       },
     ],
     type: "website",
@@ -44,9 +59,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@WebTechStudio",
-    title: "WebTechStudio - Best Web Development Agency in Agra, India",
+    title: "Web Tech Studio - Build Your Dream Website Today!",
     description:
-      "We provide high-quality websites, UI/UX design, and SEO solutions in Agra, India.",
+      "Web Tech Studio is a trusted website design & development agency offering premium SEO services. Get a modern website that ranks & converts!",
     images: ["https://webtechstudio.site/opengraph-image.jpg"],
   },
   alternates: {
@@ -58,6 +73,7 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +84,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Web Tech Studio",
+        "url": "https://webtechstudio.site",
+        "logo": "https://webtechstudio.site/logo.png",
+        "alternateName": ["Web Tech Studio", "Web-Tech Studio", "WebTechStudio"],
+        "sameAs": [
+          "https://www.linkedin.com/company/webtechstudio",
+          "https://twitter.com/WebTechStudio",
+          "https://www.instagram.com/web_tech_studio/"
+        ],
+        "description": "Web Tech Studio is a top-rated web development agency in Agra, India, specializing in website design, SEO, and branding.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Your Address Here",
+          "addressLocality": "Agra",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 92594 93075",
+          "contactType": "customer service"
+        }
+      }) }} />
+      
         {" "}<meta name="google-site-verification" content="avlaj4hsl80raElN6J_6Do1K39M50iybjbBXr-HebmM" />
         <LoadingBar />
         {children}

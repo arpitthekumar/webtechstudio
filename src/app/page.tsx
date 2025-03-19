@@ -3,11 +3,11 @@ import HomePage from "./components/home/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WebTechStudio - Best Web Development Agency in Agra",
+  title: "Web Tech Studio - Best Web Development Agency in Agra",
   description:
     "WebTechStudio is a professional web development agency in Agra, India, specializing in UI/UX design, SEO, and branding solutions.",
   openGraph: {
-    title: "WebTechStudio - Best Web Development Agency in Agra",
+    title: "Web Tech Studio - Best Web Development Agency in Agra",
     description:
       "We provide expert web development, SEO, and branding solutions for businesses in Agra.",
     url: "https://webtechstudio.site",
