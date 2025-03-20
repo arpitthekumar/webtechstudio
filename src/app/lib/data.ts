@@ -3,8 +3,8 @@ const blogs = [
     slug: "nextjs-performance-optimization",
     title: "Mastering Next.js Performance Optimization",
     date: "March 20, 2025",
-    category: "Next.js",
-    image: "/pricing/image.webp",
+    category: "Web Development",
+    image: "/mainpage/image.png",
     sections: [
       {
         heading: "Introduction",
@@ -96,7 +96,7 @@ const blogs = [
     title: "Mastering Animations with Framer Motion and GSAP",
     date: "March 22, 2025",
     category: "Animations",
-    image: "/blogs/animation.webp",
+    image: "/mainpage/image1.png",
     sections: [
       {
         heading: "Introduction",
@@ -183,6 +183,503 @@ const blogs = [
         heading: "Conclusion",
         content:
           "At Web Tech Studio, we combine Framer Motion and GSAP to create stunning animations that enhance user engagement and website performance. Whether you're building a sleek UI or complex interactive effects, these tools provide everything needed for smooth animations.",
+      },
+    ],
+  },
+  {
+    slug: "seo-nextjs",
+    title: "Mastering SEO in Next.js: The Web Tech Studio Approach",
+    date: "March 22, 2025",
+    category: "SEO",
+    image: "/mainpage/image3.png",
+    sections: [
+      {
+        heading: "Introduction",
+        content:
+          "SEO (Search Engine Optimization) is crucial for improving website visibility and driving organic traffic. At Web Tech Studio, we leverage Next.js for its built-in SEO-friendly features, such as Server-Side Rendering (SSR), Static Site Generation (SSG), and automatic image optimization. This guide explores how we use Next.js to build high-ranking websites.",
+      },
+      {
+        shortQA: [
+          {
+            question: "Why does Web Tech Studio use Next.js for SEO?",
+            answer:
+              "Next.js provides SSR and SSG, which improve page load speeds and search engine indexing. It also supports dynamic metadata, structured data, and optimized images—all crucial for SEO success.",
+          },
+          {
+            question: "Does Next.js help in ranking higher on Google?",
+            answer:
+              "Yes! With optimized page speed, metadata handling, and schema support, Next.js websites load faster and rank better in search results.",
+          },
+        ],
+      },
+      {
+        heading: "Key SEO Strategies We Use in Next.js",
+        keypoints: [
+          {
+            point: "1. Dynamic Meta Tags with `next/head`",
+            explanation:
+              "We generate dynamic `title`, `description`, and Open Graph meta tags using `next/head` for improved search visibility.",
+            link: "https://nextjs.org/docs/pages/api-reference/components/head",
+          },
+          {
+            point: "2. Optimizing Core Web Vitals",
+            explanation:
+              "We focus on LCP, FID, and CLS scores, optimizing images, preloading fonts, and minimizing JavaScript for a faster experience.",
+          },
+          {
+            point: "3. Server-Side Rendering (SSR) for SEO",
+            explanation:
+              "We use `getServerSideProps` to fetch and render SEO-critical content on the server, ensuring Google indexes pages efficiently.",
+          },
+          {
+            point: "4. Static Site Generation (SSG) for Performance",
+            explanation:
+              "For pages with static content, we use `getStaticProps` to pre-render content, improving page load speeds and rankings.",
+          },
+          {
+            point: "5. Implementing Structured Data (Schema Markup)",
+            explanation:
+              "We add JSON-LD schema for articles, services, and business details to enhance rich search results.",
+          },
+          {
+            point: "6. Image Optimization with `next/image`",
+            explanation:
+              "We use Next.js’s `next/image` component to serve WebP images, ensuring automatic optimization and lazy loading.",
+          },
+          {
+            point: "7. Dynamic Sitemaps & Robots.txt for Search Crawling",
+            explanation:
+              "We dynamically generate XML sitemaps and `robots.txt` files, helping search engines discover all important pages.",
+          },
+        ],
+      },
+      {
+        heading: "How Web Tech Studio Implements SEO in Next.js",
+        longAnswer: [
+          {
+            point: "1. Crafting SEO-Optimized Page Titles & Descriptions",
+            explanation:
+              "Each page is dynamically optimized with unique metadata using `next/head` and Next.js’s built-in SEO tools.",
+          },
+          {
+            point: "2. Using API Routes for Dynamic SEO Data",
+            explanation:
+              "We fetch and update metadata in real-time using Next.js API routes and `getServerSideProps`, ensuring up-to-date SEO content.",
+          },
+          {
+            point: "3. Enhancing Image Optimization for Faster Loading",
+            explanation:
+              "All images are automatically resized, optimized, and lazy-loaded using `next/image` to improve Core Web Vitals.",
+          },
+          {
+            point: "4. Boosting Lighthouse Scores for SEO Rankings",
+            explanation:
+              "We follow best practices to optimize JavaScript, reduce third-party scripts, and enhance caching strategies for a top PageSpeed score.",
+          },
+          {
+            point: "5. Generating Dynamic Sitemaps & Robots.txt",
+            explanation:
+              "We ensure search engines can efficiently crawl our pages by dynamically creating sitemaps and configuring `robots.txt`.",
+          },
+        ],
+      },
+      {
+        heading: "Why Choose Web Tech Studio for SEO & Next.js?",
+        keypoints: [
+          {
+            point: "✅ Expertise in Next.js & SEO",
+            explanation:
+              "We specialize in Next.js development and implement advanced SEO techniques to ensure your website ranks higher on Google.",
+          },
+          {
+            point: "🚀 Performance-Driven Approach",
+            explanation:
+              "We focus on page speed, Core Web Vitals, and content structure to maximize SEO performance.",
+          },
+          {
+            point: "🔍 Proven SEO Strategies",
+            explanation:
+              "Our Next.js SEO strategies include metadata optimization, structured data, and content indexing for better search rankings.",
+          },
+          {
+            point: "📈 Results-Oriented Optimization",
+            explanation:
+              "We track and measure performance using Google Search Console and Lighthouse to continuously improve rankings.",
+          },
+        ],
+      },
+      {
+        heading: "Conclusion",
+        content:
+          "At Web Tech Studio, we use Next.js to create SEO-friendly, high-performance websites that rank higher and load faster. Our approach ensures that your business stays ahead in search engine rankings while delivering an amazing user experience.",
+      },
+    ],
+  },
+  {
+    slug: "performance-optimization-nextjs-framer-motion-gsap",
+    title: "Performance Optimization in Next.js, Framer Motion & GSAP",
+    date: "March 22, 2025",
+    category: "Performance",
+    image: "/mainpage/image7.png",
+    sections: [
+      {
+        heading: "Introduction",
+        content:
+          "Website performance is critical for user experience, SEO, and conversions. At Web Tech Studio, we use Next.js, Framer Motion, and GSAP to build ultra-fast websites with smooth animations. This guide explains how we optimize performance using cutting-edge techniques.",
+      },
+      {
+        shortQA: [
+          {
+            question:
+              "Why does Web Tech Studio focus on performance optimization?",
+            answer:
+              "Fast websites improve SEO, reduce bounce rates, and enhance user experience. We ensure our projects load quickly while maintaining smooth animations.",
+          },
+          {
+            question: "Does Framer Motion and GSAP affect website speed?",
+            answer:
+              "When used correctly, both libraries can enhance performance. We optimize animations to prevent jank, avoid layout shifts, and ensure smooth rendering.",
+          },
+        ],
+      },
+      {
+        heading: "Key Performance Optimization Strategies",
+        keypoints: [
+          {
+            point:
+              "1. Optimized Server-Side Rendering (SSR) & Static Site Generation (SSG)",
+            explanation:
+              "We leverage Next.js’s SSR (`getServerSideProps`) and SSG (`getStaticProps`) to render pages efficiently and improve load times.",
+            link: "https://nextjs.org/docs/basic-features/data-fetching",
+          },
+          {
+            point: "2. Code Splitting & Lazy Loading",
+            explanation:
+              "Next.js automatically splits code into smaller chunks. We further optimize by dynamically importing components and using lazy loading where needed.",
+          },
+          {
+            point: "3. Efficient Image Optimization",
+            explanation:
+              "Using Next.js’s `next/image`, we serve optimized images in modern formats like WebP, ensuring fast loading without quality loss.",
+          },
+          {
+            point: "4. Using Framer Motion Efficiently",
+            explanation:
+              "We animate only necessary components, use `will-change`, and limit re-renders to keep animations smooth without impacting performance.",
+          },
+          {
+            point: "5. GSAP Performance Best Practices",
+            explanation:
+              "We optimize GSAP animations using `GSAP Timeline`, `requestAnimationFrame`, and GPU acceleration for ultra-smooth effects.",
+          },
+          {
+            point: "6. Optimizing Core Web Vitals",
+            explanation:
+              "We improve LCP, CLS, and FID scores by reducing JavaScript execution time, optimizing assets, and using efficient caching strategies.",
+          },
+          {
+            point: "7. Minimized Third-Party Scripts & Dependencies",
+            explanation:
+              "We avoid unnecessary external scripts, reduce JavaScript bloat, and use tree shaking to remove unused code.",
+          },
+        ],
+      },
+      {
+        heading: "How Web Tech Studio Implements Performance Optimization",
+        longAnswer: [
+          {
+            point: "1. Enhancing Page Load Speeds with Next.js",
+            explanation:
+              "By using automatic static optimization and incremental static regeneration, we ensure fast-loading pages that rank well on Google.",
+          },
+          {
+            point: "2. Optimizing Framer Motion for Better Performance",
+            explanation:
+              "We prevent unnecessary re-renders by using `useMemo` and `shouldReduceMotion`, optimizing animations without slowing down the UI.",
+          },
+          {
+            point: "3. Leveraging GSAP’s GPU Acceleration",
+            explanation:
+              "We enable hardware acceleration (`force3D: true`), use transforms instead of absolute positioning, and limit reflows for optimal performance.",
+          },
+          {
+            point: "4. Implementing Lazy Loading for Images & Videos",
+            explanation:
+              "We lazy-load images and videos to ensure content is loaded only when needed, reducing initial page load time.",
+          },
+          {
+            point: "5. Caching Strategies & Content Delivery Networks (CDN)",
+            explanation:
+              "We utilize CDN caching, Next.js API optimizations, and browser caching for efficient asset delivery.",
+          },
+        ],
+      },
+      {
+        heading: "Why Choose Web Tech Studio for Performance Optimization?",
+        keypoints: [
+          {
+            point: "⚡ High-Speed Next.js Websites",
+            explanation:
+              "We specialize in Next.js development, ensuring every project meets the highest speed and efficiency standards.",
+          },
+          {
+            point: "🎥 Smooth Animations with Framer Motion & GSAP",
+            explanation:
+              "Our expertise in Framer Motion & GSAP ensures that animations are optimized without impacting performance.",
+          },
+          {
+            point: "📈 Improved Core Web Vitals for SEO",
+            explanation:
+              "We optimize websites to meet Google's performance benchmarks, boosting SEO rankings and user experience.",
+          },
+          {
+            point: "🔧 Custom Performance Optimization",
+            explanation:
+              "Every project is fine-tuned with caching, lazy loading, and resource optimization to achieve maximum speed.",
+          },
+        ],
+      },
+      {
+        heading: "Conclusion",
+        content:
+          "At Web Tech Studio, we combine the power of Next.js, Framer Motion, and GSAP to build high-performance websites with seamless animations. Our approach ensures blazing-fast speeds, improved SEO, and an exceptional user experience.",
+      },
+    ],
+  },
+
+  {
+    slug: "ui-ux-design-nextjs-framer-motion-gsap",
+    title: "UI/UX Design with Next.js, Framer Motion & GSAP",
+    date: "March 22, 2025",
+    category: "UI/UX Design",
+    image: "/mainpage/image2.png",
+    sections: [
+      {
+        heading: "Introduction",
+        content:
+          "A well-designed UI/UX is key to retaining users and improving engagement. At Web Tech Studio, we create immersive user experiences using Next.js, Framer Motion, and GSAP. This guide explores how we design interfaces that are both visually stunning and highly functional.",
+      },
+      {
+        shortQA: [
+          {
+            question: "Why is UI/UX design important for websites?",
+            answer:
+              "A great UI/UX improves user engagement, reduces bounce rates, and increases conversions. A well-optimized interface makes navigation smooth and intuitive.",
+          },
+          {
+            question: "How do animations enhance UI/UX?",
+            answer:
+              "Animations create fluid transitions, guide user attention, and make interactions feel natural. Framer Motion and GSAP help us achieve this seamlessly.",
+          },
+        ],
+      },
+      {
+        heading: "Key Principles of UI/UX Design",
+        keypoints: [
+          {
+            point: "1. Responsive & Adaptive Design",
+            explanation:
+              "We ensure our designs work flawlessly across all devices using Next.js’s responsive utilities and CSS best practices.",
+          },
+          {
+            point: "2. Interactive Animations with Framer Motion",
+            explanation:
+              "Framer Motion allows us to build UI animations that feel smooth, engaging, and dynamic, enhancing user interaction.",
+          },
+          {
+            point: "3. Advanced Motion Graphics with GSAP",
+            explanation:
+              "GSAP enables complex animations like scroll-based effects, parallax transitions, and timeline-based interactions.",
+          },
+          {
+            point: "4. Performance-Focused UI",
+            explanation:
+              "We optimize every design choice to ensure fast load times, smooth interactions, and a frustration-free experience.",
+          },
+          {
+            point: "5. Accessibility & Usability",
+            explanation:
+              "Our UI/UX designs follow accessibility standards (WCAG) to make websites user-friendly for everyone.",
+          },
+        ],
+      },
+      {
+        heading: "How Web Tech Studio Designs Next-Level UI/UX",
+        longAnswer: [
+          {
+            point: "1. Crafting Visually Appealing Layouts",
+            explanation:
+              "We use Next.js’s flexible layout system to create visually stunning, structured, and modern interfaces.",
+          },
+          {
+            point: "2. Enhancing Micro-Interactions",
+            explanation:
+              "Framer Motion’s `whileHover` and `whileTap` add micro-interactions to buttons and elements, making interactions more engaging.",
+          },
+          {
+            point: "3. Scroll-Based Animations with GSAP",
+            explanation:
+              "Using GSAP’s ScrollTrigger, we implement smooth scroll-based effects that enhance storytelling and engagement.",
+          },
+          {
+            point: "4. Creating Seamless Page Transitions",
+            explanation:
+              "Next.js with Framer Motion allows us to add fluid, fast-loading page transitions that improve user flow.",
+          },
+          {
+            point: "5. Optimizing for Performance & User Experience",
+            explanation:
+              "Our UI/UX designs prioritize fast load times, minimizing heavy assets while keeping animations smooth and responsive.",
+          },
+        ],
+      },
+      {
+        heading: "Why Choose Web Tech Studio for UI/UX Design?",
+        keypoints: [
+          {
+            point: "🎨 Modern & Aesthetic Designs",
+            explanation:
+              "We create visually stunning interfaces that reflect brand identity and user needs.",
+          },
+          {
+            point: "⚡ High-Performance UI/UX",
+            explanation:
+              "We balance beautiful design with optimized performance, ensuring fast, smooth experiences.",
+          },
+          {
+            point: "🎥 Smooth Animations with Framer Motion & GSAP",
+            explanation:
+              "Our use of Framer Motion and GSAP ensures every animation feels natural and enhances usability.",
+          },
+          {
+            point: "🔧 Custom UI/UX Solutions",
+            explanation:
+              "We design tailored UI/UX experiences that cater to business goals, user behavior, and accessibility.",
+          },
+        ],
+      },
+      {
+        heading: "Conclusion",
+        content:
+          "At Web Tech Studio, we merge **Next.js, Framer Motion, and GSAP** to craft intuitive, engaging, and high-performance UI/UX experiences. Our design philosophy ensures fast, seamless, and interactive websites that captivate users and drive conversions.",
+      },
+    ],
+  },
+  {
+    slug: "ecommerce-website-development-nextjs-framer-motion-gsap",
+    title: "E-Commerce Website Development with Next.js, Framer Motion & GSAP",
+    date: "March 22, 2025",
+    category: "E-Commerce",
+    image: "/mainpage/image6.png",
+    sections: [
+      {
+        heading: "Introduction",
+        content:
+          "A well-built e-commerce website is key to driving sales and enhancing user experience. At Web Tech Studio, we craft fast, interactive, and high-converting e-commerce platforms using Next.js, Framer Motion, and GSAP. This guide explores how we build cutting-edge online stores that maximize conversions and engagement.",
+      },
+      {
+        shortQA: [
+          {
+            question: "Why choose Next.js for e-commerce?",
+            answer:
+              "Next.js provides **fast page loads, SEO optimization, and seamless performance**, making it ideal for high-traffic e-commerce stores.",
+          },
+          {
+            question: "How do animations improve e-commerce UX?",
+            answer:
+              "Framer Motion and GSAP create smooth transitions, interactive product showcases, and engaging micro-interactions, enhancing user experience and conversions.",
+          },
+        ],
+      },
+      {
+        heading: "Key Features of a Modern E-Commerce Website",
+        keypoints: [
+          {
+            point: "1. Lightning-Fast Performance with Next.js",
+            explanation:
+              "Next.js enables server-side rendering (SSR) and static site generation (SSG), ensuring ultra-fast load times for product pages.",
+          },
+          {
+            point: "2. Dynamic UI Animations with Framer Motion",
+            explanation:
+              "Framer Motion enhances user engagement with animated product transitions, cart interactions, and hover effects.",
+          },
+          {
+            point: "3. Interactive Product Showcases with GSAP",
+            explanation:
+              "GSAP’s timeline animations and scroll effects allow immersive product displays, enhancing the shopping experience.",
+          },
+          {
+            point: "4. SEO & Core Web Vitals Optimization",
+            explanation:
+              "Next.js helps optimize page speed and metadata, improving search rankings and visibility for e-commerce stores.",
+          },
+          {
+            point: "5. Secure & Scalable Architecture",
+            explanation:
+              "We build secure, scalable platforms with Next.js, ensuring a seamless shopping experience even under high traffic.",
+          },
+        ],
+      },
+      {
+        heading: "How Web Tech Studio Builds High-Performance E-Commerce Sites",
+        longAnswer: [
+          {
+            point: "1. Optimized Checkout Flows",
+            explanation:
+              "We design seamless checkout experiences with minimal steps, reducing cart abandonment and boosting conversions.",
+          },
+          {
+            point: "2. Engaging Product Pages with Framer Motion",
+            explanation:
+              "Our product pages feature **smooth image transitions, hover effects, and animated call-to-actions (CTAs)** to improve engagement.",
+          },
+          {
+            point: "3. Scroll-Based Animations with GSAP",
+            explanation:
+              "Using GSAP’s ScrollTrigger, we implement scroll-based interactions that make browsing **engaging and intuitive**.",
+          },
+          {
+            point: "4. AI-Powered Search & Filters",
+            explanation:
+              "We integrate **real-time search and AI-driven product recommendations**, enhancing the user experience.",
+          },
+          {
+            point: "5. Mobile-First & Responsive Design",
+            explanation:
+              "Our e-commerce websites are fully **responsive**, providing a seamless shopping experience across all devices.",
+          },
+        ],
+      },
+      {
+        heading: "Why Choose Web Tech Studio for E-Commerce Development?",
+        keypoints: [
+          {
+            point: "🚀 Blazing-Fast Load Times",
+            explanation:
+              "We use Next.js’s advanced rendering techniques to ensure fast product browsing and checkout speeds.",
+          },
+          {
+            point: "🎨 Stunning Animations with Framer Motion & GSAP",
+            explanation:
+              "Our use of Framer Motion and GSAP ensures **engaging, high-converting animations** for e-commerce sites.",
+          },
+          {
+            point: "📈 SEO & Performance Optimization",
+            explanation:
+              "We optimize every aspect of the site for **SEO and high Google Core Web Vitals scores**, boosting rankings and visibility.",
+          },
+          {
+            point: "🛒 Custom E-Commerce Solutions",
+            explanation:
+              "We tailor each store to **business needs, branding, and customer behavior**, creating a unique shopping experience.",
+          },
+        ],
+      },
+      {
+        heading: "Conclusion",
+        content:
+          "At Web Tech Studio, we build next-generation **e-commerce websites** powered by **Next.js, Framer Motion, and GSAP**. Our expertise in UI/UX, performance optimization, and modern animations ensures an engaging shopping experience that drives conversions and sales.",
       },
     ],
   },
