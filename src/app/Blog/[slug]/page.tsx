@@ -1,11 +1,13 @@
-import { notFound } from "next/navigation";
+"use client";
+import { notFound, usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
-import blogs from "./data";
+import blogs from "../../lib/data";
 import Navbar from "@/app/components/main/Navbar";
 import Footer from "@/app/components/main/Footer";
 import Cta from "@/app/components/main/cta/Cta";
+import { useEffect, useState } from "react";
+import BlogSEO from "./component/BlogSEO";
 
 type BlogType = {
   slug: string;
@@ -24,63 +26,111 @@ type BlogType = {
   }[];
 };
 
-// interface PageProps {
-//   params: { slug?: string };
-// }
-
-// export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-//   const resolvedParams = await params;
-//   if (!resolvedParams?.slug) return {};
-
-//   const slug = resolvedParams.slug;
-//   const blog = blogs.find((b) => b.slug === slug);
+// ✅ Enhanced Dynamic SEO with JSON-LD Schema Markup
+// export async function generateMetadata(): Promise<Metadata> {
+//   const blog = blogs[0];
 //   if (!blog) return {};
 
+//   const blogUrl = `https://webtechstudio.site/blog/${blog.slug}`;
+
 //   return {
-//     title: `${blog.title} | WebTech Studio`,
+//     title: `${blog.title} | Web Tech Studio`,
 //     description: `Read our latest insights on ${blog.category}. Learn more about ${blog.title} at WebTech Studio.`,
+//     keywords: `Web Tech, SEO, ${blog.category}, ${blog.title}, WebTech Studio, ${blog.slug}`,
+//     authors: [{ name: "WebTech Studio", url: "https://webtechstudio.site" }],
+//     alternates: { canonical: blogUrl },
 //     openGraph: {
-//       title: `${blog.title} | WebTech Studio`,
+//       title: `${blog.title} | Web Tech Studio`,
 //       description: `Learn about ${blog.title} in our latest blog.`,
-//       url: `https://webtechstudio.site/blog/${slug}`,
+//       url: blogUrl,
 //       type: "article",
+//       publishedTime: blog.date,
+//       siteName: "Web Tech Studio",
 //       images: [{ url: blog.image, width: 1200, height: 630, alt: blog.title }],
 //     },
 //     twitter: {
 //       card: "summary_large_image",
-//       title: `${blog.title} | WebTech Studio`,
+//       title: `${blog.title} | Web Tech Studio`,
 //       description: `Discover ${blog.title} and more on our blog.`,
 //       images: [blog.image],
+//     },
+//     other: {
+//       "application/ld+json": JSON.stringify({
+//         "@context": "https://schema.org",
+//         "@type": "BlogPosting",
+//         "mainEntityOfPage": { "@type": "WebPage", "@id": blogUrl },
+//         "headline": blog.title,
+//         "image": blog.image,
+//         "datePublished": blog.date,
+//         "dateModified": blog.date,
+//         "author": { "@type": "Organization", "name": "Web Tech Studio" },
+//         "publisher": {
+//           "@type": "Organization",
+//           "name": "Web Tech Studio",
+//           "logo": { "@type": "ImageObject", "url": "https://webtechstudio.site/logo.png" },
+//         },
+//         "description": `Learn more about ${blog.title}.`,
+//       }),
 //     },
 //   };
 // }
 
-export default function BlogPage() {
-  const blog = blogs[0]; // ✅ Just using the first blog (Can be changed dynamically)
 
+export default function BlogPage() {
+  const [blog, setBlog] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const slug = pathname.split("/").pop(); // ✅ Get slug from URL
+    const foundBlog = blogs.find((b) => b.slug === slug);
+    setBlog(foundBlog || null);
+    setLoading(false);
+  }, [pathname]);
+
+  if (loading) return <p className="text-white text-center py-10">Loading...</p>;
   if (!blog) return notFound();
 
   return (
     <>
+  <BlogSEO
+        title={blog.title}
+        description={`Read our latest insights on ${blog.category}. Learn more about ${blog.title} at WebTech Studio.`}
+        slug={blog.slug}
+        image={blog.image}
+        date={blog.date}
+        category={blog.category}
+      />
       <Navbar />
       <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-6 md:px-20 max-w-9xl">
           <header className="text-center">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">{blog.title}</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              {blog.title}
+            </h1>
             <div className="flex flex-wrap justify-between mt-2 text-lg text-bluish-gray">
-              <span className="px-4 py-2 bg-text-bg text-white rounded-full">{blog.category}</span>
+              <span className="px-4 py-2 bg-text-bg text-white rounded-full">
+                {blog.category}
+              </span>
               <span>{blog.date}</span>
             </div>
           </header>
 
           <div className="mt-6 w-full h-64 md:h-96 lg:h-[500px] relative rounded-3xl overflow-hidden">
-            <Image src={blog.image} alt={blog.title} fill className="object-cover" />
+            <Image
+              src={blog.image}
+              alt={blog.title}
+              fill
+              className="object-cover"
+            />
           </div>
 
           <div className="mt-10 space-y-16 md:space-y-20">
-            {blog.sections.map((section, index) => (
-              <BlogSection key={index} section={section} />
-            ))}
+            {blog.sections.map(
+              (section: BlogType["sections"][number], index: number) => (
+                <BlogSection key={index} section={section} />
+              )
+            )}
           </div>
         </div>
         <Cta />
@@ -90,25 +140,38 @@ export default function BlogPage() {
   );
 }
 
-const BlogSection = ({ section }: { section: BlogType["sections"][0] }) => (
+const BlogSection = ({
+  section,
+}: {
+  section: BlogType["sections"][number];
+}) => (
   <div className="space-y-5 px-4 md:px-0">
     {section.heading && (
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">
         {section.heading}
       </h2>
     )}
-    {section.content && <p className="text-lg md:text-xl text-bluish-gray">{section.content}</p>}
+    {section.content && (
+      <p className="text-lg md:text-xl text-bluish-gray">{section.content}</p>
+    )}
 
     {section.shortQA?.map((qa, i) => (
-      <div key={i} className="border-l-4 border-[var(--acua-marine)] pl-4 space-y-2 py-2">
-        <p className="font-semibold text-xl md:text-2xl lg:text-4xl text-white">{qa.question}</p>
+      <div
+        key={i}
+        className="border-l-4 border-[var(--acua-marine)] pl-4 space-y-2 py-2"
+      >
+        <p className="font-semibold text-xl md:text-2xl lg:text-4xl text-white">
+          {qa.question}
+        </p>
         <p className="text-lg text-bluish-gray">{qa.answer}</p>
       </div>
     ))}
 
     {section.keypoints?.map((kp, i) => (
       <div key={i} className="p-2">
-        <p className="text-lg md:text-2xl font-bold text-acua-marine">{kp.point}</p>
+        <p className="text-lg md:text-2xl font-bold text-acua-marine">
+          {kp.point}
+        </p>
         <p className="text-lg text-bluish-gray pt-2">
           {kp.explanation}{" "}
           {kp.link && (
@@ -123,12 +186,14 @@ const BlogSection = ({ section }: { section: BlogType["sections"][0] }) => (
     {section.longAnswer?.map((la, i) => (
       <div key={i} className="p-2 rounded-lg">
         <p className="text-lg font-bold pb-1 text-acua-marine">{la.point}</p>
-        <p className="text-lg text-bluish-gray">{la.explanation}</p>
+        <p className="text-lg text--bluish-gray">{la.explanation}</p>
       </div>
     ))}
 
     {section.conclusion && (
-      <p className="text-lg text-bluish-gray italic pl-4">{section.conclusion}</p>
+      <p className="text-lg text-bluish-gray italic pl-4">
+        {section.conclusion}
+      </p>
     )}
   </div>
 );
