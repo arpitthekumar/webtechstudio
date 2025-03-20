@@ -24,26 +24,51 @@ type BlogType = {
   }[];
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const blog = blogs.find((b) => b.slug === params.slug);
-  return blog
-    ? {
-        title: blog.title,
-        description: `Read our latest insights on ${blog.category} at WebTech Studio.`,
-      }
-    : {};
+// ✅ Define `PageProps` Type
+interface PageProps {
+  params: { slug?: string };
 }
 
-export default function BlogPage({ params }: { params: { slug: string } }) {
-  const blog = blogs.find((b) => b.slug === params.slug);
+// ✅ Fix `generateMetadata`
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params; // ✅ Ensure params are awaited
+  if (!resolvedParams?.slug) return {}; // ✅ Prevent errors
+
+  const slug = resolvedParams.slug;
+  const blog = blogs.find((b) => b.slug === slug);
+  if (!blog) return {};
+
+  return {
+    title: `${blog.title} | WebTech Studio`,
+    description: `Read our latest insights on ${blog.category}. Learn more about ${blog.title} at WebTech Studio.`,
+    openGraph: {
+      title: `${blog.title} | WebTech Studio`,
+      description: `Learn about ${blog.title} in our latest blog.`,
+      url: `https://webtechstudio.site/blog/${slug}`,
+      type: "article",
+      images: [{ url: blog.image, width: 1200, height: 630, alt: blog.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${blog.title} | WebTech Studio`,
+      description: `Discover ${blog.title} and more on our blog.`,
+      images: [blog.image],
+    },
+  };
+}
+
+// ✅ Fix `BlogPage`
+export default async function BlogPage({ params }: PageProps) {
+  const resolvedParams = await params; // ✅ Ensure params are awaited
+  if (!resolvedParams?.slug) return notFound(); // ✅ Ensure params exist
+
+  const slug = resolvedParams.slug;
+  const blog = blogs.find((b) => b.slug === slug);
   if (!blog) return notFound();
 
   return (
-    <><Navbar/>
+    <>
+      <Navbar />
       <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-6 md:px-20 max-w-9xl">
           {/* Header */}
@@ -74,9 +99,9 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
             ))}
           </div>
         </div>
-      <Cta/>
+        <Cta />
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }
