@@ -89,11 +89,11 @@
             "details": "A sleek, professional design that reflects credibility and reliability."
           }
         ],
-        "thumbnail": "/images/triguna-thumbnail.jpg",
+        "thumbnail": "/project/triguna/image1.png",
         "gallery": [
-          "/images/triguna-1.jpg",
-          "/images/triguna-2.jpg",
-          "/images/triguna-3.jpg"
+          "/project/triguna/image2.png",
+          "/project/triguna/image.png",
+          "/project/triguna/image3.png"
         ]
       }
     ]
