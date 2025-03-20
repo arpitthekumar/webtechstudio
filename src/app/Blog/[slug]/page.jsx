@@ -5,7 +5,6 @@ import blogs from "../../lib/data";
 import Navbar from "@/app/components/main/Navbar";
 import Footer from "@/app/components/main/Footer";
 import Cta from "@/app/components/main/cta/Cta";
-import BlogSEO from "./component/BlogSEO";
 
 export async function generateMetadata() {
   const blog = blogs[0];
@@ -54,25 +53,27 @@ export async function generateMetadata() {
     },
   };
 }
+export function generateStaticParams() {
+  return blogs.map((blog) => ({ slug: blog.slug }));
+}
 
-export default function BlogPage({ params }) {
-  if (!params?.slug) return notFound();
+export default async function BlogPage({ params }) {
+  if (!params) return notFound();
 
-  const decodedSlug = decodeURIComponent(params.slug);
+  // Ensure params are awaited before accessing slug
+  const { slug } = await params;
+
+  if (!slug) return notFound();
+
+  const decodedSlug = decodeURIComponent(slug);
   const blog = blogs.find((b) => b.slug === decodedSlug);
 
   if (!blog) return notFound();
 
+
   return (
     <>
-      <BlogSEO
-        title={blog.title}
-        description={`Read our latest insights on ${blog.category}. Learn more about ${blog.title} at WebTech Studio.`}
-        slug={blog.slug}
-        image={blog.image}
-        date={blog.date}
-        category={blog.category}
-      />
+      
       <Navbar />
       <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-6 md:px-20 max-w-9xl">
@@ -102,7 +103,7 @@ export default function BlogPage({ params }) {
 }
 
 const BlogSection = ({ section }) => (
-  <div className="space-y-5 px-4 md:px-0">
+  <div className="space-y-5 ">
     {section.heading && <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">{section.heading}</h2>}
     {section.content && <p className="text-lg md:text-xl text-bluish-gray">{section.content}</p>}
     {section.shortQA?.map((qa, i) => (

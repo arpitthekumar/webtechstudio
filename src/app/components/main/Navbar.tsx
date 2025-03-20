@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const navItems = ["About", "Project", "Services", "Pricing", "Blog"];
+  const navItems = ["About", "Projects", "Services", "Pricing", "Blog"];
 
   return (
     <nav className="sticky top-0 z-20 bg-black text-white p-6 px-6 md:px-20 flex justify-between items-center">

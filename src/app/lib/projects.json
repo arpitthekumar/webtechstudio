@@ -1,0 +1,101 @@
+{
+    "projects": [
+      {
+        "id": "triguna-coaching-classes",
+        "name": "Triguna Coaching Classes",
+        "tagline": "Elevating Education with Cutting-Edge Web Technology",
+        "agency": "Web Tech Studio",
+        "introduction": "At Web Tech Studio, we don’t just build websites—we craft powerful digital experiences that enhance brands and maximize engagement. Triguna Coaching Classes is a testament to our expertise in web development, UI/UX design, and SEO-driven strategy, helping students seamlessly connect with top-quality coaching resources.",
+        "website_url": "https://trigunacoachingclasses.in",
+        "technologies": ["Next.js", "Tailwind CSS", "GSAP", "Framer Motion"],
+        "features": [
+          {
+            "details": "Developed with Next.js 14, optimizing speed and smooth navigation."
+          },
+          {
+            "details": "Implemented on-page and dynamic SEO to improve Google rankings and attract students."
+          },
+          {
+            "details": "Used GSAP and Framer Motion for smooth transitions, interactive hover effects, and immersive animations."
+          },
+          {
+            "details": "Designed for seamless access across all devices, ensuring maximum engagement."
+          },
+          {
+            "details": "Integrated a knowledge hub with study materials, faculty details, and regular updates."
+          }
+        ],
+        "challenges_overview": "Triguna Coaching Classes faced multiple challenges, including an outdated design that lacked engagement, slow website performance affecting user experience, low SEO visibility reducing student reach, and minimal interactive elements that failed to highlight its unique approach.",
+
+        "challenges": [
+          {
+            "title": "Outdated Website Design",
+            "details": "The site lacked modern aesthetics and intuitive navigation, leading to poor engagement."
+          },
+          {
+            "title": "Slow Performance & Poor Responsiveness",
+            "details": "The platform wasn’t optimized for mobile users, resulting in slow load times and accessibility issues."
+          },
+          {
+            "title": "Limited SEO Visibility",
+            "details": "The website wasn’t ranking well on search engines, affecting organic traffic and student enrollments."
+          },
+          {
+            "title": "Lack of Interactive Elements",
+            "details": "The existing site didn’t effectively showcase Triguna Coaching’s unique approach and expertise."
+          }
+        ],
+        "solutions_overview": "To overcome these challenges, we implemented a comprehensive strategy that included a modern UI/UX redesign for better navigation, performance optimizations for faster load times, SEO enhancements to improve visibility, and interactive animations to create an engaging digital experience.",
+
+        "solutions": [
+          {
+            "title": "User-Centric Redesign",
+            "details": "Crafted a modern, intuitive layout for seamless navigation, making it easier for students to explore courses and resources."
+          },
+          {
+            "title": "Mobile-Optimized Performance",
+            "details": "Built a fully responsive website with lightning-fast speed for optimal accessibility."
+          },
+          {
+            "title": "SEO-Optimized Strategy",
+            "details": "Applied on-page and dynamic SEO techniques to boost search engine rankings and visibility."
+          },
+          {
+            "title": "Engaging UI & Animations",
+            "details": "Implemented GSAP and Framer Motion for fluid interactions and immersive visual storytelling."
+          },
+          {
+            "title": "Performance & Scalability",
+            "details": "Optimized for speed and future growth, ensuring long-term usability and expansion capabilities."
+          }
+        ],
+        "results": {
+          "reduced_bounce_rate": "40% decrease in bounce rate and improved session durations.",
+          "boosted_search_rankings": "SEO improvements significantly increased organic traffic.",
+          "higher_engagement": "A modern, dynamic design resulted in more student inquiries and enrollments.",
+          "seamless_mobile_experience": "The fully responsive layout achieved 95% mobile usability."
+        },
+        "why_stand_out": [
+          {
+            "title": "Built for Performance & Growth",
+            "details": "A scalable website that can easily integrate new features in the future."
+          },
+          {
+            "title": "Optimized for Search & Speed",
+            "details": "Ensuring fast load times and top-tier search engine visibility."
+          },
+          {
+            "title": "Aesthetic Meets Functionality",
+            "details": "A sleek, professional design that reflects credibility and reliability."
+          }
+        ],
+        "thumbnail": "/images/triguna-thumbnail.jpg",
+        "gallery": [
+          "/images/triguna-1.jpg",
+          "/images/triguna-2.jpg",
+          "/images/triguna-3.jpg"
+        ]
+      }
+    ]
+  }
+  

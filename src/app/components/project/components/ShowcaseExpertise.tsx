@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "../../main/button/Button";
 import Chip from "../../main/chip/chip";
 
 const projects = [
@@ -12,25 +11,25 @@ const projects = [
     image: "/mainpage/image8.png",
     category: "Web Development",
     title: "Zenithox – Elevating Marketing Agency Experience",
-    link: "/projects/zenithox",
+    link: "/Projects/zenithox",
   },
   {
     image: "/mainpage/image7.png",
     category: "Branding",
     title: "NeonTech – Revolutionizing AI Solutions",
-    link: "/projects/neontech",
+    link: "/Projects/neontech",
   },
   {
     image: "/mainpage/image6.png",
     category: "E-commerce",
     title: "ShopEase – Modern Shopping Experience",
-    link: "/projects/shopease",
+    link: "/Projects/shopease",
   },
   {
     image: "/mainpage/image9.png",
     category: "SaaS Platform",
     title: "CloudSync – Efficient Data Management",
-    link: "/projects/cloudsync",
+    link: "/Projects/cloudsync",
   },
 ];
 
