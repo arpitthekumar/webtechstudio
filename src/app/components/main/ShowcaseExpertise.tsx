@@ -30,11 +30,11 @@ const projects = [
     link: "/Projects/universal-taekwondo-academy",
   },
   {
-    image: "/mainpage/image6.png",
-    category: "E-commerce",
-    Chip: "Triguna Coaching Classes",
-    title: "ShopEase – Modern Shopping Experience",
-    link: "/Projects/shopease",
+    image: "/project/adsuper/image.png",
+    category: "Web Development",
+    Chip: "ADSuper",
+    title: "Mastering SEO & UX for Maximum Conversion",
+    link: "/Projects/adsuper",
   },
 ];
 

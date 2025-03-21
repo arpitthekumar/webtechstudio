@@ -333,6 +333,90 @@
         "/project/tkw/image2.png",
         "/project/tkw/image3.png"
       ]
+    },
+    {
+      "id": "adsuper",
+      "name": "ADSuper - Targeted SEO & Design",
+      "tagline": "Mastering SEO & UX for Maximum Conversion",
+      "agency": "Web Tech Studio",
+      "introduction": "ADSuper was a unique project by Web Tech Studio,  where we focused solely on a single-page experience. The goal was to enhance SEO, improve the page's UI/UX, and ensure it ranked higher in search engines. Our expertise in targeted optimization and structured content helped ADSuper reach a larger audience while maintaining a smooth and engaging design.",
+      "website_url": "https://adsuper.netlify.app/",
+      "technologies": ["Next.js", "Tailwind CSS", "SEO Optimization"],
+      "features": [
+        {
+          "details": "SEO-optimized structure for better search engine performance."
+        },
+        {
+          "details": "Single-page layout designed for fast loading and smooth navigation."
+        },
+        {
+          "details": "Content strategy that enhances user engagement and retention."
+        }
+      ],
+      "challenges_overview": "This project was Web Tech Studio’s  first time working on **only a main page** rather than a full website. The challenge was to optimize a single-page experience with proper SEO and a visually engaging design that encouraged conversions.",
+      "challenges": [
+        {
+          "title": "First-Time Single-Page SEO Optimization",
+          "details": "We needed to implement an effective SEO strategy without multi-page depth."
+        },
+        {
+          "title": "Ensuring a Compelling UX/UI",
+          "details": "With only one page, it was crucial to make every element count in terms of design and functionality."
+        },
+        {
+          "title": "Standing Out in Search Rankings",
+          "details": "We had to ensure ADSuper outperformed competitors despite its single-page limitation."
+        }
+      ],
+      "solutions_overview": "By applying SEO-driven structuring, Next.js optimizations, and refined design choices, we transformed ADSuper’s page into a powerful digital asset.",
+      "solutions": [
+        {
+          "title": "Targeted On-Page SEO Strategy",
+          "details": "Implemented schema markup, meta optimizations, and content hierarchy for maximum visibility."
+        },
+        {
+          "title": "Lightweight & Performance-Oriented",
+          "details": "Used Next.js for static generation and fast-loading content."
+        },
+        {
+          "title": "Conversion-Focused UI Enhancements",
+          "details": "Strategic placement of call-to-actions (CTAs) to drive engagement and interactions."
+        }
+      ],
+      "results": [
+        {
+          "title": "Improved Search Ranking",
+          "details": "The optimized SEO structure resulted in a noticeable boost in organic traffic."
+        },
+        {
+          "title": "Higher Engagement Rate",
+          "details": "Users spent more time on the page, interacting with content and CTAs effectively."
+        },
+        {
+          "title": "Faster Load Speeds",
+          "details": "Next.js optimizations led to a **30% reduction in page load time**, improving user experience."
+        }
+      ],
+      "why_stand_out": [
+        {
+          "title": "Precision SEO for a Single Page",
+          "details": "Our approach ensured top rankings despite the absence of multi-page depth."
+        },
+        {
+          "title": "High-Speed, Lightweight Performance",
+          "details": "Optimized for both SEO and user experience."
+        },
+        {
+          "title": "Strategically Designed for Engagement",
+          "details": "Every design element was crafted to enhance interactions and conversions."
+        }
+      ],
+      "thumbnail": "/project/adsuper/image.png",
+      "gallery": [
+        "/project/adsuper/image1.png",
+        "/project/adsuper/image2.png",
+        "/project/adsuper/image3.png"
+      ]
     }
   ]
 }

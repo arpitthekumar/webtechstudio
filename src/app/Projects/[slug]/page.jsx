@@ -215,7 +215,7 @@ export default async function ProjectPage({ params }) {
           <div className="mt-4 text-bluish-gray space-y-4">
             {project.results.map((result, index) => (
               <div key={index} className="flex items-start gap-3">
-                <span className="text-2xl">          {index === 0 ? "🚀" : index === 1 ? "📈" : index === 2 ? "📊" : "📱"}
+                <span className="text-2xl ">          {index === 0 ? "🚀" : index === 1 ? "📈" : index === 2 ? "📊" : "📱"}
                 </span>
                 <div>
                   <strong className="text-xl text-white">

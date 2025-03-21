@@ -9,49 +9,44 @@ import Chip from "../../main/chip/chip";
 const projects = [
   {
     image: "/project/triguna/image1.png",
-    category: "Web Development",
+    category: ["Web Development","Branding", "SEO"],
     Chip: "Triguna Coaching Classes",
     title: "Elevating Education with Cutting-Edge Web Technology",
     link: "/Projects/triguna-coaching-classes",
   },
   {
     image: "/project/gurukul/image1.png",
-    category: "Branding",
+    category: ["E-commerce", "SEO"],
     Chip: "Gurukul Skills",
     title: "Empowering Careers with Cutting-Edge Skill Development",
     link: "/Projects/gurukul-skills",
   },
   {
     image: "/project/tkw/image.png",
-    category: "Web Development",
+    category: ["Branding", "SEO"],
     Chip: "Universal Taekwondo Academy",
     title: "Empowering Champions with a Dynamic Digital Presence",
     link: "/Projects/universal-taekwondo-academy",
   },
   {
-    image: "/mainpage/image9.png",
-    category: "E-commerce",
-    Chip: "Triguna Coaching Classes",
-    title: "CloudSync – Efficient Data Management",
-    link: "/Projects/cloudsync",
+    image: "/project/adsuper/image.png",
+    category: ["Web Development", "SEO"], // ✅ Multiple categories
+    Chip: "ADSuper",
+    title: "Mastering SEO & UX for Maximum Conversion",
+    link: "/Projects/adsuper",
   },
 ];
 
-const categories = [
-  "All",
-  "Web Development",
-  "Branding",
-  "E-commerce",
-];
+const categories = ["All", "Web Development", "Branding", "E-commerce", "SEO"];
 
 const ShowcaseExpertise = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Track which project is hovered
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((project) => project.category === activeCategory);
+      : projects.filter((project) => project.category.includes(activeCategory)); // ✅ Updated filtering logic
 
   return (
     <div className="bg-black text-white py-20 px-6 md:px-20">
@@ -64,7 +59,6 @@ const ShowcaseExpertise = () => {
         className="flex flex-col items-center text-center relative"
       >
         <Chip text="Our Work" isDark={true} />
-
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
           Showcasing Our Expertise
         </h1>
@@ -76,25 +70,25 @@ const ShowcaseExpertise = () => {
       </motion.div>
 
       {/* ✅ Category Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 rounded-full border-2 ${
-                activeCategory === category
-                  ? "bg-[var(--acua-marine)] text-black"
-                  : "border-gray-400 text-gray-400 hover:bg-gray-700"
-              } transition-all`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveCategory(category)}
+            className={`px-5 py-2 rounded-full border-2 ${
+              activeCategory === category
+                ? "bg-[var(--acua-marine)] text-black"
+                : "border-gray-400 text-gray-400 hover:bg-gray-700"
+            } transition-all`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
 
       {/* ✅ Animated Projects Section */}
       <motion.div
-        key={activeCategory} // ✅ This forces re-animation when category changes
+        key={activeCategory}
         initial="hidden"
         animate="visible"
         variants={{
