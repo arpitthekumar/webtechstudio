@@ -74,8 +74,8 @@ export default function HeroSection() {
           <div className="space-y-6">
             {[
               { title: "Office Address", value: "123 Creative Street, Innovation City, 56789" },
-              { title: "Phone Number", value: "+1 (123) 456-7890" },
-              { title: "Email Address", value: "hello@mail.com" },
+              { title: "Phone Number", value: "+91 92594 93075" },
+              { title: "Email Address", value: "webtechstudio37@gmail.com" },
             ].map((item, index) => (
               <motion.div
                 key={index}

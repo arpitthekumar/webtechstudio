@@ -103,7 +103,7 @@ export default async function ProjectPage({ params }) {
           <ul className="mt-4 space-y-3 text-bluish-gray">
             {project.features.map((feature, index) => (
               <li key={index} className="flex items-start gap-3">
-                <div className="h-2 w-2 mt-1 mr-2 rounded-full bg-acua-marine"></div>
+                <div className="h-2 w-2 mt-2 mr-2 rounded-full bg-acua-marine"></div>
                 <span>{feature.details}</span>
               </li>
             ))}
@@ -111,51 +111,57 @@ export default async function ProjectPage({ params }) {
         </div>
 
         {/* Challenges Section */}
-        <div className="mt-12">
-          <h2 className="text-4xl font-semibold">The Challenge</h2>
-          <p className="mt-4 text-bluish-gray">{project.challenges_overview}</p>
+        <div className="mt-12 px-4 md:px-0">
+          <h2 className="text-2xl md:text-4xl font-semibold">The Challenge</h2>
+          <p className="mt-4 text-bluish-gray text-base md:text-lg">{project.challenges_overview}</p>
           <ul className="mt-4 space-y-3 text-bluish-gray">
             {project.challenges.map((challenge, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <div className="h-2 w-2 mt-1 mr-2 rounded-full bg-red-600"></div>
-                <strong className="text-xl text-white">
-                  {challenge.title}
-                </strong>{" "}
-                <span>{challenge.details}</span>
+              <li key={index} className="flex  items-start gap-3">
+                <div className="h-2 w-2 mt-2  mr-2 rounded-full  flex-shrink-0 bg-red-600"></div>
+                <div>
+                  <strong className="text-lg md:text-xl text-white">
+                    {challenge.title}
+                  </strong>
+                  <span className="block text-base md:text-lg">{challenge.details}</span>
+                </div>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Solutions Section */}
-        <div className="mt-12">
-          <h2 className="text-4xl font-semibold">Our Solution</h2>
-          <p className="mt-4 text-bluish-gray">{project.solutions_overview}</p>
+        <div className="mt-12 px-4 md:px-0">
+          <h2 className="text-2xl md:text-4xl font-semibold">Our Solution</h2>
+          <p className="mt-4 text-bluish-gray text-base md:text-lg">{project.solutions_overview}</p>
           <ul className="mt-4 space-y-3 text-bluish-gray">
             {project.solutions.map((solution, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <div className="h-2 w-2 mt-1 mr-2 rounded-full bg-acua-marine"></div>
-                <strong className="text-xl text-white">{solution.title}</strong>{" "}
-                <span>{solution.details}</span>
+              <li key={index} className="flex  items-start gap-3">
+                <div className="h-2 w-2 mt-2 mr-2 rounded-full flex-shrink-0 bg-acua-marine"></div>
+                <div>
+                  <strong className="text-lg md:text-xl text-white">{solution.title}</strong>
+                  <span className="block text-base md:text-lg">{solution.details}</span>
+                </div>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Why This Project Stands Out */}
-        <div className="mt-12">
-          <h2 className="text-4xl font-semibold">
-            Why This Project Stands Out?
-          </h2>
+        <div className="mt-12 px-4 md:px-0">
+          <h2 className="text-2xl md:text-4xl font-semibold">Why This Project Stands Out?</h2>
           <ul className="mt-4 space-y-3 text-bluish-gray">
             {project.why_stand_out.map((point, index) => (
               <li key={index} className="flex items-start gap-3">
-                🔹<strong className="text-xl text-white">{point.title}</strong>{" "}
-                <span>{point.details}</span>
+                <span className="text-lg md:text-xl flex-shrink-0">🔹</span>
+                <div>
+                  <strong className="text-lg md:text-xl text-white">{point.title}</strong>
+                  <span className="block text-base md:text-lg">{point.details}</span>
+                </div>
               </li>
             ))}
           </ul>
         </div>
+
 
         {/* Results Section */}
         <div className="mt-12">
