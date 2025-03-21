@@ -6,22 +6,47 @@ import Chip from "../../main/chip/chip";
 
 export default function HeroSection() {
   const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    setHasAnimated(true);
-  }, []);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  useEffect(() => {
+    setHasAnimated(true);
+  }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        setMessage({ type: "success", text: "Message sent successfully! 🎉" });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        throw new Error(data.error || "Something went wrong.");
+      }
+    } catch (error: any) {
+      setMessage({ type: "error", text: error.message });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -37,13 +62,9 @@ export default function HeroSection() {
         {/* ✅ Header */}
         <div className="flex flex-col space-y-6 md:space-y-6 text-left">
           <Chip text="Contact Us" isDark={true} />
-          <h1 className="text-3xl md:text-5xl font-bold max-w-3xl">
-            Let's Bring Your Vision to Life
-          </h1>
-          <p className="text-bluish-gray mt-4  text-base md:text-lg max-w-7xl">
-            Have a project in mind or need help with design and development?
-            We're here to answer your questions, discuss your ideas, and create
-            something amazing together. Reach out to us, and let's get started.
+          <h1 className="text-3xl md:text-5xl font-bold max-w-3xl">Let's Bring Your Vision to Life</h1>
+          <p className="text-bluish-gray mt-4 text-base md:text-lg max-w-7xl">
+            Have a project in mind or need help with design and development? Reach out to us, and let's get started.
           </p>
         </div>
 
@@ -79,48 +100,62 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <h2 className="text-2xl font-bold mb-6">Contact Form</h2>
-            <form className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="flex flex-col md:flex-row gap-4">
                 <input
                   type="text"
                   name="name"
                   placeholder="Full Name"
-                  aria-label="Full Name"
-                  className="bg-black text-white w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-[#50fa7b]"
+                  value={formData.name}
                   onChange={handleChange}
+                  className="bg-black text-white w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-[#50fa7b]"
+                  required
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email Address"
-                  aria-label="Email Address"
-                  className="bg-black text-white w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-[#50fa7b]"
+                  value={formData.email}
                   onChange={handleChange}
+                  className="bg-black text-white w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-[#50fa7b]"
+                  required
                 />
               </div>
               <input
                 type="tel"
                 name="phone"
                 placeholder="Phone Number"
-                aria-label="Phone Number"
-                className="bg-black text-white w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-[#50fa7b]"
+                value={formData.phone}
                 onChange={handleChange}
+                className="bg-black text-white w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-[#50fa7b]"
+                required
               />
               <textarea
                 name="message"
                 placeholder="Message"
-                aria-label="Message"
+                value={formData.message}
+                onChange={handleChange}
                 rows={4}
                 className="bg-black text-white w-full px-4 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-[#50fa7b]"
-                onChange={handleChange}
+                required
               ></textarea>
               <button
                 type="submit"
-                className="bg-acua-marine text-black font-bold px-4 py-3 rounded-xl transition-transform transform hover:scale-105"
+                disabled={loading}
+                className={`bg-acua-marine text-black font-bold px-4 py-3 rounded-xl transition-transform transform hover:scale-105 ${
+                  loading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
+
+            {/* Success/Error Message */}
+            {message && (
+              <p className={`mt-4 text-${message.type === "success" ? "green-500" : "red-500"}`}>
+                {message.text}
+              </p>
+            )}
           </motion.div>
         </div>
       </motion.div>
