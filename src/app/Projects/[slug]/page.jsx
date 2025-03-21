@@ -7,7 +7,6 @@ import Cta from "@/app/components/main/cta/Cta";
 import Footer from "@/app/components/main/Footer";
 import Chip from "@/app/components/main/chip/chip";
 
-// Dynamic Import for projects.json
 async function getProject(slug) {
   const projectsData = await import("@/app/lib/projects.json");
   return projectsData.projects.find((p) => p.id === slug);
@@ -15,7 +14,10 @@ async function getProject(slug) {
 
 // Metadata Function
 export async function generateMetadata({ params }) {
-  const project = await getProject(params.slug);
+  const { slug } = await params; // ✅ Await params before using
+  if (!slug) return { title: "Project Not Found | WebTech Studio" };
+
+  const project = await getProject(decodeURIComponent(slug));
 
   if (!project) {
     return {
@@ -24,29 +26,73 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const projectUrl = `https://webtechstudio.site/projects/${project.id}`;
+
   return {
-    title: `${project.name} | WebTech Studio`,
+    title: `${project.name} | Web Tech Studio`,
     description: project.introduction,
+    keywords: `Web Tech, ${project.name}, WebTech Studio, ${project.id}`,
+    authors: [{ name: "WebTech Studio", url: "https://webtechstudio.site" }],
+    alternates: { canonical: projectUrl },
     openGraph: {
       title: project.name,
       description: project.introduction,
+      url: projectUrl,
+      type: "article",
+      siteName: "Web Tech Studio",
       images: [
         {
           url: project.thumbnail,
-          width: 800,
-          height: 400,
+          width: 1200,
+          height: 630,
           alt: project.name,
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: project.name,
+      description: project.introduction,
+      images: [project.thumbnail],
+    },
+    other: {
+      "application/ld+json": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": projectUrl },
+        "headline": project.name,
+        "image": project.thumbnail,
+        "datePublished": project.date,
+        "dateModified": project.date,
+        "author": { "@type": "Organization", "name": "WebTech Studio" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "WebTech Studio",
+          "logo": { "@type": "ImageObject", "url": "https://webtechstudio.site/logo.png" },
+        },
+        "description": project.introduction,
+      }),
+    },
   };
+}
+
+// Static Params for Dynamic Routes
+export function generateStaticParams() {
+  const projectsData = require("@/app/lib/projects.json");
+  return projectsData.projects.map((project) => ({
+    slug: project.id,
+  }));
 }
 
 // Project Page Component
 export default async function ProjectPage({ params }) {
-  const project = await getProject(params.slug);
+  const { slug } = await params; // ✅ Await params before using
+  if (!slug) return notFound();
+
+  const project = await getProject(decodeURIComponent(slug));
 
   if (!project) return notFound();
+
 
   return (
     <div className="min-h-screen min-w-9xl bg-black text-white">
