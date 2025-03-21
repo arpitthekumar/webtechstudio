@@ -9,28 +9,32 @@ import Chip from "./chip/chip";
 
 const projects = [
   {
-    image: "/mainpage/image8.png",
+    image: "/project/triguna/image1.png",
     category: "Web Development",
-    title: "Zenithox – Elevating Marketing Agency Experience",
-    link: "/projects/zenithox",
+    Chip: "Triguna Coaching Classes",
+    title: "Elevating Education with Cutting-Edge Web Technology",
+    link: "/Projects/triguna-coaching-classes",
   },
   {
     image: "/mainpage/image7.png",
     category: "Branding",
+    Chip: "Triguna Coaching Classes",
     title: "NeonTech – Revolutionizing AI Solutions",
-    link: "/projects/neontech",
+    link: "/Projects/neontech",
   },
   {
     image: "/mainpage/image6.png",
     category: "E-commerce",
+    Chip: "Triguna Coaching Classes",
     title: "ShopEase – Modern Shopping Experience",
-    link: "/projects/shopease",
+    link: "/Projects/shopease",
   },
   {
     image: "/mainpage/image9.png",
     category: "SaaS Platform",
+    Chip: "Triguna Coaching Classes",
     title: "CloudSync – Efficient Data Management",
-    link: "/projects/cloudsync",
+    link: "/Projects/cloudsync",
   },
 ];
 
@@ -107,7 +111,7 @@ const ShowcaseExpertise = () => {
                     alt={project.title}
                     width={600}
                     height={550}
-                    className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] object-cover"
+                    className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] object-fill"
                   />
 
                   {/* ✅ Hover Effect */}
@@ -122,7 +126,7 @@ const ShowcaseExpertise = () => {
                     className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[85%] flex flex-col justify-center gap-4 backdrop-blur-lg bg-black/40 rounded-2xl px-4 py-6"
                   >
                     <p className="text-xs sm:text-sm border-2 rounded-4xl w-fit px-3 py-1 sm:py-2 text-white border-[var(--acua-marine)] hover:bg-[var(--acua-marine)]">
-                      {project.category}
+                      {project.Chip}
                     </p>
                     <div className="flex items-center justify-center gap-2">
                       <h3 className="text-lg sm:text-xl md:text-2xl font-semibold underline">

@@ -56,20 +56,25 @@ export default async function ProjectPage({ params }) {
 
         {/* Header */}
         <div className="flex text-4xl font-bold">
-          <h1 className="text-4xl gap-2font-bold">
+          <h1 className="text-4xl gap-2 font-bold">
             {project.name} - {project.tagline}
           </h1>
         </div>
 
         {/* Clickable Thumbnail */}
         <div className="mt-8 flex justify-center">
-          <Link href={project.website_url} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={project.website_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
             <Image
               src={project.thumbnail}
               alt={project.name}
-              width={800}
-              height={400}
-              className="rounded-4xl shadow-4xl cursor-pointer transition-transform hover:scale-105"
+              width={900} // This is ignored when `w-full` is used
+              height={400} // This is still needed for proper aspect ratio
+              className="w-full h-auto rounded-4xl shadow-4xl cursor-pointer object-cover transition-transform hover:scale-105"
             />
           </Link>
         </div>
@@ -87,7 +92,9 @@ export default async function ProjectPage({ params }) {
         {/* Introduction */}
         <div className="mt-6">
           <h2 className="text-4xl font-semibold">About the Project</h2>
-          <p className="text-lg text-bluish-gray mt-6">{project.introduction}</p>
+          <p className="text-lg text-bluish-gray mt-6">
+            {project.introduction}
+          </p>
         </div>
 
         {/* Features Section */}
@@ -111,7 +118,9 @@ export default async function ProjectPage({ params }) {
             {project.challenges.map((challenge, index) => (
               <li key={index} className="flex items-start gap-3">
                 <div className="h-2 w-2 mt-1 mr-2 rounded-full bg-red-600"></div>
-                <strong className="text-xl text-white">{challenge.title}</strong>{" "}
+                <strong className="text-xl text-white">
+                  {challenge.title}
+                </strong>{" "}
                 <span>{challenge.details}</span>
               </li>
             ))}
@@ -135,7 +144,9 @@ export default async function ProjectPage({ params }) {
 
         {/* Why This Project Stands Out */}
         <div className="mt-12">
-          <h2 className="text-4xl font-semibold">Why This Project Stands Out?</h2>
+          <h2 className="text-4xl font-semibold">
+            Why This Project Stands Out?
+          </h2>
           <ul className="mt-4 space-y-3 text-bluish-gray">
             {project.why_stand_out.map((point, index) => (
               <li key={index} className="flex items-start gap-3">
@@ -150,29 +161,46 @@ export default async function ProjectPage({ params }) {
         <div className="mt-12">
           <h2 className="text-4xl font-semibold">The Results</h2>
           <div className="mt-4 text-bluish-gray">
-            🚀 <strong className="text-xl text-white">Reduced Bounce Rate:</strong> {project.results.reduced_bounce_rate} <br />
-            📈 <strong className="text-xl text-white">Boosted Search Rankings:</strong> {project.results.boosted_search_rankings} <br />
-            📊 <strong className="text-xl text-white">Higher Engagement & Conversions:</strong> {project.results.higher_engagement} <br />
-            📱 <strong className="text-xl text-white">Seamless Mobile Experience:</strong> {project.results.seamless_mobile_experience}
+            🚀{" "}
+            <strong className="text-xl text-white">Reduced Bounce Rate:</strong>{" "}
+            {project.results.reduced_bounce_rate} <br />
+            📈{" "}
+            <strong className="text-xl text-white">
+              Boosted Search Rankings:
+            </strong>{" "}
+            {project.results.boosted_search_rankings} <br />
+            📊{" "}
+            <strong className="text-xl text-white">
+              Higher Engagement & Conversions:
+            </strong>{" "}
+            {project.results.higher_engagement} <br />
+            📱{" "}
+            <strong className="text-xl text-white">
+              Seamless Mobile Experience:
+            </strong>{" "}
+            {project.results.seamless_mobile_experience}
           </div>
         </div>
 
         {/* Image Gallery */}
         <div className="mt-12">
-          <h2 className="text-4xl font-semibold">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            {project.gallery.map((image, index) => (
-              <Image
-                key={index}
-                src={image}
-                alt={`Project Image ${index + 1}`}
-                width={800}
-                height={450}
-                className={`rounded-lg shadow-md ${index === 0 ? "md:col-span-2" : ""}`}
-              />
-            ))}
-          </div>
-        </div>
+  <h2 className="text-4xl font-semibold">Project Gallery</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    {project.gallery.map((image, index) => (
+      <Image
+        key={index}
+        src={image}
+        alt={`Project Image ${index + 1}`}
+        width={800} // Image width (ignored when w-full is applied)
+        height={450} // Aspect ratio maintained
+        className={`rounded-4xl shadow-md w-full object-cover ${
+          index === 0 ? "md:col-span-2 md:h-[500px]" : "h-[300px]"
+        }`}
+      />
+    ))}
+  </div>
+</div>
+
       </section>
       <Cta />
       <Footer />
