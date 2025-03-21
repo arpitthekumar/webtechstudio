@@ -26,7 +26,7 @@ const Footer = () => {
       items: [
         // { name: "Styleguide", href: "/Styleguide" },
         // { name: "Changelog", href: "/Changelog" },
-        { name: "Privacy Policy", href: "/ Privacypolicy" },
+        { name: "Privacy Policy", href: "/PrivacyPolicy" },
         { name: "License", href: "/License" },
         // { name: "YouTube", href: "https://youtube.com" },
       ],

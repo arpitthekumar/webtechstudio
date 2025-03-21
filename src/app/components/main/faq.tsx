@@ -11,28 +11,42 @@ interface FAQItem {
 const FAQ = () => {
   const [faqs, setFaqs] = useState<FAQItem[]>([
     {
-      question: "What services does Kairos offer?",
+      question: "What services does WebTech Studio provide?",
       answer:
-        "Kairos offers web development, UI/UX design, branding, and more.",
+        "WebTech Studio specializes in web development, UI/UX design, branding, SEO optimization, and e-commerce solutions.",
     },
     {
-      question: "How long does it take to complete a project?",
+      question: "How long does it take to develop a website with WebTech Studio?",
       answer:
-        "The project timeline varies depending on the scope and complexity.",
+        "Project timelines depend on complexity, but we typically deliver websites within 4 to 8 weeks. Custom solutions may take longer.",
     },
     {
-      question: "Can I customize my pricing plan?",
-      answer: "Yes, we offer flexible pricing plans.",
+      question: "Do you offer SEO-friendly website development?",
+      answer:
+        "Yes! All our websites are optimized for search engines, ensuring fast load speeds, mobile responsiveness, and high Google rankings.",
     },
     {
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Yes, we offer ongoing support and maintenance.",
+      question: "Can I request custom features for my website?",
+      answer:
+        "Absolutely! We offer custom web development tailored to your business needs, including unique functionalities and integrations.",
     },
     {
-      question: "What makes Kairos different from other agencies?",
-      answer: "Kairos focuses on tailored solutions and high-quality delivery.",
+      question: "Do you provide website maintenance and support?",
+      answer:
+        "Yes, we offer ongoing website maintenance, updates, security checks, and performance optimizations to keep your site running smoothly.",
+    },
+    {
+      question: "How can WebTech Studio help improve my online presence?",
+      answer:
+        "Our SEO experts optimize your site for better rankings, while our branding and UI/UX design enhance user engagement and conversions.",
+    },
+    {
+      question: "Why should I choose WebTech Studio over other web agencies?",
+      answer:
+        "We focus on high-performance, SEO-friendly websites with modern design and user experience, ensuring business growth and ROI.",
     },
   ]);
+  
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 

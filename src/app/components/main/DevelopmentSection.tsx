@@ -93,7 +93,7 @@ const Section = ({ title, description, features, image, reverse }: any) => (
         {features.map((item: string, index: number) => (
           <FeatureItem key={index} text={item} />
         ))}
-        <Button text="Discover Our Story" mode="light" href="/contact" />
+        <Button text="Discover Our Story" mode="light" href="/Contact" />
       </div>
     )}
   </motion.section>

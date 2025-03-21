@@ -35,12 +35,19 @@ const projects = [
     title: "Mastering SEO & UX for Maximum Conversion",
     link: "/Projects/adsuper",
   },
+  {
+    image: "/project/mrdamager/image3.png",
+    category: ["Web Development"], // ✅ Multiple categories
+    Chip: "Mr.Damager",
+    title: "Showcasing Cutting-Edge Animations & UI Excellence",
+    link: "/Projects/mrdamager_portfolio",
+  },
 ];
 
 const categories = ["All", "Web Development", "Branding", "E-commerce", "SEO"];
 
 const ShowcaseExpertise = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Web Development");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const filteredProjects =

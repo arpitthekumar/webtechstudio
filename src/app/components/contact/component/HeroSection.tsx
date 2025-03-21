@@ -73,7 +73,7 @@ export default function HeroSection() {
           {/* Left - Contact Details */}
           <div className="space-y-6">
             {[
-              { title: "Office Address", value: "123 Creative Street, Innovation City, 56789" },
+              { title: "Address", value: "Agra India" },
               { title: "Phone Number", value: "+91 92594 93075" },
               { title: "Email Address", value: "webtechstudio37@gmail.com" },
             ].map((item, index) => (

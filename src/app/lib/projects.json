@@ -417,6 +417,93 @@
         "/project/adsuper/image2.png",
         "/project/adsuper/image3.png"
       ]
+    },
+    {
+      "id": "mrdamager_portfolio",
+      "name": "Mr. Damager - Next.js Portfolio",
+      "tagline": "Showcasing Cutting-Edge Animations & UI Excellence",
+      "agency": "Web Tech Studio",
+      "introduction": "Mr. Damager's portfolio is a masterpiece crafted by Web Tech Studio, blending high-performance development with immersive animations. Built with Next.js, GSAP, and Locomotive Scroll, this portfolio delivers an engaging, smooth, and interactive user experience. Every section is optimized for performance, ensuring fast load times and SEO-friendly structure while maintaining a stunning visual appeal.",
+      "website_url": "https://mrdamager.netlify.app/",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "Locomotive Scroll", "SEO Optimization"],
+      "features": [
+        {
+          "details": "Seamless GSAP animations with smooth scrolling effects for a dynamic user experience."
+        },
+        {
+          "details": "SEO-optimized structure ensuring fast load times and high search engine visibility."
+        },
+        {
+          "details": "Dark-themed, minimal UI/UX design crafted for a modern and premium feel."
+        },
+        {
+          "details": "Performance-driven development with Next.js for static site generation and server-side rendering."
+        }
+      ],
+      "challenges_overview": "Building a high-performance portfolio with advanced animations while maintaining fast load speeds and smooth UX was a key challenge. Ensuring the website was mobile-friendly and SEO-optimized without compromising interactivity required strategic development.",
+      "challenges": [
+        {
+          "title": "Advanced GSAP & Locomotive Scroll Integration",
+          "details": "Implementing fluid animations while keeping performance optimized across all devices."
+        },
+        {
+          "title": "Balancing Aesthetics & Speed",
+          "details": "Maintaining high animation quality without sacrificing website load times."
+        },
+        {
+          "title": "SEO & Performance Optimization",
+          "details": "Ensuring search engine visibility despite the heavy animation effects."
+        }
+      ],
+      "solutions_overview": "By leveraging modern frontend technologies, optimized animations, and SEO best practices, we built a visually striking yet high-performing portfolio.",
+      "solutions": [
+        {
+          "title": "GSAP & Framer Motion for Stunning Animations",
+          "details": "Created engaging transitions, page reveals, and scroll-triggered effects."
+        },
+        {
+          "title": "Next.js & Tailwind CSS for Speed & Performance",
+          "details": "Ensured fast load times with efficient code and static optimization."
+        },
+        {
+          "title": "SEO-Optimized Content & Structured Markup",
+          "details": "Implemented schema markup, optimized metadata, and fast-loading assets."
+        }
+      ],
+      "results": [
+        {
+          "title": "Enhanced User Engagement",
+          "details": "Users interact more with smooth transitions and immersive animations."
+        },
+        {
+          "title": "Faster Load Speeds",
+          "details": "Optimized assets and Next.js improvements reduced load time by 40%."
+        },
+        {
+          "title": "Higher SEO Rankings",
+          "details": "Improved search visibility with optimized structure and keyword-rich content."
+        }
+      ],
+      "why_stand_out": [
+        {
+          "title": "Best-in-Class Animations & UI",
+          "details": "Showcasing high-quality developer expertise with seamless interactions."
+        },
+        {
+          "title": "Performance-Optimized for SEO",
+          "details": "Ensuring fast load times while maintaining a visually stunning design."
+        },
+        {
+          "title": "Tailored for a Developer’s Portfolio",
+          "details": "Designed to attract high-value clients and showcase technical skills effectively."
+        }
+      ],
+      "thumbnail": "/project/mrdamager/image.png",
+      "gallery": [
+        "/project/mrdamager/image1.png",
+        "/project/mrdamager/image2.png",
+        "/project/mrdamager/image3.png"
+      ]
     }
   ]
 }

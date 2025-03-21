@@ -72,7 +72,7 @@ const Team: React.FC = () => {
       >
         <Chip text="Meet Our Team" isDark={true} />
         <h2 className="text-5xl text-white font-bold">
-          Meet Our Kairos Expertise
+          Meet Our WebTech Studio Expertise
         </h2>
         <p className="text-gray-200 max-w-xl mt-2">
           Our team is a diverse group of professionals, each bringing their
