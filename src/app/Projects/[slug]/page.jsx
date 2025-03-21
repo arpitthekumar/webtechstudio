@@ -160,47 +160,40 @@ export default async function ProjectPage({ params }) {
         {/* Results Section */}
         <div className="mt-12">
           <h2 className="text-4xl font-semibold">The Results</h2>
-          <div className="mt-4 text-bluish-gray">
-            🚀{" "}
-            <strong className="text-xl text-white">Reduced Bounce Rate:</strong>{" "}
-            {project.results.reduced_bounce_rate} <br />
-            📈{" "}
-            <strong className="text-xl text-white">
-              Boosted Search Rankings:
-            </strong>{" "}
-            {project.results.boosted_search_rankings} <br />
-            📊{" "}
-            <strong className="text-xl text-white">
-              Higher Engagement & Conversions:
-            </strong>{" "}
-            {project.results.higher_engagement} <br />
-            📱{" "}
-            <strong className="text-xl text-white">
-              Seamless Mobile Experience:
-            </strong>{" "}
-            {project.results.seamless_mobile_experience}
+          <div className="mt-4 text-bluish-gray space-y-4">
+            {project.results.map((result, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <span className="text-2xl">          {index === 0 ? "🚀" : index === 1 ? "📈" : index === 2 ? "📊" : "📱"}
+                </span>
+                <div>
+                  <strong className="text-xl text-white">
+                    {result.title}:
+                  </strong>
+                  <p>{result.details}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Image Gallery */}
         <div className="mt-12">
-  <h2 className="text-4xl font-semibold">Project Gallery</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-    {project.gallery.map((image, index) => (
-      <Image
-        key={index}
-        src={image}
-        alt={`Project Image ${index + 1}`}
-        width={800} // Image width (ignored when w-full is applied)
-        height={450} // Aspect ratio maintained
-        className={`rounded-4xl shadow-md w-full object-cover ${
-          index === 0 ? "md:col-span-2 md:h-[500px]" : "h-[300px]"
-        }`}
-      />
-    ))}
-  </div>
-</div>
-
+          <h2 className="text-4xl font-semibold">Project Gallery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            {project.gallery.map((image, index) => (
+              <Image
+                key={index}
+                src={image}
+                alt={`Project Image ${index + 1}`}
+                width={800} // Image width (ignored when w-full is applied)
+                height={450} // Aspect ratio maintained
+                className={`rounded-4xl shadow-md w-full object-fill ${
+                  index === 0 ? "md:col-span-2 md:h-[600px]" : "h-[400px]"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </section>
       <Cta />
       <Footer />

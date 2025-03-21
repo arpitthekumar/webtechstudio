@@ -16,11 +16,18 @@ const projects = [
     link: "/Projects/triguna-coaching-classes",
   },
   {
-    image: "/mainpage/image7.png",
+    image: "/project/gurukul/image1.png",
     category: "Branding",
-    Chip: "Triguna Coaching Classes",
-    title: "NeonTech – Revolutionizing AI Solutions",
-    link: "/Projects/neontech",
+    Chip: "Gurukul Skills",
+    title: "Empowering Careers with Cutting-Edge Skill Development",
+    link: "/Projects/gurukul-skills",
+  },
+  {
+    image: "/project/tkw/image.png",
+    category: "Web Development",
+    Chip: "Universal Taekwondo Academy",
+    title: "Empowering Champions with a Dynamic Digital Presence",
+    link: "/Projects/universal-taekwondo-academy",
   },
   {
     image: "/mainpage/image6.png",
@@ -28,13 +35,6 @@ const projects = [
     Chip: "Triguna Coaching Classes",
     title: "ShopEase – Modern Shopping Experience",
     link: "/Projects/shopease",
-  },
-  {
-    image: "/mainpage/image9.png",
-    category: "SaaS Platform",
-    Chip: "Triguna Coaching Classes",
-    title: "CloudSync – Efficient Data Management",
-    link: "/Projects/cloudsync",
   },
 ];
 
@@ -70,7 +70,7 @@ const ShowcaseExpertise = () => {
           viewport={{ once: true }}
           className="mt-4 md:absolute md:bottom-0 md:right-0"
         >
-          <Button text="View All Projects" mode="light" href="/Contact" />
+          <Button text="View All Projects" mode="light" href="/Projects" />
         </motion.div>
       </motion.div>
 
