@@ -4,67 +4,108 @@ import { motion } from "framer-motion";
 import Chip from "./chip/chip";
 
 const testimonials = [
+  // Triguna Coaching Classes
   {
-    text: "Working with Kairos was a game changer for us. They delivered a flawless website that surpassed our expectations. Their expertise in web development made our vision a reality with a seamless experience.",
-    name: "Michael Lee",
-    position: "Founder, BrandLift",
-    image: "/mainpage/image.png",
+    text: "Web Tech Studio delivered a fast, responsive, and visually appealing website for our coaching center. The new design and structured content have significantly improved student inquiries.",
+    name: "Amit Verma",
+    position: "Founder, Triguna Coaching Classes",
+    image: "/clientphoto/sir2.jpg",
   },
   {
-    text: "Kairos’s UX design services improved our engagement by 50%. Their attention to detail is unmatched. The team took time to understand our brand and delivered a stunning, user-friendly design that boosted our conversions significantly.",
-    name: "Sarah Collins",
-    position: "CEO, DesignHub",
-    image: "/mainpage/image.png",
+    text: "Their SEO strategy helped us reach a wider audience, and the smooth UX makes it easier for students to navigate. Highly recommend their expertise!",
+    name: "Ravi Mehta",
+    position: "Co-Founder, Triguna Coaching Classes",
+    image: "/clientphoto/sir4.jpg",
   },
   {
-    text: "The branding work Kairos did for us was incredible. They transformed our brand into something fresh and modern. Their ability to capture the essence of our company and translate it into a strong visual identity was outstanding.",
-    name: "David Lee",
-    position: "Marketing Head, SwiftCorp",
-    image: "/mainpage/image.png",
+    text: "From branding to development, everything was handled with professionalism. Our website now truly represents the excellence of our coaching institute.",
+    name: "Neha Agarwal",
+    position: "Managing Director, Triguna Coaching Classes",
+    image: "/project/triguna/image3.png",
+  },
+
+  // Gurukul Skills
+  {
+    text: "Web Tech Studio created an engaging platform that makes online learning simple and effective. Their UI/UX expertise is unmatched!",
+    name: "Neha Sharma",
+    position: "CEO, Gurukul Skills",
+    image: "/project/gurukul/image1.png",
   },
   {
-    text: "Our platform now looks premium and user-friendly, boosting our sales by 70%. A highly professional team! Their design and development process was smooth, and they ensured every feature was perfectly aligned with our business goals.",
-    name: "Anita Roy",
-    position: "Product Manager, FlowTech",
-    image: "/mainpage/image.png",
+    text: "We saw a 60% increase in student enrollments after the redesign. Their team truly understands how to convert visitors into active users.",
+    name: "Vikram Singh",
+    position: "Co-Founder, Gurukul Skills",
+    image: "/project/gurukul/image2.png",
   },
   {
-    text: "Kairos delivered an exceptional e-commerce platform for us. The UI is intuitive, fast, and beautifully designed. Our customer feedback has been overwhelmingly positive, and we’ve seen an increase in repeat purchases.",
-    name: "James Carter",
-    position: "CTO, ShopEase",
-    image: "/mainpage/image.png",
+    text: "Their use of modern animations and seamless navigation makes our website feel premium. It's a game-changer for online education.",
+    name: "Meenal Rajput",
+    position: "Head of Operations, Gurukul Skills",
+    image: "/project/gurukul/image3.png",
+  },
+
+  // Universal Taekwondo Academy
+  {
+    text: "Our academy needed a strong digital presence, and Web Tech Studio delivered. The animations and fast load speed improved our user experience significantly.",
+    name: "Mark Robinson",
+    position: "Head Instructor, Universal Taekwondo Academy",
+    image: "/project/tkw/image.png",
   },
   {
-    text: "Thanks to Kairos, our SaaS product now has a sleek, high-performance UI that’s intuitive and easy to navigate. Their design team was collaborative, and their attention to accessibility made a huge difference.",
-    name: "Emily Watson",
-    position: "Lead Developer, SoftCloud",
-    image: "/mainpage/image.png",
+    text: "The website now reflects the energy and discipline of Taekwondo. The bold, action-packed visuals are exactly what we needed!",
+    name: "David Kim",
+    position: "Co-Founder, Universal Taekwondo Academy",
+    image: "/project/tkw/image2.png",
   },
   {
-    text: "The website Kairos developed for us helped increase our credibility and brand authority. Their creative approach to web design made a lasting impact, and we highly recommend their services to anyone looking for top-tier digital solutions.",
-    name: "Robert Hughes",
-    position: "COO, VisionTech",
-    image: "/mainpage/image.png",
+    text: "Their work exceeded our expectations. The website looks professional, is easy to use, and helps us attract more students.",
+    name: "Linda Carter",
+    position: "Director, Universal Taekwondo Academy",
+    image: "/project/tkw/image3.png",
+  },
+
+  // ADSuper
+  {
+    text: "Web Tech Studio crafted a high-converting, SEO-optimized landing page for us. Since the launch, traffic and engagement have skyrocketed.",
+    name: "Rahul Kapoor",
+    position: "Marketing Director, ADSuper",
+    image: "/project/adsuper/image.png",
   },
   {
-    text: "We needed a website that matched our premium brand, and Kairos delivered exactly that. The design is elegant, fast, and optimized for conversions. We’re beyond satisfied with their work and will continue to collaborate with them.",
-    name: "Jessica Patel",
-    position: "CMO, LuxeDesign",
-    image: "/mainpage/image.png",
+    text: "Their strategic approach to SEO has made a real difference. The page ranks higher, loads faster, and converts more visitors.",
+    name: "Sneha Bhatt",
+    position: "Co-Founder, ADSuper",
+    image: "/project/adsuper/image2.png",
   },
   {
-    text: "Working with Kairos was an absolute pleasure. Their expertise in UX and development resulted in a seamless product that our users love. Their ability to simplify complex processes into a smooth user experience was impressive.",
-    name: "Liam Johnson",
-    position: "Head of Product, NexaSoft",
-    image: "/mainpage/image.png",
+    text: "We had a unique vision, and they executed it flawlessly. The UI is intuitive, and the brand identity is spot-on.",
+    name: "Arjun Mehra",
+    position: "Creative Head, ADSuper",
+    image: "/project/adsuper/image3.png",
+  },
+
+  // Mr. Damager Portfolio
+  {
+    text: "My portfolio website is a true reflection of my brand. The GSAP and Locomotive Scroll animations bring my work to life!",
+    name: "Mr. Damager",
+    position: "Web Developer & Influencer",
+    image: "/project/mrdamager/image.png",
   },
   {
-    text: "Kairos has completely transformed our online presence. Their design, development, and branding expertise took our business to new heights. We couldn’t be happier with the results!",
-    name: "Sophia Martinez",
-    position: "Founder, Elevate Studios",
-    image: "/mainpage/image.png",
+    text: "The site's smooth performance and interactive design have helped me stand out in the industry. Web Tech Studio nailed it!",
+    name: "Arpit Kumar",
+    position: "Owner, Mr. Damager Portfolio",
+    image: "/project/mrdamager/image2.png",
+  },
+  {
+    text: "From UI to SEO, every detail is top-notch. This is exactly what a high-end developer portfolio should look like.",
+    name: "Rahul Sharma",
+    position: "Tech Consultant, Mr. Damager Portfolio",
+    image: "/project/mrdamager/image3.png",
   },
 ];
+
+
 
 const ClientSuccessStories = () => {
   return (

@@ -9,20 +9,6 @@ import Chip from "./chip/chip";
 
 const projects = [
   {
-    image: "/project/triguna/image1.png",
-    category: "Web Development",
-    Chip: "Triguna Coaching Classes",
-    title: "Elevating Education with Cutting-Edge Web Technology",
-    link: "/Projects/triguna-coaching-classes",
-  },
-  {
-    image: "/project/gurukul/image1.png",
-    category: "Branding",
-    Chip: "Gurukul Skills",
-    title: "Empowering Careers with Cutting-Edge Skill Development",
-    link: "/Projects/gurukul-skills",
-  },
-  {
     image: "/project/tkw/image.png",
     category: "Web Development",
     Chip: "Universal Taekwondo Academy",
@@ -35,6 +21,20 @@ const projects = [
     Chip: "ADSuper",
     title: "Mastering SEO & UX for Maximum Conversion",
     link: "/Projects/adsuper",
+  },
+  {
+    image: "/project/gurukul/image1.png",
+    category: "Branding",
+    Chip: "Gurukul Skills",
+    title: "Empowering Careers with Cutting-Edge Skill Development",
+    link: "/Projects/gurukul-skills",
+  },
+  {
+    image: "/project/triguna/image1.png",
+    category: "Web Development",
+    Chip: "Triguna Coaching Classes",
+    title: "Elevating Education with Cutting-Edge Web Technology",
+    link: "/Projects/triguna-coaching-classes",
   },
 ];
 
