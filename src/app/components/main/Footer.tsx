@@ -27,7 +27,9 @@ const Footer = () => {
         // { name: "Styleguide", href: "/Styleguide" },
         // { name: "Changelog", href: "/Changelog" },
         { name: "Privacy Policy", href: "/PrivacyPolicy" },
-        { name: "License", href: "/License" },
+        { name: "Terms & Conditions", href: "/TermsAndConditions" },
+
+        // { name: "License", href: "/License" },
         // { name: "YouTube", href: "https://youtube.com" },
       ],
     },
@@ -35,7 +37,7 @@ const Footer = () => {
       title: "Social Media",
       items: [
         { name: "Facebook", href: "https://facebook.com" },
-        { name: "Instagram", href: "https://instagram.com" },
+        { name: "Instagram", href: "https://www.instagram.com/web.tech.studio/" },
         { name: "YouTube", href: "https://youtube.com" },
         { name: "Twitter", href: "https://twitter.com" },
         { name: "LinkedIn", href: "https://linkedin.com" },
@@ -45,7 +47,7 @@ const Footer = () => {
 
   const socialIcons = [
     { icon: <FaFacebookF />, href: "https://facebook.com" },
-    { icon: <FaInstagram />, href: "https://instagram.com" },
+    { icon: <FaInstagram />, href: "https://www.instagram.com/web.tech.studio/" },
     { icon: <FaLinkedinIn />, href: "https://linkedin.com" },
     { icon: <FaYoutube />, href: "https://youtube.com" },
     { icon: <FaXTwitter />, href: "https://twitter.com" },

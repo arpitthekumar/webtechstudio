@@ -11,18 +11,19 @@ const blogs = [
     id: 1,
     category: "Web Development",
     date: "December 28, 2024",
-    title: "Essential Web Design Trends to Follow",
+    title: "Mastering Next.js Performance Optimization",
     image: "/mainpage/image.png",
-    link: "/blogs/essential-web-design-trends-to-follow",
+    link: "/Blog/nextjs-performance-optimization",
   },
   {
     id: 2,
-    category: "Web Development",
+    category: "Animations",
     date: "December 28, 2024",
-    title: "Essential Web Development Trends to Win for Business",
-    image: "/mainpage/image.png",
-    link: "/blogs/essential-web-development-trends-to-win-for-business",
+    title: "Mastering Animations with Framer Motion and GSAP",
+    image: "/mainpage/image1.png",
+    link: "/Blog/animation-framer-motion-gsap",
   },
+  
 ];
 
 export default function BlogSection() {
