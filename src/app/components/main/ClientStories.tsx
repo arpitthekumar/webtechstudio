@@ -7,101 +7,69 @@ const testimonials = [
   // Triguna Coaching Classes
   {
     text: "Web Tech Studio delivered a fast, responsive, and visually appealing website for our coaching center. The new design and structured content have significantly improved student inquiries.",
-    name: "Amit Verma",
+    name: "Ashish",
     position: "Founder, Triguna Coaching Classes",
-    image: "/clientphoto/sir2.jpg",
+    image: "/clientphoto/triguna.ico",
   },
   {
     text: "Their SEO strategy helped us reach a wider audience, and the smooth UX makes it easier for students to navigate. Highly recommend their expertise!",
-    name: "Ravi Mehta",
+    name: "Jagvendra",
     position: "Co-Founder, Triguna Coaching Classes",
-    image: "/clientphoto/sir4.jpg",
+    image: "/clientphoto/sir2.jpg",
+  },
+  {
+    text: "Web Tech Studio created an engaging platform that makes online learning simple and effective. Their UI/UX expertise is unmatched!",
+    name: "Daksh Sharma",
+    position: "CEO, Gurukul Skills",
+    image: "/clientphoto/gurukul.ico",
   },
   {
     text: "From branding to development, everything was handled with professionalism. Our website now truly represents the excellence of our coaching institute.",
-    name: "Neha Agarwal",
+    name: "Rupesh Pachori",
     position: "Managing Director, Triguna Coaching Classes",
-    image: "/project/triguna/image3.png",
+    image: "/clientphoto/sir4.jpg",
   },
 
   // Gurukul Skills
   {
-    text: "Web Tech Studio created an engaging platform that makes online learning simple and effective. Their UI/UX expertise is unmatched!",
-    name: "Neha Sharma",
-    position: "CEO, Gurukul Skills",
-    image: "/project/gurukul/image1.png",
-  },
-  {
-    text: "We saw a 60% increase in student enrollments after the redesign. Their team truly understands how to convert visitors into active users.",
-    name: "Vikram Singh",
-    position: "Co-Founder, Gurukul Skills",
-    image: "/project/gurukul/image2.png",
-  },
-  {
     text: "Their use of modern animations and seamless navigation makes our website feel premium. It's a game-changer for online education.",
-    name: "Meenal Rajput",
+    name: "Arpit Gupta",
     position: "Head of Operations, Gurukul Skills",
-    image: "/project/gurukul/image3.png",
+    image: "/clientphoto/gurukul.ico",
   },
-
+  
   // Universal Taekwondo Academy
   {
-    text: "Our academy needed a strong digital presence, and Web Tech Studio delivered. The animations and fast load speed improved our user experience significantly.",
-    name: "Mark Robinson",
-    position: "Head Instructor, Universal Taekwondo Academy",
-    image: "/project/tkw/image.png",
-  },
-  {
     text: "The website now reflects the energy and discipline of Taekwondo. The bold, action-packed visuals are exactly what we needed!",
-    name: "David Kim",
+    name: "Aman Singh",
     position: "Co-Founder, Universal Taekwondo Academy",
-    image: "/project/tkw/image2.png",
+    image: "/clientphoto/tkw.ico",
   },
-  {
-    text: "Their work exceeded our expectations. The website looks professional, is easy to use, and helps us attract more students.",
-    name: "Linda Carter",
-    position: "Director, Universal Taekwondo Academy",
-    image: "/project/tkw/image3.png",
-  },
-
   // ADSuper
   {
     text: "Web Tech Studio crafted a high-converting, SEO-optimized landing page for us. Since the launch, traffic and engagement have skyrocketed.",
-    name: "Rahul Kapoor",
-    position: "Marketing Director, ADSuper",
-    image: "/project/adsuper/image.png",
+    name: "Uday chauhan",
+    position: "ADSuper",
+    image: "/clientphoto/adsuper.ico",
   },
-  {
-    text: "Their strategic approach to SEO has made a real difference. The page ranks higher, loads faster, and converts more visitors.",
-    name: "Sneha Bhatt",
-    position: "Co-Founder, ADSuper",
-    image: "/project/adsuper/image2.png",
-  },
-  {
-    text: "We had a unique vision, and they executed it flawlessly. The UI is intuitive, and the brand identity is spot-on.",
-    name: "Arjun Mehra",
-    position: "Creative Head, ADSuper",
-    image: "/project/adsuper/image3.png",
-  },
-
   // Mr. Damager Portfolio
   {
-    text: "My portfolio website is a true reflection of my brand. The GSAP and Locomotive Scroll animations bring my work to life!",
-    name: "Mr. Damager",
+    text: "My portfolio website is a true reflection of my brand. The GSAP and Locomotive Scroll animations bring my work to life! The site's smooth performance and interactive design have helped me stand out in the industry. Web Tech Studio nailed it!",
+    name: "Arpit kumar(Mr.Damager)",
     position: "Web Developer & Influencer",
-    image: "/project/mrdamager/image.png",
+    image: "/clientphoto/Mr.damager.png",
   },
   {
-    text: "The site's smooth performance and interactive design have helped me stand out in the industry. Web Tech Studio nailed it!",
-    name: "Arpit Kumar",
-    position: "Owner, Mr. Damager Portfolio",
-    image: "/project/mrdamager/image2.png",
+    text: "We saw a 60% increase in student enrollments after the redesign. Their team truly understands how to convert visitors into active users.",
+    name: "Abhishek Singh",
+    position: "Co-Founder, Gurukul Skills",
+    image: "/clientphoto/gurukul.ico",
   },
   {
-    text: "From UI to SEO, every detail is top-notch. This is exactly what a high-end developer portfolio should look like.",
-    name: "Rahul Sharma",
-    position: "Tech Consultant, Mr. Damager Portfolio",
-    image: "/project/mrdamager/image3.png",
+    text: "Our academy needed a strong digital presence, and Web Tech Studio delivered. The animations and fast load speed improved our user experience significantly.",
+    name: "Universal Taekwondo Academy",
+    position: "Head Instructor, Universal Taekwondo Academy",
+    image: "/clientphoto/tkw.ico",
   },
 ];
 
