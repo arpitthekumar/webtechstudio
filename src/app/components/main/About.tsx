@@ -135,7 +135,7 @@ const AboutSection = () => {
             <div className="relative w-full pt-[56.25%]">
               <iframe
                 className="absolute top-0 left-0 w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                src="https://www.youtube.com/embed/QRWIiewQlaM?autoplay=1&mute=1"
                 title="Video"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
