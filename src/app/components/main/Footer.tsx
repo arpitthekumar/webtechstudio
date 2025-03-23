@@ -37,7 +37,7 @@ const Footer = () => {
       title: "Social Media",
       items: [
         { name: "Facebook", href: "https://facebook.com" },
-        { name: "Instagram", href: "https://www.instagram.com/web.tech.studio/" },
+        { name: "Instagram", href: "https://www.instagram.com/web.tech.studio?igsh=bnE5bnc5b3E0NGkz" },
         { name: "YouTube", href: "https://youtube.com" },
         { name: "Twitter", href: "https://twitter.com" },
         { name: "LinkedIn", href: "https://linkedin.com" },
@@ -47,7 +47,7 @@ const Footer = () => {
 
   const socialIcons = [
     { icon: <FaFacebookF />, href: "https://facebook.com" },
-    { icon: <FaInstagram />, href: "https://www.instagram.com/web.tech.studio/" },
+    { icon: <FaInstagram />, href: "https://www.instagram.com/web.tech.studio?igsh=bnE5bnc5b3E0NGkz" },
     { icon: <FaLinkedinIn />, href: "https://linkedin.com" },
     { icon: <FaYoutube />, href: "https://youtube.com" },
     { icon: <FaXTwitter />, href: "https://twitter.com" },

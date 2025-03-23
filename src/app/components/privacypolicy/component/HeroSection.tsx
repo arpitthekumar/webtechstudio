@@ -21,13 +21,20 @@ const PrivacyPolicy = () => {
         <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
           1. Information We Collect
         </h2>
+        <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
+          3. Required Client Details
+        </h2>
+        <p className="text-gray-300 mt-2">
+          Before starting the project, the client must provide:
+        </p>
         <ul className="list-disc pl-5 text-gray-300 mt-2">
-          <li>
-            Personal information (name, email, phone number) when you contact
-            us.
-          </li>
-          <li>Analytics data to improve user experience.</li>
-          <li>Cookies to enhance site functionality.</li>
+          <li>Full Name</li>
+          <li>Business Name (if applicable)</li>
+          <li>Email Address</li>
+          <li>Phone Number</li>
+          <li>Physical Address</li>
+          <li>Billing Details (if different from above)</li>
+          <li>GitHub Account (if required for deployment)</li>
         </ul>
 
         {/* Use of Your Personal Data */}
@@ -59,7 +66,7 @@ const PrivacyPolicy = () => {
         </h2>
         <p className="text-gray-300 mt-2">
           To begin any project, we require a{" "}
-          <span className="text-white font-semibold">50% advance payment</span>.
+          <span className="text-white font-semibold">40% advance payment</span>.
           The remaining balance must be paid by the due date specified in the
           contract.
         </p>

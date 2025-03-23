@@ -22,8 +22,8 @@ const TermsAndConditions = () => {
           1. Payment Terms & Binding Agreement
         </h2>
         <p className="text-gray-300 mt-2">
-          - Clients must **pay 30% advance** before the project starts. - The
-          remaining **70% must be paid before final delivery**. - Once the
+          - Clients must **pay 40% advance** before the project starts. - The
+          remaining **60% must be paid before final delivery**. - Once the
           agreement is signed, the client **agrees to pay the full decided
           amount** and **accepts all our policies**. - Failure to complete the
           payment **will result in legal action** if necessary.
@@ -82,7 +82,7 @@ const TermsAndConditions = () => {
           5. Refund & Cancellation Policy
         </h2>
         <p className="text-gray-300 mt-2">
-          - The **30% advance payment is non-refundable** under any
+          - The **40% advance payment is non-refundable** under any
           circumstances. - If the client **cancels the project**, all **work
           completed up to that point must be paid for**.
         </p>

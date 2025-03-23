@@ -18,7 +18,7 @@ const FAQ = () => {
     {
       question: "How long does it take to develop a website with WebTech Studio?",
       answer:
-        "Project timelines depend on complexity, but we typically deliver websites within 4 to 8 weeks. Custom solutions may take longer.",
+        "Project timelines depend on complexity, but we typically deliver websites within 2 to 3 weeks. Custom solutions may take longer.",
     },
     {
       question: "Do you offer SEO-friendly website development?",
