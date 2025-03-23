@@ -38,7 +38,7 @@ const Footer = () => {
       items: [
         { name: "Facebook", href: "https://facebook.com" },
         { name: "Instagram", href: "https://www.instagram.com/web.tech.studio?igsh=bnE5bnc5b3E0NGkz" },
-        { name: "YouTube", href: "https://youtube.com" },
+        { name: "YouTube", href: "https://www.youtube.com/@WebTechStudio-y8c" },
         { name: "Twitter", href: "https://twitter.com" },
         { name: "LinkedIn", href: "https://linkedin.com" },
       ],
@@ -49,7 +49,7 @@ const Footer = () => {
     { icon: <FaFacebookF />, href: "https://facebook.com" },
     { icon: <FaInstagram />, href: "https://www.instagram.com/web.tech.studio?igsh=bnE5bnc5b3E0NGkz" },
     { icon: <FaLinkedinIn />, href: "https://linkedin.com" },
-    { icon: <FaYoutube />, href: "https://youtube.com" },
+    { icon: <FaYoutube />, href: "https://www.youtube.com/@WebTechStudio-y8c" },
     { icon: <FaXTwitter />, href: "https://twitter.com" },
   ];
 
