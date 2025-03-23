@@ -41,7 +41,7 @@ const Navbar = () => {
 
       {/* Desktop Button */}
       <div className="hidden md:block">
-        <Button text="Let's Talk" mode="light" href="/contact" />
+        <Button text="Let's Talk" mode="light" href="/Contact" />
       </div>
 
       {/* Hamburger Button (Mobile) */}

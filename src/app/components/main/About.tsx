@@ -45,9 +45,9 @@ const AboutSection = () => {
           className="flex space-x-10 mb-6"
         >
           {[
-            { value: "700+", label: "Projects Delivered" },
+            { value: "50+", label: "Projects Delivered" },
             { value: "98%", label: "Client Satisfaction" },
-            { value: "10+", label: "Industry Experience" },
+            { value: "5+", label: "Industry Experience" },
           ].map((item, index) => (
             <motion.div key={index} className="text-center">
               <motion.h3

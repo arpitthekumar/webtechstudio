@@ -2,6 +2,10 @@
 import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Chip from "./chip/chip";
+import { useEffect, useState } from "react";
+
+
+
 
 const testimonials = [
   // Triguna Coaching Classes
@@ -75,7 +79,24 @@ const testimonials = [
 
 
 
+
 const ClientSuccessStories = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    handleResize(); // Run on mount
+    window.addEventListener("resize", handleResize);
+    
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const duplicatedTestimonials = isMobile
+    ? [...testimonials, ...testimonials, ...testimonials] // More items for mobile
+    : [...testimonials, ...testimonials,  ...testimonials]; // Default for desktop
   return (
     <div className="bg-black text-white overflow-auto py-20 px-6 md:px-20">
       {/* ✅ Section Header */}
@@ -100,11 +121,11 @@ const ClientSuccessStories = () => {
           animate={{ x: ["0%", "-100%"] }}
           transition={{
             repeat: Infinity,
-            duration: 10,
+            duration: isMobile ? 15 : 10, // Slower on mobile for smoothness
             ease: "linear",
           }}
         >
-          {[...testimonials, ...testimonials].map((testimonial, index) => (
+          {duplicatedTestimonials.map((testimonial, index) => (
             <div
               key={index}
               className="min-w-[300px] max-w-[320px] bg-[linear-gradient(#181823,#101017)] p-6 rounded-4xl border border-transparent hover:border-[var(--acua-marine)]  flex-shrink-0"

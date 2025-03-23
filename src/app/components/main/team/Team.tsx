@@ -6,7 +6,7 @@ import Chip from "../chip/chip";
 
 const teamMembers = [
   {
-    name: "Sophia Garcia",
+    name: "Arpit Kumar",
     role: "Lead Developer",
     image: "/mainpage/image1.png",
     socials: {
@@ -16,7 +16,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Alex Thompson",
+    name: "Uday chauhan",
     role: "Senior UI/UX Designer",
     image: "/mainpage/image2.png",
     socials: {
@@ -26,7 +26,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Michael Lee",
+    name: "Abishek Shingh",
     role: "Project Manager",
     image: "/mainpage/image3.png",
     socials: {
@@ -36,7 +36,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Rachel Evans",
+    name: "Daksh",
     role: "Branding Specialist",
     image: "/mainpage/image.png",
     socials: {
