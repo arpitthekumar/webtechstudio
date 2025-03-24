@@ -7,6 +7,10 @@ import { seoData } from "@/app/lib/seo";
 const randomIndex = Math.floor(Math.random() * seoData.titles.length);
 
 export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: seoData.titles[randomIndex],
   description: seoData.descriptions[randomIndex],
   keywords: seoData.keywords.join(","),

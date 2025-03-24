@@ -3,6 +3,10 @@ import HomePage from "./components/home/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: "Web Tech Studio - Best Web Development Agency in Agra",
   description:
     "WebTechStudio is a professional web development agency in Agra, India, specializing in UI/UX design, SEO, and branding solutions.",
