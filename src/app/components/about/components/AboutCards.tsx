@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const stats = [
   {
     id: 1,
-    value: "700+",
+    value: "50+",
     title: "Projects Delivered",
     description:
       "We’ve successfully completed over 500 digital projects, driving growth for startups and enterprises alike.",
@@ -19,7 +19,7 @@ const stats = [
   },
   {
     id: 3,
-    value: "10+",
+    value: "5+",
     title: "Industry Experience",
     description:
       "We’ve successfully completed over 500 digital projects, driving growth for startups and enterprises alike.",
