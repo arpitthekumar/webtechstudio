@@ -58,6 +58,11 @@ const PricingPage = () => {
         { text: "3 Revisions", included: true },
         { text: "Maintenance: 3 Months", included: true },
         { text: "Ai Chat Bot Intrigation", included: false },
+        { text: "Custom Features", included: false },
+        { text: "Performance Optimization", included: false },
+        { text: "Social Media Integration", included: false },
+        { text: "Backup & Restore", included: false },
+
       ],
     },
     {
@@ -81,6 +86,8 @@ const PricingPage = () => {
         { text: "Performance Optimization", included: true },
         { text: "Social Media Integration", included: true },
         { text: "Backup & Restore", included: false },
+        { text: "Priority Support", included: false },
+
       ],
     },
     {
@@ -105,6 +112,7 @@ const PricingPage = () => {
         { text: "Performance Optimization", included: true },
         { text: "Social Media Integration", included: true },
         { text: "Backup & Restore", included: true },
+        
       ],
     },
   ];
