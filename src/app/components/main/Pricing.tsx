@@ -13,8 +13,8 @@ const FeatureItem = ({
   included: boolean;
 }) => (
   <motion.div
-  className="flex items-center space-x-3 bg-text-bg px-4 w-fit py-2 rounded-full"
-  initial={{ opacity: 0, y: 20 }}
+    className="flex items-center space-x-3 bg-text-bg px-4 w-fit py-2 rounded-full"
+    initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4 }}
   >
@@ -57,6 +57,7 @@ const PricingPage = () => {
         { text: "SEO Level: Basic", included: true },
         { text: "3 Revisions", included: true },
         { text: "Maintenance: 3 Months", included: true },
+        { text: "Ai Chat Bot Intrigation", included: false },
       ],
     },
     {
@@ -75,6 +76,11 @@ const PricingPage = () => {
         { text: "Google Business Account Setup", included: true },
         { text: "Payment Gateway Integration", included: true },
         { text: "Admin Access", included: true },
+        { text: "Ai Chat Bot Intrigation", included: false },
+        { text: "Custom Features", included: true },
+        { text: "Performance Optimization", included: true },
+        { text: "Social Media Integration", included: true },
+        { text: "Backup & Restore", included: false },
       ],
     },
     {
@@ -93,6 +99,12 @@ const PricingPage = () => {
         { text: "Payment Gateway Integration", included: true },
         { text: "Google Business Account Setup", included: true },
         { text: "Admin Access", included: true },
+        { text: "Ai Chat Bot Intrigation", included: true },
+        { text: "Custom Features", included: true },
+        { text: "Priority Support", included: true },
+        { text: "Performance Optimization", included: true },
+        { text: "Social Media Integration", included: true },
+        { text: "Backup & Restore", included: true },
       ],
     },
   ];
