@@ -46,7 +46,7 @@ const MaintenancePricing = () => {
         { text: "Bug Fixes (Unlimited)", included: true },
         { text: "Monthly Backup", included: true },
         { text: "Basic Performance Optimization", included: true },
-        { text: "Content Updates (2 Updates/Month)", included: false },
+        { text: "Content Updates (2 Updates/Month)", included: true },
         { text: "SEO Monitoring", included: false },
         { text: "Advanced Performance Optimization", included: false },
         { text: "Priority Support", included: false },
