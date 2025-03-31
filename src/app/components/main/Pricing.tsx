@@ -112,7 +112,6 @@ const PricingPage = () => {
         { text: "Performance Optimization", included: true },
         { text: "Social Media Integration", included: true },
         { text: "Backup & Restore", included: true },
-        
       ],
     },
   ];
