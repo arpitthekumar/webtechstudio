@@ -28,16 +28,19 @@ const FeatureItem = ({
 );
 
 const MaintenancePricing = () => {
-  const [expanded, setExpanded] = useState(null);
+  const [billingCycle, setBillingCycle] = useState("month");
 
-  const toggleExpand = (index : number) => {
-    const [expanded, setExpanded] = useState<number | null>(null);
-};
+  const [expanded, setExpanded] = useState<number | null>(null);
+
+  const toggleExpand = (index: number) => {
+    setExpanded(expanded === index ? null : index);
+  };
 
   const plans = [
     {
       title: "Basic Maintenance",
-      price: "₹999",
+      price: "₹499",
+      years: "₹5,499",
       features: [
         { text: "Security Updates", included: true },
         { text: "Bug Fixes (Up to 2 Fixes/Month)", included: true },
@@ -53,7 +56,8 @@ const MaintenancePricing = () => {
     },
     {
       title: "Standard Maintenance",
-      price: "₹1,999",
+      price: "₹999",
+      years: "₹10,999",
       features: [
         { text: "Security Updates", included: true },
         { text: "Bug Fixes (Up to 5 Fixes/Month)", included: true },
@@ -69,7 +73,8 @@ const MaintenancePricing = () => {
     },
     {
       title: "Premium Maintenance",
-      price: "₹3,999",
+      price: "₹1,999",
+      years: "₹21,999",
       features: [
         { text: "Security Updates", included: true },
         { text: "Bug Fixes (Unlimited Fixes/Month)", included: true },
@@ -104,6 +109,24 @@ const MaintenancePricing = () => {
           Keep your website secure and optimized with our flexible maintenance
           plans.
         </p>
+        <div className="flex mt-6 space-x-4 p-2 rounded-full">
+          <button
+            className={`px-4 py-2 rounded-full transition-all ${
+              billingCycle === "month" ? "bg-[var(--acua-marine)]" : "bg-text-bg"
+            }`}
+            onClick={() => setBillingCycle("month")}
+          >
+            Monthly
+          </button>
+          <button
+            className={`px-4 py-2 rounded-full transition-all ${
+              billingCycle === "year" ? "bg-[var(--acua-marine)]" : "bg-text-bg"
+            }`}
+            onClick={() => setBillingCycle("year")}
+          >
+            Yearly (20% Off)
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mt-12  max-w-8xl mx-auto">
@@ -129,9 +152,10 @@ const MaintenancePricing = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
-                {plan.price}
+                {billingCycle === "year" ? plan.years : plan.price}
               </motion.span>
-              /month
+              {billingCycle === "year" ? "/year" : ""}{" "}
+              {billingCycle === "month" ? "/month" : ""}
             </h3>
             <div className="space-y-3 md:space-y-4">
               {plan.features

@@ -12,6 +12,7 @@ import PricingPage from "../main/Pricing";
 import ProcessSection from "../main/processsection/ProcessSection";
 import ShowcaseExpertise from "../main/ShowcaseExpertise";
 import Team from "../main/team/Team";
+import Link from "next/link";
 
 const HomePage: React.FC = () => {
   return (
@@ -48,6 +49,9 @@ const HomePage: React.FC = () => {
         <ShowcaseExpertise />
         <ProcessSection />
         <PricingPage />
+        <Link href="/Pricing#Maintenance" className="text-white hover:text-[var(--acua-marine)] text-center block mt-4 underline">
+          View Maintenance Pricing 
+        </Link>
         <Team />
         <ClientSuccessStories />
         <FAQ />

@@ -11,8 +11,10 @@ const PricingPage: React.FC = () => {
     <>
       <div className="bg-black min-h-screen">
         <Navbar />
-        <PricingPag/>
-        <MaintenancePricing/>
+        <PricingPag />
+        <div id="Maintenance">
+          <MaintenancePricing />
+        </div>
         <ClientSuccessStories />
         <FAQ />
         <Cta />
