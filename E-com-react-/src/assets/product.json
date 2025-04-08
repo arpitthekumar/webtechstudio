@@ -1,0 +1,205 @@
+[
+    {
+      "id": 1,
+      "category": "Headphone",
+      "name": "White Headphone",
+      "price": 150,
+      "image": "/Headphone/1.jpg",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "category": "Headphone",
+      "name": "RGB Headphone",
+      "price": 100,
+      "image": "/Headphone/2.jpg",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "category": "Headphone",
+      "name": "NX Headphone",
+      "price": 100,
+      "image": "/Headphone/3.jpg",
+      "rating": 5,
+      "onSale": true,
+      "originalPrice": 120
+    },
+    {
+      "id": 4,
+      "category": "Headphone",
+      "name": "Wireless Earbuds",
+      "price": 75,
+      "image": "/Headphone/4.jpg",
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "category": "Headphone",
+      "name": "Over-Ear Studio Headphones",
+      "price": 200,
+      "image": "/Headphone/5.jpeg",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "category": "Monitor",
+      "name": "Gaming Monitor",
+      "price": 300,
+      "image": "/Monitor/1.jpg",
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "category": "Monitor",
+      "name": "4K UHD Monitor",
+      "price": 400,
+      "image": "/Monitor/2.jpg",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "category": "Monitor",
+      "name": "Curved Monitor",
+      "price": 350,
+      "image": "/Monitor/3.jpeg",
+      "rating": 4
+    },
+    {
+      "id": 9,
+      "category": "Monitor",
+      "name": "Portable Monitor",
+      "price": 200,
+      "image": "/Monitor/4.jpeg",
+      "rating": 4
+    },
+    {
+      "id": 10,
+      "category": "Monitor",
+      "name": "Ultrawide Monitor",
+      "price": 500,
+      "image": "/Monitor/5.jpg",
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "category": "Speaker",
+      "name": "Bluetooth Speaker",
+      "price": 100,
+      "image": "/Speaker/1.jpeg",
+      "rating": 4
+    },
+    {
+      "id": 12,
+      "category": "Speaker",
+      "name": "Smart Speaker",
+      "price": 150,
+      "image": "/Speaker/2.jpeg",
+      "rating": 5
+    },
+    {
+      "id": 13,
+      "category": "Speaker",
+      "name": "Soundbar",
+      "price": 200,
+      "image": "/Speaker/3.jpeg",
+      "rating": 5
+    },
+    {
+      "id": 14,
+      "category": "Speaker",
+      "name": "Portable PA System",
+      "price": 300,
+      "image": "/Speaker/4.jpeg",
+      "rating": 4
+    },
+    {
+      "id": 15,
+      "category": "Speaker",
+      "name": "Bookshelf Speaker",
+      "price": 250,
+      "image": "/Speaker/5.jpeg",
+      "rating": 5
+    },
+    {
+      "id": 16,
+      "category": "Keyboard",
+      "name": "Mechanical Keyboard",
+      "price": 120,
+      "image": "/keyboard/1.jpeg",
+      "rating": 5
+    },
+    {
+      "id": 17,
+      "category": "Keyboard",
+      "name": "Wireless Keyboard",
+      "price": 60,
+      "image": "/keyboard/2.jpeg",
+      "rating": 4
+    },
+    {
+      "id": 18,
+      "category": "Keyboard",
+      "name": "Ergonomic Keyboard",
+      "price": 100,
+      "image": "/keyboard/3.jpeg",
+      "rating": 5
+    },
+    {
+      "id": 19,
+      "category": "Keyboard",
+      "name": "Gaming Keyboard",
+      "price": 150,
+      "image": "/keyboard/4.jpeg",
+      "rating": 5
+    },
+    {
+      "id": 20,
+      "category": "Keyboard",
+      "name": "Compact Keyboard",
+      "price": 80,
+      "image": "/keyboard/5.jpeg",
+      "rating": 4
+    },
+    {
+      "id": 21,
+      "category": "Phone",
+      "name": "Smartphone A",
+      "price": 700,
+      "image": "/Phone/1.jpg",
+      "rating": 5
+    },
+    {
+      "id": 22,
+      "category": "Phone",
+      "name": "Smartphone B",
+      "price": 800,
+      "image": "/Phone/2.jpg",
+      "rating": 5
+    },
+    {
+      "id": 23,
+      "category": "Phone",
+      "name": "Smartphone C",
+      "price": 650,
+      "image": "/Phone/3.jpg",
+      "rating": 4
+    },
+    {
+      "id": 24,
+      "category": "Phone",
+      "name": "Smartphone D",
+      "price": 900,
+      "image": "/Phone/4.jpg",
+      "rating": 5
+    },
+    {
+      "id": 25,
+      "category": "Phone",
+      "name": "Smartphone E",
+      "price": 750,
+      "image": "/Phone/4.jpg",
+      "rating": 4
+    }
+  ]
+  

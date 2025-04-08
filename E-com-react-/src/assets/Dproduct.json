@@ -1,0 +1,875 @@
+[
+    {
+        "id": 1,
+        "category": "Headphone",
+        "name": "White Headphone",
+        "price": {
+            "original": 180,
+            "discounted": 150
+        },
+        "image": "/Headphone/1.jpg",
+        "thumbnails": [
+            "/Headphone/thumb1.jpg",
+            "/Headphone/thumb2.jpg",
+            "/Headphone/thumb3.jpg",
+            "/Headphone/thumb4.jpg"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "WH12345",
+            "status": "Available"
+        },
+        "brand": "AudioPro",
+        "description": "High-quality white headphones with exceptional sound clarity. Perfect for music lovers.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "4 Days",
+            "freeShippingMessage": "On all orders over $75"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard",
+            "american-express"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 2,
+        "category": "Headphone",
+        "name": "RGB Headphone",
+        "price": {
+            "original": 120,
+            "discounted": 100
+        },
+        "image": "/Headphone/2.jpg",
+        "thumbnails": [
+            "/Headphone/thumb1.jpg",
+            "/Headphone/thumb2.jpg",
+            "/Headphone/thumb3.jpg",
+            "/Headphone/thumb4.jpg"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "RGB12345",
+            "status": "Available"
+        },
+        "brand": "TechAudio",
+        "description": "Stylish RGB headphones with adjustable colors and high-quality sound.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "3 Days",
+            "freeShippingMessage": "On orders above $50"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 3,
+        "category": "Headphone",
+        "name": "NX Headphone",
+        "price": {
+            "original": 120,
+            "discounted": 100
+        },
+        "image": "/Headphone/3.jpg",
+        "thumbnails": [
+            "/Headphone/thumb1.jpg",
+            "/Headphone/thumb2.jpg",
+            "/Headphone/thumb3.jpg",
+            "/Headphone/thumb4.jpg"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "NX12345",
+            "status": "Available"
+        },
+        "brand": "NXSound",
+        "description": "Noise-canceling headphones with deep bass and clear treble.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "5 Days",
+            "freeShippingMessage": "On orders above $80"
+        },
+        "paymentOptions": [
+            "stripe",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 4,
+        "category": "Headphone",
+        "name": "Wireless Earbuds",
+        "price": {
+            "original": 100,
+            "discounted": 75
+        },
+        "image": "/Headphone/4.jpg",
+        "thumbnails": [
+            "/Headphone/thumb1.jpg",
+            "/Headphone/thumb2.jpg",
+            "/Headphone/thumb3.jpg",
+            "/Headphone/thumb4.jpg"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "WE12345",
+            "status": "Available"
+        },
+        "brand": "SoundFlex",
+        "description": "Lightweight wireless earbuds with easy Bluetooth pairing.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "4 Days",
+            "freeShippingMessage": "On all orders over $50"
+        },
+        "paymentOptions": [
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 5,
+        "category": "Headphone",
+        "name": "Over-Ear Studio Headphones",
+        "price": {
+            "original": 220,
+            "discounted": 200
+        },
+        "image": "/Headphone/5.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Studio+Headphones+thumb1",
+            "https://via.placeholder.com/150?text=Studio+Headphones+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "OESH12345",
+            "status": "Available"
+        },
+        "brand": "StudioPro",
+        "description": "Professional studio headphones for accurate sound reproduction.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "3 Days",
+            "freeShippingMessage": "On all orders over $100"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 6,
+        "category": "Monitor",
+        "name": "Gaming Monitor",
+        "price": {
+            "original": 350,
+            "discounted": 300
+        },
+        "image": "/Monitor/1.jpg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Gaming+Monitor+thumb1",
+            "https://via.placeholder.com/150?text=Gaming+Monitor+thumb2"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "GM12345",
+            "status": "Available"
+        },
+        "brand": "GameVision",
+        "description": "A high-performance monitor designed for gaming with ultra-fast refresh rates.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "5 Days",
+            "freeShippingMessage": "On all orders over $150"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 7,
+        "category": "Monitor",
+        "name": "4K UHD Montoir",
+        "price": {
+            "original": 450,
+            "discounted": 400
+        },
+        "image": "/Monitor/2.jpg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=4K+Monitor+thumb1",
+            "https://via.placeholder.com/150?text=4K+Monitor+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "4K12345",
+            "status": "Available"
+        },
+        "brand": "VisionPlus",
+        "description": "A 4K UHD monitor for crystal-clear picture quality and vibrant colors.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "4 Days",
+            "freeShippingMessage": "On orders above $200"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 8,
+        "category": "Monitor",
+        "name": "Curved Monitor",
+        "price": {
+            "original": 400,
+            "discounted": 350
+        },
+        "image": "/Monitor/3.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Curved+Monitor+thumb1",
+            "https://via.placeholder.com/150?text=Curved+Monitor+thumb2"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "CM12345",
+            "status": "Available"
+        },
+        "brand": "CurveTech",
+        "description": "An immersive curved monitor ideal for both gaming and productivity.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "5 Days",
+            "freeShippingMessage": "On all orders over $100"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 9,
+        "category": "Monitor",
+        "name": "Portable Monitor",
+        "price": {
+            "original": 250,
+            "discounted": 200
+        },
+        "image": "/Monitor/4.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Portable+Monitor+thumb1",
+            "https://via.placeholder.com/150?text=Portable+Monitor+thumb2"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "PM12345",
+            "status": "Available"
+        },
+        "brand": "PortaVision",
+        "description": "A sleek portable monitor for easy on-the-go use with ultra-lightweight design.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "3 Days",
+            "freeShippingMessage": "On orders above $75"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 10,
+        "category": "Monitor",
+        "name": "Ultrawide Monitor",
+        "price": {
+            "original": 600,
+            "discounted": 500
+        },
+        "image": "/Monitor/5.jpg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Ultrawide+Monitor+thumb1",
+            "https://via.placeholder.com/150?text=Ultrawide+Monitor+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "UW12345",
+            "status": "Available"
+        },
+        "brand": "UltraVision",
+        "description": "An ultrawide monitor with a wide aspect ratio perfect for multitasking and immersive gaming.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "6 Days",
+            "freeShippingMessage": "On all orders above $250"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 11,
+        "category": "Speaker",
+        "name": "Bluetooth Speaker",
+        "price": {
+            "original": 120,
+            "discounted": 100
+        },
+        "image": "/Speaker/1.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Bluetooth+Speaker+thumb1",
+            "https://via.placeholder.com/150?text=Bluetooth+Speaker+thumb2"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "BS12345",
+            "status": "Available"
+        },
+        "brand": "SoundWave",
+        "description": "Portable Bluetooth speaker with rich sound and long battery life, perfect for outdoor use.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "3 Days",
+            "freeShippingMessage": "On all orders over $50"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 12,
+        "category": "Speaker",
+        "name": "Smart Speaker",
+        "price": {
+            "original": 180,
+            "discounted": 150
+        },
+        "image": "/Speaker/2.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Smart+Speaker+thumb1",
+            "https://via.placeholder.com/150?text=Smart+Speaker+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "SS12345",
+            "status": "Available"
+        },
+        "brand": "TechTalk",
+        "description": "Smart speaker with voice control, compatible with Alexa and Google Assistant for a seamless experience.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "4 Days",
+            "freeShippingMessage": "On all orders over $100"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 13,
+        "category": "Speaker",
+        "name": "Soundbar",
+        "price": {
+            "original": 250,
+            "discounted": 200
+        },
+        "image": "/Speaker/3.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Soundbar+thumb1",
+            "https://via.placeholder.com/150?text=Soundbar+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "SB12345",
+            "status": "Available"
+        },
+        "brand": "SoundPro",
+        "description": "Enhance your home theater experience with this sleek and powerful soundbar for clear, rich audio.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "5 Days",
+            "freeShippingMessage": "On all orders above $150"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 14,
+        "category": "Speaker",
+        "name": "Portable PA System",
+        "price": {
+            "original": 350,
+            "discounted": 300
+        },
+        "image": "/Speaker/4.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=PA+System+thumb1",
+            "https://via.placeholder.com/150?text=PA+System+thumb2"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "PA12345",
+            "status": "Available"
+        },
+        "brand": "SoundMax",
+        "description": "Portable PA system with built-in microphone and amplifier for events and presentations.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "6 Days",
+            "freeShippingMessage": "On all orders over $200"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 15,
+        "category": "Speaker",
+        "name": "Bookshelf Speaker",
+        "price": {
+            "original": 300,
+            "discounted": 250
+        },
+        "image": "/Speaker/5.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Bookshelf+Speaker+thumb1",
+            "https://via.placeholder.com/150?text=Bookshelf+Speaker+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "BS12345",
+            "status": "Available"
+        },
+        "brand": "AudioCraft",
+        "description": "High-quality bookshelf speakers designed for audiophiles who value rich, detailed sound.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "7 Days",
+            "freeShippingMessage": "On orders above $150"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 16,
+        "category": "Keyboard",
+        "name": "Mechanical Keyboard",
+        "price": {
+            "original": 140,
+            "discounted": 120
+        },
+        "image": "/keyboard/1.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Mechanical+Keyboard+thumb1",
+            "https://via.placeholder.com/150?text=Mechanical+Keyboard+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "MK12345",
+            "status": "Available"
+        },
+        "brand": "KeyCraft",
+        "description": "A high-performance mechanical keyboard for gamers and typists with customizable RGB lighting.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "3 Days",
+            "freeShippingMessage": "On orders above $75"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 17,
+        "category": "Keyboard",
+        "name": "Wireless Keyboard",
+        "price": {
+            "original": 80,
+            "discounted": 60
+        },
+        "image": "/keyboard/2.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Wireless+Keyboard+thumb1",
+            "https://via.placeholder.com/150?text=Wireless+Keyboard+thumb2"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "WK12345",
+            "status": "Available"
+        },
+        "brand": "LogiTech",
+        "description": "Wireless keyboard for seamless typing experience with long battery life and quiet keys.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "4 Days",
+            "freeShippingMessage": "On all orders over $50"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 18,
+        "category": "Keyboard",
+        "name": "Ergonomic Keyboard",
+        "price": {
+            "original": 120,
+            "discounted": 100
+        },
+        "image": "/keyboard/3.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Ergonomic+Keyboard+thumb1",
+            "https://via.placeholder.com/150?text=Ergonomic+Keyboard+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "EK12345",
+            "status": "Available"
+        },
+        "brand": "ComfortKey",
+        "description": "Ergonomic keyboard designed to reduce wrist strain and provide a comfortable typing experience.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "3 Days",
+            "freeShippingMessage": "On orders over $70"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 19,
+        "category": "Keyboard",
+        "name": "Gaming Keyboard",
+        "price": {
+            "original": 180,
+            "discounted": 150
+        },
+        "image": "/keyboard/4.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Gaming+Keyboard+thumb1",
+            "https://via.placeholder.com/150?text=Gaming+Keyboard+thumb2"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "GK12345",
+            "status": "Available"
+        },
+        "brand": "Razer",
+        "description": "Gaming keyboard with mechanical switches, customizable RGB lighting, and dedicated media controls.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "5 Days",
+            "freeShippingMessage": "On orders above $100"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 20,
+        "category": "Keyboard",
+        "name": "Compact Keyboard",
+        "price": {
+            "original": 90,
+            "discounted": 80
+        },
+        "image": "/keyboard/5.jpeg",
+        "thumbnails": [
+            "https://via.placeholder.com/150?text=Compact+Keyboard+thumb1",
+            "https://via.placeholder.com/150?text=Compact+Keyboard+thumb2"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "CK12345",
+            "status": "Available"
+        },
+        "brand": "MiniKey",
+        "description": "Compact and portable keyboard ideal for on-the-go use, with a minimalist design and responsive keys.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "4 Days",
+            "freeShippingMessage": "On all orders over $40"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 21,
+        "category": "Phone",
+        "name": "Smartphone A",
+        "price": {
+            "original": 800,
+            "discounted": 700
+        },
+        "image": "/Phone/1.jpg",
+        "thumbnails": [
+            "/Phone/thumb1.jpg",
+            "/Phone/thumb2.jpg",
+            "/Phone/thumb3.jpg"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "PA12345",
+            "status": "Available"
+        },
+        "brand": "TechCorp",
+        "description": "Smartphone A with cutting-edge features, a 64MP camera, and a 5000mAh battery.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "7 Days",
+            "freeShippingMessage": "On orders over $100"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 22,
+        "category": "Phone",
+        "name": "Smartphone B",
+        "price": {
+            "original": 900,
+            "discounted": 800
+        },
+        "image": "/Phone/2.jpg",
+        "thumbnails": [
+            "/Phone/thumb1.jpg",
+            "/Phone/thumb2.jpg",
+            "/Phone/thumb3.jpg"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "PB12345",
+            "status": "Available"
+        },
+        "brand": "GigaTech",
+        "description": "Smartphone B with 128GB storage, 8GB RAM, and a 48MP dual-camera setup.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "6 Days",
+            "freeShippingMessage": "On all orders above $120"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 23,
+        "category": "Phone",
+        "name": "Smartphone C",
+        "price": {
+            "original": 700,
+            "discounted": 650
+        },
+        "image": "/Phone/3.jpg",
+        "thumbnails": [
+            "/Phone/thumb1.jpg",
+            "/Phone/thumb2.jpg",
+            "/Phone/thumb3.jpg"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "PC12345",
+            "status": "Out of Stock"
+        },
+        "brand": "Mobility",
+        "description": "Smartphone C with a 6.4-inch AMOLED display and 5G support.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "8 Days",
+            "freeShippingMessage": "On all orders over $90"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 24,
+        "category": "Phone",
+        "name": "Smartphone D",
+        "price": {
+            "original": 1000,
+            "discounted": 900
+        },
+        "image": "/Phone/4.jpg",
+        "thumbnails": [
+            "/Phone/thumb1.jpg",
+            "/Phone/thumb2.jpg",
+            "/Phone/thumb3.jpg"
+        ],
+        "rating": 5,
+        "stock": {
+            "sku": "PD12345",
+            "status": "Available"
+        },
+        "brand": "Xperia",
+        "description": "Smartphone D with a 120Hz refresh rate, 108MP camera, and 5000mAh battery.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "5 Days",
+            "freeShippingMessage": "On all orders above $150"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal",
+            "mastercard"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    },
+    {
+        "id": 25,
+        "category": "Phone",
+        "name": "Smartphone E",
+        "price": {
+            "original": 800,
+            "discounted": 750
+        },
+        "image": "/Phone/5.jpg",
+        "thumbnails": [
+            "/Phone/thumb1.jpg",
+            "/Phone/thumb2.jpg",
+            "/Phone/thumb3.jpg"
+        ],
+        "rating": 4,
+        "stock": {
+            "sku": "PE12345",
+            "status": "Available"
+        },
+        "brand": "NovaTech",
+        "description": "Smartphone E with a 6.5-inch Full HD+ display, 128GB storage, and 6GB RAM.",
+        "quantity": 1,
+        "delivery": {
+            "estimated": "6 Days",
+            "freeShippingMessage": "On orders above $100"
+        },
+        "paymentOptions": [
+            "stripe",
+            "visa",
+            "paypal"
+        ],
+        "share": {
+            "url": "https://example.com/share-link"
+        }
+    }
+]

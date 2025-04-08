@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.split-text span {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.strike-text {
+  will-change: transform, opacity;
+}
+.text-stroke {
+  -webkit-text-stroke: 6px transparent; /* Adjust the width and color of the stroke */
+  color: #0a0a0a; /* The text color */
+}
+.wwrcolor {
+  background-color: #242629;
+}

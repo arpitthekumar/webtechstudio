@@ -1,0 +1,145 @@
+see i have this actually let me explain you my full like i am now working on user dashboard in which there in pages there are components which are reused  are 6 pages in it exams { label: "Dashboard", key: "dashboard" },
+    { label: "Profile", key: "profile" },
+    { label: "Study Materials", key: "studyMaterials" },
+    { label: "Exams", key: "exams" },
+    { label: "Results", key: "results" },
+    { label: "Fees", key: "fees" },
+ first exams which have TestPapers,StatisticsGraph,DatabaseTable,TopRankingStudents 
+TestPapers:it hase TestPaper {
+  id: number;
+  title: string;
+  description: string;
+  teacher: string;
+  image: string;
+  downloadLink: string;
+  openLink: string;
+}
+StatisticsGraph:it has TestData {
+  testDate: string;
+  testPercentage: number;
+}
+DatabaseTable:name: "",
+    score: 0,
+    subject: "",
+    avatar: "",
+TopRankingStudents:no need any data 
+second we have Fees which have FeeData
+FeeData:Payment {
+  month: string;
+  year: string;
+  type: "Online" | "Offline";
+  amount: number; // in USD
+}
+third we have profile it has StatisticsGraph,CircularProgress and profile 
+StatisticsGraph:it has TestData {
+  testDate: string;
+  testPercentage: number;
+}
+CircularProgress:do not need any data it is static
+profile:name: "John Doe",
+    email: "johndoe@example.com",
+    phone: "+1234567890",
+    address: "123 Main Street, City, Country",
+    profileImage: "/default-avatar.jpg",
+and one attendance :attendanceData = {
+    "2024-12-01": ["present", "absent", "present"],
+    "2024-12-02": ["absent", "present", null],
+    "2024-12-03": ["present", "present", "present"],
+    "2024-12-04": [null, null, null], // No class
+  };
+fourth result which have TopRankingStudents,StatisticsGraph,DatabaseTable
+TopRankingStudents:no need any data
+StatisticsGraph:TestData {
+  testDate: string;
+  testPercentage: number;
+}
+DatabaseTable:name: "",
+  score: 0,
+  subject: "",
+  avatar: "",
+fifth StudyMaterial it contain Studymaterial
+Studymaterial:  const recentlyViewed = [
+    {
+      id: 3,
+      visitedDate: "2024-11-20",
+    },
+    {
+      id: 5,
+      visitedDate: "2024-11-25",
+    },
+    {
+      id: 4,
+      visitedDate: "2024-11-23",
+    },
+  ];
+
+  // All available materials
+  const allMaterials = [
+    {
+      id: 3,
+      title: "Physics: Mechanics",
+      description: "Covers the basics of kinematics and dynamics.",
+      teacher: "Prof. Alan Walker",
+      image: "https://via.placeholder.com/150",
+      addedDate: "2024-11-15",
+      downloadLink: "#",
+      openLink: "#",
+    },
+    {
+      id: 4,
+      title: "Computer Science Basics",
+      description: "Introduction to algorithms and programming.",
+      teacher: "Ms. Rachel Green",
+      image: "https://via.placeholder.com/150",
+      addedDate: "2024-11-20",
+      downloadLink: "#",
+      openLink: "#",
+    },
+  ];
+sixth dashboard it contain StatisticsGraph,CircularProgress,Calendar,NoticeBoard and Timetable
+StatisticsGraph:it has TestData {
+  testDate: string;
+  testPercentage: number;
+}
+CircularProgress:do not need any data
+Calendar: classLevel: { type: Number, required: true }, // Class 9, 10, 11, 12
+  dates: [
+    {
+      date: { type: String, required: true }, // YYYY-MM-DD format
+      subjects: {
+        type: Map,
+        of: { type: String, enum: ["on", "off", "test"], required: true }, // Subject statuses
+      },
+    },
+  ],
+NoticeBoard:notices = [
+    {
+      title: "Notice of Special Examinations of Semester Spring 2021",
+      author: "Justin Langer",
+      image: "https://via.placeholder.com/100",
+    },
+    {
+      title: "Time Extension Notice of Semester Admission",
+      author: "Danial Vatory",
+      image: "https://via.placeholder.com/100",
+    },
+    {
+      title: "COVID-19 Vaccination Survey October 2021",
+      author: "Jacob Oram",
+      image: "https://via.placeholder.com/100",
+    },
+    {
+      title: "Scholarship Viva Notice Spring 2021",
+      author: "Name",
+      image: "https://via.placeholder.com/100",
+    },
+  ];
+Timetable:notifications = [
+    { icon: "🍔", name: "Nathan Macclam", time: "10 AM - 12 PM" },
+    { icon: "🚕", name: "Dinal Vatoy", time: "12 PM - 2 PM" },
+    { icon: "📚", name: "Sarah Lee", time: "2 PM - 4 PM" },
+    { icon: "🎮", name: "George Dark", time: "4 PM - 6 PM" },
+    { icon: "🍕", name: "Jessica Smith", time: "6 PM - 8 PM" },
+    { icon: "✈️", name: "Oliver Stone", time: "8 PM - 10 PM" },
+  ];
+ this all i have like make something like to connect everything according to class and all like make it like it will be an tution cotuching clases user dashboard like there will be so many  user so there we need to connect and also by class like where you know what i am shaying 
