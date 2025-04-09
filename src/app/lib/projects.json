@@ -7,7 +7,11 @@
       "agency": "Web Tech Studio",
       "introduction": "At Web Tech Studio, we don’t just build websites—we craft powerful digital experiences that enhance brands and maximize engagement. Triguna Coaching Classes is a testament to our expertise in web development, UI/UX design, and SEO-driven strategy, helping students seamlessly connect with top-quality coaching resources.",
       "website_url": "https://trigunacoachingclasses.in",
-      "category": ["Web Development","Branding", "SEO"],
+      "category": [
+        "Web Development",
+        "Branding",
+        "SEO"
+      ],
       "technologies": [
         "Next.js",
         "Tailwind CSS",
@@ -119,7 +123,10 @@
       "agency": "Web Tech Studio",
       "introduction": "At Web Tech Studio, we believe in transforming education through technology. Gurukul Skills is a prime example of our expertise in building high-performance websites with immersive animations, seamless user experiences, and SEO-driven strategies to connect learners with top-notch skill development resources.",
       "website_url": "https://gurukulskills.site",
-      "category": ["E-commerce", "SEO"],
+      "category": [
+        "E-commerce",
+        "SEO"
+      ],
       "technologies": [
         "Next.js",
         "Tailwind CSS",
@@ -232,7 +239,10 @@
       "agency": "Web Tech Studio",
       "introduction": "At Web Tech Studio, we create digital experiences that elevate brands and drive engagement. Universal Taekwondo Academy is a perfect example of our expertise in modern web development, stunning animations, and SEO-driven strategies—designed to showcase the power, discipline, and excellence of martial arts.",
       "website_url": "https://universal-taekwondo-academy.netlify.app",
-      "category": ["Branding", "SEO"],
+      "category": [
+        "Branding",
+        "SEO"
+      ],
       "technologies": [
         "Next.js",
         "Tailwind CSS",
@@ -344,8 +354,15 @@
       "agency": "Web Tech Studio",
       "introduction": "ADSuper was a unique project by Web Tech Studio,  where we focused solely on a single-page experience. The goal was to enhance SEO, improve the page's UI/UX, and ensure it ranked higher in search engines. Our expertise in targeted optimization and structured content helped ADSuper reach a larger audience while maintaining a smooth and engaging design.",
       "website_url": "https://adsuper.netlify.app/",
-     "category": ["Web Development", "SEO"],
-      "technologies": ["Next.js", "Tailwind CSS", "SEO Optimization"],
+      "category": [
+        "Web Development",
+        "SEO"
+      ],
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "SEO Optimization"
+      ],
       "features": [
         {
           "details": "SEO-optimized structure for better search engine performance."
@@ -429,8 +446,18 @@
       "agency": "Web Tech Studio",
       "introduction": "Mr. Damager's portfolio is a masterpiece crafted by Web Tech Studio, blending high-performance development with immersive animations. Built with Next.js, GSAP, and Locomotive Scroll, this portfolio delivers an engaging, smooth, and interactive user experience. Every section is optimized for performance, ensuring fast load times and SEO-friendly structure while maintaining a stunning visual appeal.",
       "website_url": "https://mrdamager.netlify.app/",
-      "category": ["Web Development"],
-      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "Locomotive Scroll", "SEO Optimization"],
+      "category": [
+        "Web Development"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "GSAP",
+        "Framer Motion",
+        "Locomotive Scroll",
+        "SEO Optimization"
+      ],
       "features": [
         {
           "details": "Seamless GSAP animations with smooth scrolling effects for a dynamic user experience."
@@ -508,6 +535,103 @@
         "/project/mrdamager/image1.png",
         "/project/mrdamager/image2.png",
         "/project/mrdamager/image3.png"
+      ]
+    },
+    {
+      "id": "pkpcb-com",
+      "name": "PKPCB - RAR/ZIP Web Viewer",
+      "tagline": "Graber Viewer for RAR and ZIP files at Unmatched Low Price",
+      "agency": "Web Tech Studio",
+      "introduction": "PKPCB is a fully frontend-based web application that lets users preview RAR and ZIP archive contents directly in the browser using JavaScript. It’s built for speed, privacy, and affordability — no backend required.",
+      "website_url": "https://pkpcb.com/",
+      "category": [
+        "Web Development",
+        "Branding"
+      ],
+      "technologies": [
+        "Next.js",
+        "Vue.js",
+        "TypeScript",
+        "CSS",
+        "Unzipper",
+        "unrar.js"
+      ],
+      "features": [
+        {
+          "details": "Preview .rar and .zip file contents directly in-browser with no backend."
+        },
+        {
+          "details": "Uses client-side decompression powered by `unzipper` and `unrar.js`."
+        },
+        {
+          "details": "Drag and drop support with live folder/file tree structure."
+        },
+        {
+          "details": "Works offline after first load (PWA-ready)."
+        },
+        {
+          "details": "Zero user data sent to server — complete privacy."
+        }
+      ],
+      "challenges_overview": "The main challenge was implementing archive parsing and tree rendering entirely on the client-side without consuming too much memory or crashing the browser.",
+      "challenges": [
+        {
+          "title": "No Backend Logic",
+          "details": "Had to rely fully on browser APIs and client-side libraries like `unrar.js` and `unzipper`."
+        },
+        {
+          "title": "Performance on Large Archives",
+          "details": "Rendering large file trees from multi-MB archives required efficient traversal and memory management."
+        },
+        {
+          "title": "Cross-Library Integration",
+          "details": "Managing Vue components inside a primarily Next.js app with strict TypeScript config."
+        }
+      ],
+      "solutions_overview": "We optimized everything for client-side efficiency by streaming file reads and lazy-rendering UI components, and modularized the Vue integrations cleanly.",
+      "solutions": [
+        {
+          "title": "Streaming Archive Readers",
+          "details": "Used `unzipper` and `unrar.js` to parse archives in chunks directly in the browser."
+        },
+        {
+          "title": "TypeScript & Component Safety",
+          "details": "Strict type checking and isolated components to avoid runtime issues."
+        },
+        {
+          "title": "Clean Vue Integration",
+          "details": "Embedded Vue logic into standalone components and mounted them where needed via micro-frontend style setup."
+        }
+      ],
+      "results": [
+        {
+          "title": "Zero Backend Hosting Cost",
+          "details": "Since everything runs on the frontend, there's no server cost — pure JAMstack."
+        },
+        {
+          "title": "Private & Secure",
+          "details": "No data ever leaves the user’s machine, making it ideal for sensitive files."
+        },
+        {
+          "title": "Loved by Devs & Designers",
+          "details": "A clean and functional tool for anyone dealing with compressed files online."
+        }
+      ],
+      "why_stand_out": [
+        {
+          "title": "Truly Backendless",
+          "details": "Almost no tools offer RAR/ZIP preview like this without a backend."
+        },
+        {
+          "title": "Cross-Framework Magic",
+          "details": "Built with both Next.js and Vue.js in harmony, using TypeScript and pure CSS."
+        }
+      ],
+      "thumbnail": "/project/pkpcb/image2.png",
+      "gallery": [
+        "/project/pkpcb/image2.png",
+        "/project/pkpcb/image1.png",
+        "/project/pkpcb/image3.png"
       ]
     }
   ]
