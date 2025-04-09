@@ -16,7 +16,7 @@ const uniqueCategories = [
 ];
 
 const ShowcaseExpertise = () => {
-  const [activeCategory, setActiveCategory] = useState("Web Development");
+  const [activeCategory, setActiveCategory] = useState("SEO");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const filteredProjects =
