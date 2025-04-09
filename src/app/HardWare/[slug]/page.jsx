@@ -1,6 +1,6 @@
 import hardwareData from "@/app/lib/hardware.json";
 import { notFound } from "next/navigation";
-import HardwareDetailPage from "@/app/components/hardware/Hardware";
+import HardwareDetailPage from "./component/hardware/Hardware";
 
 // ✅ SEO Metadata (like BlogPage)
 export async function generateMetadata({ params }) {
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
       title: product.name,
       description: product.description,
       url: productUrl,
-      type: "product",
+      type: "website",
       siteName: "WebTech Studio",
       images: [{ url: product.image, width: 1200, height: 630, alt: product.name }],
     },
