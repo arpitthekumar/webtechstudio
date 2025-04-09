@@ -63,9 +63,9 @@ const GymPOSPricing = () => {
       hardware: [
         {
           name: "Wireless Barcode Scanner",
-          link: "https://example.com/wireless-scanner",
+          link: "https://webtechstudio.site/hardware/barcode-scanner",
         },
-        { name: "Touch POS Machine", link: "https://example.com/pos-machine" },
+        { name: "Touch POS Machine", link: "https://webtechstudio.site/hardware/complete-kit" },
       ],
       features: [
         { text: "Trainer Login (Unlimited)", included: true },
