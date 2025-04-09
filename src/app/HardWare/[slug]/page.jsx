@@ -1,13 +1,20 @@
-import hardwareData from "@/app/lib/hardware.json";
+import { hardwareData } from "@/app/lib/hardware";
 import { notFound } from "next/navigation";
 import HardwareDetailPage from "./component/hardware/Hardware";
 
 // ✅ SEO Metadata (like BlogPage)
 export async function generateMetadata({ params }) {
-  const product = hardwareData.products.find((p) => p.id === params.slug);
-  if (!product) return { title: "Product Not Found | Web Tech Studio" };
+  const { slug } = params;
+  const product = hardwareData.products.find((p) => p.id === slug);
 
-  const productUrl = `https://webtechstudio.site/hardware/${product.id}`;
+  if (!product) {
+    return {
+      title: "Product Not Found | Web Tech Studio",
+      description: "We couldn't find the hardware you're looking for.",
+    };
+  }
+
+  const productUrl = `https://webtechstudio.site/HardWare/${product.id}`;
 
   return {
     title: `${product.name} | POS Hardware - WebTech Studio`,
@@ -20,7 +27,14 @@ export async function generateMetadata({ params }) {
       url: productUrl,
       type: "website",
       siteName: "WebTech Studio",
-      images: [{ url: product.image, width: 1200, height: 630, alt: product.name }],
+      images: [
+        {
+          url: product.image,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -51,14 +65,16 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// ✅ Generate Static Params for all slugs
+// ✅ Static Params
 export function generateStaticParams() {
   return hardwareData.products.map((product) => ({ slug: product.id }));
 }
 
-// ✅ Render the Component (like BlogPage)
-export default function Page({ params }) {
-  const product = hardwareData.products.find((p) => p.id === params.slug);
+// ✅ Page Component - make this async
+export default async function Page({ params }) {
+  const { slug } = params;
+  const product = hardwareData.products.find((p) => p.id === slug);
+
   if (!product) return notFound();
 
   return <HardwareDetailPage product={product} />;
