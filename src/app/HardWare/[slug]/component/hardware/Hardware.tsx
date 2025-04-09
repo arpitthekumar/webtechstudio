@@ -52,8 +52,8 @@ const HardwareDetailPage = ({ product }: { product: HardwareProduct }) => {
         <div className="mt-6">
           <Button href={product.link} text="Buy Now" mode="light" />
         </div>
-      </section>
       <Cta />
+      </section>
       <Footer />
     </>
   );

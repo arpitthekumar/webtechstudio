@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import Button from "@/app/components/main/button/Button";
 import Chip from "@/app/components/main/chip/chip";
+import Link from "next/link";
 
 const FeatureItem = ({
   text,
@@ -63,9 +64,9 @@ const GymPOSPricing = () => {
       hardware: [
         {
           name: "Wireless Barcode Scanner",
-          link: "https://webtechstudio.site/hardware/barcode-scanner",
+          link: "/HardWare/barcode-scanner",
         },
-        { name: "Touch POS Machine", link: "https://webtechstudio.site/hardware/complete-kit" },
+        { name: "Touch POS Machine", link: "/HardWare/complete-kit" },
       ],
       features: [
         { text: "Trainer Login (Unlimited)", included: true },
@@ -172,15 +173,13 @@ const GymPOSPricing = () => {
             {plan.hardware && plan.hardware.length > 0 ? (
               <div className="flex flex-wrap gap-2">
                 {plan.hardware.map((item, idx) => (
-                  <a
+                  <Link
                     key={idx}
                     href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="bg-acua-marine/10 text-acua-marine border border-acua-marine px-3 py-1 rounded-full text-sm hover:bg-acua-marine/20 transition-all"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             ) : (
