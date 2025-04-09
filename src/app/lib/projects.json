@@ -7,6 +7,7 @@
       "agency": "Web Tech Studio",
       "introduction": "At Web Tech Studio, we don’t just build websites—we craft powerful digital experiences that enhance brands and maximize engagement. Triguna Coaching Classes is a testament to our expertise in web development, UI/UX design, and SEO-driven strategy, helping students seamlessly connect with top-quality coaching resources.",
       "website_url": "https://trigunacoachingclasses.in",
+      "category": ["Web Development","Branding", "SEO"],
       "technologies": [
         "Next.js",
         "Tailwind CSS",
@@ -118,6 +119,7 @@
       "agency": "Web Tech Studio",
       "introduction": "At Web Tech Studio, we believe in transforming education through technology. Gurukul Skills is a prime example of our expertise in building high-performance websites with immersive animations, seamless user experiences, and SEO-driven strategies to connect learners with top-notch skill development resources.",
       "website_url": "https://gurukulskills.site",
+      "category": ["E-commerce", "SEO"],
       "technologies": [
         "Next.js",
         "Tailwind CSS",
@@ -230,6 +232,7 @@
       "agency": "Web Tech Studio",
       "introduction": "At Web Tech Studio, we create digital experiences that elevate brands and drive engagement. Universal Taekwondo Academy is a perfect example of our expertise in modern web development, stunning animations, and SEO-driven strategies—designed to showcase the power, discipline, and excellence of martial arts.",
       "website_url": "https://universal-taekwondo-academy.netlify.app",
+      "category": ["Branding", "SEO"],
       "technologies": [
         "Next.js",
         "Tailwind CSS",
@@ -341,6 +344,7 @@
       "agency": "Web Tech Studio",
       "introduction": "ADSuper was a unique project by Web Tech Studio,  where we focused solely on a single-page experience. The goal was to enhance SEO, improve the page's UI/UX, and ensure it ranked higher in search engines. Our expertise in targeted optimization and structured content helped ADSuper reach a larger audience while maintaining a smooth and engaging design.",
       "website_url": "https://adsuper.netlify.app/",
+     "category": ["Web Development", "SEO"],
       "technologies": ["Next.js", "Tailwind CSS", "SEO Optimization"],
       "features": [
         {
@@ -425,6 +429,7 @@
       "agency": "Web Tech Studio",
       "introduction": "Mr. Damager's portfolio is a masterpiece crafted by Web Tech Studio, blending high-performance development with immersive animations. Built with Next.js, GSAP, and Locomotive Scroll, this portfolio delivers an engaging, smooth, and interactive user experience. Every section is optimized for performance, ensuring fast load times and SEO-friendly structure while maintaining a stunning visual appeal.",
       "website_url": "https://mrdamager.netlify.app/",
+      "category": ["Web Development"],
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "Locomotive Scroll", "SEO Optimization"],
       "features": [
         {

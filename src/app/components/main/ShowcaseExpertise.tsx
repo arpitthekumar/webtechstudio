@@ -6,39 +6,11 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "./button/Button";
 import Chip from "./chip/chip";
-
-const projects = [
-  {
-    image: "/project/tkw/image.png",
-    category: "Web Development",
-    Chip: "Universal Taekwondo Academy",
-    title: "Empowering Champions with a Dynamic Digital Presence",
-    link: "/Projects/universal-taekwondo-academy",
-  },
-  {
-    image: "/project/adsuper/image.png",
-    category: "Web Development",
-    Chip: "ADSuper",
-    title: "Mastering SEO & UX for Maximum Conversion",
-    link: "/Projects/adsuper",
-  },
-  {
-    image: "/project/gurukul/image1.png",
-    category: "Branding",
-    Chip: "Gurukul Skills",
-    title: "Empowering Careers with Cutting-Edge Skill Development",
-    link: "/Projects/gurukul-skills",
-  },
-  {
-    image: "/project/triguna/image1.png",
-    category: "Web Development",
-    Chip: "Triguna Coaching Classes",
-    title: "Elevating Education with Cutting-Edge Web Technology",
-    link: "/Projects/triguna-coaching-classes",
-  },
-];
+import { getBasicProjectCards } from "@/app/lib/projectAdapter";
 
 const ShowcaseExpertise = () => {
+  const projects = getBasicProjectCards(); // Get the first 6 projects
+
   return (
     <div className="bg-black text-white py-20 px-6 md:px-20">
       {/* ✅ Animated Header Section */}

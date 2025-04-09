@@ -5,46 +5,15 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Chip from "../../main/chip/chip";
+import { getBasicProjectCards } from "@/app/lib/projectAdapter";
 
-const projects = [
-  {
-    image: "/project/triguna/image1.png",
-    category: ["Web Development","Branding", "SEO"],
-    Chip: "Triguna Coaching Classes",
-    title: "Elevating Education with Cutting-Edge Web Technology",
-    link: "/Projects/triguna-coaching-classes",
-  },
-  {
-    image: "/project/gurukul/image1.png",
-    category: ["E-commerce", "SEO"],
-    Chip: "Gurukul Skills",
-    title: "Empowering Careers with Cutting-Edge Skill Development",
-    link: "/Projects/gurukul-skills",
-  },
-  {
-    image: "/project/tkw/image.png",
-    category: ["Branding", "SEO"],
-    Chip: "Universal Taekwondo Academy",
-    title: "Empowering Champions with a Dynamic Digital Presence",
-    link: "/Projects/universal-taekwondo-academy",
-  },
-  {
-    image: "/project/adsuper/image.png",
-    category: ["Web Development", "SEO"], // ✅ Multiple categories
-    Chip: "ADSuper",
-    title: "Mastering SEO & UX for Maximum Conversion",
-    link: "/Projects/adsuper",
-  },
-  {
-    image: "/project/mrdamager/image3.png",
-    category: ["Web Development"], // ✅ Multiple categories
-    Chip: "Mr.Damager",
-    title: "Showcasing Cutting-Edge Animations & UI Excellence",
-    link: "/Projects/mrdamager_portfolio",
-  },
+const allProjects = getBasicProjectCards();
+
+// 🧠 Extract unique categories from the projects dynamically
+const uniqueCategories = [
+  "All",
+  ...new Set(allProjects.flatMap((project) => project.category)),
 ];
-
-const categories = ["All", "Web Development", "Branding", "E-commerce", "SEO"];
 
 const ShowcaseExpertise = () => {
   const [activeCategory, setActiveCategory] = useState("Web Development");
@@ -52,12 +21,14 @@ const ShowcaseExpertise = () => {
 
   const filteredProjects =
     activeCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category.includes(activeCategory)); // ✅ Updated filtering logic
+      ? allProjects
+      : allProjects.filter((project) =>
+          project.category.includes(activeCategory)
+        );
 
   return (
     <div className="bg-black text-white py-20 px-6 md:px-20">
-      {/* ✅ Animated Header Section */}
+      {/* ✅ Header */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -76,9 +47,9 @@ const ShowcaseExpertise = () => {
         </p>
       </motion.div>
 
-      {/* ✅ Category Buttons */}
+      {/* ✅ Categories */}
       <div className="flex flex-wrap justify-center gap-4 mt-8">
-        {categories.map((category) => (
+        {uniqueCategories.map((category) => (
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
@@ -93,7 +64,7 @@ const ShowcaseExpertise = () => {
         ))}
       </div>
 
-      {/* ✅ Animated Projects Section */}
+      {/* ✅ Project Cards */}
       <motion.div
         key={activeCategory}
         initial="hidden"
@@ -106,7 +77,7 @@ const ShowcaseExpertise = () => {
       >
         {filteredProjects.map((project, index) => (
           <motion.div
-            key={index}
+            key={project.id}
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
@@ -118,7 +89,7 @@ const ShowcaseExpertise = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* ✅ Image Section */}
+              {/* ✅ Image */}
               <motion.div className="relative">
                 <Image
                   src={project.image}
@@ -128,7 +99,7 @@ const ShowcaseExpertise = () => {
                   className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px] object-center"
                 />
 
-                {/* ✅ Hover Effect */}
+                {/* ✅ Hover Overlay */}
                 <motion.div
                   initial={{ y: "100%", opacity: 0 }}
                   animate={
