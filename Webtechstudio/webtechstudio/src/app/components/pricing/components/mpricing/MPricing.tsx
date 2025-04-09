@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaCheck, FaTimes } from "react-icons/fa";
-import Button from "../button/Button";
-import Chip from "../chip/chip";
+import Button from "../../../main/button/Button";
+import Chip from "../../../main/chip/chip";
 
 const FeatureItem = ({
   text,
