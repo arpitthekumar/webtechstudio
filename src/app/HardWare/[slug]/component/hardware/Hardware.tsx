@@ -44,7 +44,7 @@ const HardwareDetailPage = ({ product }: Props) => {
                 alt={`${product.name} Image ${i + 1}`}
                 width={800}
                 height={500}
-                className="object-cover w-full h-[400px]"
+                className="object-cover w-full h-[600px]"
               />
             </div>
           ))}

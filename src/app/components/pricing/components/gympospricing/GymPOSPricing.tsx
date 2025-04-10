@@ -39,8 +39,8 @@ const GymPOSPricing = () => {
   const plans = [
     {
       title: "Basic Gym POS",
-      price: "₹1,499",
-      year: "₹14,999",
+      price: "₹799",
+      year: "	₹7,500",
       lifetime: "₹15,000",
       hardware: [],
       features: [
@@ -57,17 +57,17 @@ const GymPOSPricing = () => {
     },
     {
       title: "Pro Gym POS",
-      price: "₹1,999",
-      year: "₹17,999",
+      price: "₹999",
+      year: "₹10,000",
       lifetime: "₹20,000",
       hardware: [
         {
-          name: "Thermal Printer",
-          link: "/Hardware/thermal-printer",
-        },
-        {
           name: "Basic Website Plan",
           link: "/Pricing",
+        },
+        {
+          name: "Thermal Printer",
+          link: "/Hardware/thermal-printer",
         },
       ],
       features: [
@@ -76,12 +76,21 @@ const GymPOSPricing = () => {
         { text: "Automated Attendance", included: true },
         { text: "Email & SMS Campaigns", included: true },
         { text: "Priority Support", included: true },
+        { text: "Member Management", included: true },
+        { text: "Trainer Management", included: true },
+        { text: "Manual Attendance", included: true },
+        { text: "Workout & Diet Plans", included: true },
+        { text: "SMS Alerts", included: true },
+        { text: "Sales & Expenses Tracking", included: true },
+        { text: "Stock Management", included: true },
+        { text: "Reports & Analytics", included: true },
+        { text: "Staff Module (Owner Only Access)", included: true },
       ],
     },
     {
       title: "Elite Gym POS",
-      price: "₹2,999",
-      year: "₹29,999",
+      price: "₹1,499",
+      year: "₹15,000",
       lifetime: "₹30,000",
       hardware: [
         {
@@ -105,6 +114,15 @@ const GymPOSPricing = () => {
         { text: "Advanced Analytics", included: true },
         { text: "Dedicated Success Manager", included: true },
         { text: "Emergency Support", included: true },
+        { text: "Member Management", included: true },
+        { text: "Trainer Management", included: true },
+        { text: "Manual Attendance", included: true },
+        { text: "Workout & Diet Plans", included: true },
+        { text: "SMS Alerts", included: true },
+        { text: "Sales & Expenses Tracking", included: true },
+        { text: "Stock Management", included: true },
+        { text: "Reports & Analytics", included: true },
+        { text: "Staff Module (Owner Only Access)", included: true },
       ],
     },
   ];
