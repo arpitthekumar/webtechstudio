@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { hardwareData } from "@/app/lib/hardware";
-import HardwareDetailPage from "./component/hardware/Hardware";
+import HardwareDetailPage from "@/app/lib/hardware";
 
 // ✅ Get Product by Slug
 async function getProduct(slug) {
