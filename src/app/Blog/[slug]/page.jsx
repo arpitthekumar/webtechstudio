@@ -5,6 +5,7 @@ import blogs from "../../lib/data";
 import Navbar from "@/app/components/main/Navbar";
 import Footer from "@/app/components/main/Footer";
 import Cta from "@/app/components/main/cta/Cta";
+import Breadcrumb from "@/app/components/Breadcrumb";
 
 export async function generateMetadata() {
   const blog = blogs[0];
@@ -75,9 +76,12 @@ export default async function BlogPage({ params }) {
     <>
       
       <Navbar />
-      <section className="py-20 bg-black text-white">
+      <section className="py-2 bg-black text-white">
+        
         <div className="container mx-auto px-6 md:px-20 max-w-9xl">
           <header className="text-center">
+          <Breadcrumb />
+
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{blog.title}</h1>
             <div className="flex flex-wrap justify-between mt-2 text-lg text-bluish-gray">
               <span className="px-4 py-2 bg-text-bg text-white rounded-full">{blog.category}</span>

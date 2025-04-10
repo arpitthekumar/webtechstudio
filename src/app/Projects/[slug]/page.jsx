@@ -6,6 +6,7 @@ import Navbar from "@/app/components/main/Navbar";
 import Cta from "@/app/components/main/cta/Cta";
 import Footer from "@/app/components/main/Footer";
 import Chip from "@/app/components/main/chip/chip";
+import Breadcrumb from "@/app/components/Breadcrumb";
 
 async function getProject(slug) {
   const projectsData = await import("@/app/lib/projects.json");
@@ -97,7 +98,8 @@ export default async function ProjectPage({ params }) {
   return (
     <div className="min-h-screen min-w-9xl bg-black text-white">
       <Navbar />
-      <section className="container mx-auto px-6 md:px-20 py-12">
+      <section className="container mx-auto px-6 md:px-20 ">
+      <Breadcrumb />
         <Chip text={project.name} isDark={true} />
 
         {/* Header */}

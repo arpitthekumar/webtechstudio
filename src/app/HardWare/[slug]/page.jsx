@@ -1,12 +1,15 @@
-import { hardwareData } from "@/app/lib/hardware";
 import { notFound } from "next/navigation";
+import { hardwareData } from "@/app/lib/hardware";
 import HardwareDetailPage from "./component/hardware/Hardware";
 
-// ✅ SEO Metadata (like BlogPage)
-export async function generateMetadata({ params }) {
-  const { slug } = params;
-  const product = hardwareData.products.find((p) => p.id === slug);
+// ✅ Get Product by Slug
+async function getProduct(slug) {
+  return hardwareData.products.find((p) => p.id === decodeURIComponent(slug));
+}
 
+// ✅ Metadata
+export async function generateMetadata({ params }) {
+  const product = await getProduct(params.slug);
   if (!product) {
     return {
       title: "Product Not Found | Web Tech Studio",
@@ -15,11 +18,10 @@ export async function generateMetadata({ params }) {
   }
 
   const productUrl = `https://webtechstudio.site/HardWare/${product.id}`;
-
   return {
-    title: `${product.name} | POS Hardware - WebTech Studio`,
+    title: `${product.name} | Hardware - WebTech Studio`,
     description: product.description,
-    keywords: `${product.name}, Gym Hardware, POS Devices, WebTech Studio`,
+    keywords: `${product.name}, POS Hardware, WebTech Studio`,
     alternates: { canonical: productUrl },
     openGraph: {
       title: product.name,
@@ -65,17 +67,19 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// ✅ Static Params
+// ✅ Static Params for SSG
 export function generateStaticParams() {
-  return hardwareData.products.map((product) => ({ slug: product.id }));
+  return hardwareData.products.map((p) => ({ slug: p.id }));
 }
 
-// ✅ Page Component - make this async
+// ✅ Page
 export default async function Page({ params }) {
-  const { slug } = params;
-  const product = hardwareData.products.find((p) => p.id === slug);
-
+  const product = await getProduct(params.slug);
   if (!product) return notFound();
 
-  return <HardwareDetailPage product={product} />;
+  return (
+    <div className="bg-black text-white min-h-screen">
+     <HardwareDetailPage product={product}/>
+    </div>
+  );
 }
