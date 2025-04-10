@@ -30,7 +30,7 @@ module.exports = {
     }));
 
     // ✅ Load hardware.json
-    const hardwarePath = path.join(__dirname, "src/app/lib/hardware.json");
+    const hardwarePath = path.join(__dirname, "src/app/lib/hardware.ts");
     const hardwareFile = fs.readFileSync(hardwarePath, "utf-8");
     const { products } = JSON.parse(hardwareFile);
 

@@ -66,9 +66,9 @@ const PricingPage = () => {
       ],
     },
     {
-      title: "Moderate Plan",
+      title: "Modern Plan",
       price: "₹19,999",
-      plan: "Moderate",
+      plan: "Modern",
       features: [
         { text: "Free Domain & Subdomain", included: true },
         { text: "Hosting", included: true },
