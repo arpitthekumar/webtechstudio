@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Chip from "@/app/components/main/chip/chip";
-import Button from "@/app/components/main/button/Button";
 import { hardwareData } from "@/app/lib/hardware";
 
 const HeroSection = () => {
