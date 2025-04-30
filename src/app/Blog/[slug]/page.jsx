@@ -16,7 +16,7 @@ export async function generateMetadata() {
   return {
     title: `${blog.title} | Web Tech Studio`,
     description: `Read our latest insights on ${blog.category}. Learn more about ${blog.title} at WebTech Studio.`,
-    keywords: `Web Tech, SEO, ${blog.category}, ${blog.title}, WebTech Studio, ${blog.slug}`,
+    keywords: `Web Tech, SEO, ${blog.category}, ${blog.title}, WebTech Studio, ${blog.slug} ${blog.key}`,
     authors: [{ name: "WebTech Studio", url: "https://webtechstudio.site" }],
     alternates: { canonical: blogUrl },
     openGraph: {

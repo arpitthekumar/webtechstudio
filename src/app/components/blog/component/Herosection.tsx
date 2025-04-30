@@ -5,71 +5,45 @@ import Link from "next/link";
 import Image from "next/image";
 import Chip from "../../main/chip/chip";
 import { useEffect, useState } from "react";
-
-const blogs = [
-    {
-        id: 1,
-        category: "Web Development",
-        date: "December 28, 2024",
-        title: "Mastering Next.js Performance Optimization",
-        image: "/mainpage/image.png",
-        link: "/Blog/nextjs-performance-optimization",
-      },
-      {
-        id: 2,
-        category: "Animations",
-        date: "December 28, 2024",
-        title: "Mastering Animations with Framer Motion and GSAP",
-        image: "/mainpage/image1.png",
-        link: "/Blog/animation-framer-motion-gsap",
-      },
-      {
-        id: 3,
-        category: "UI/UX Design",
-        date: "January 5, 2025",
-        title: "Top UI/UX Practices for a Better User Experience",
-        image: "/mainpage/image2.png",
-        link: "/Blog/ui-ux-design-nextjs-framer-motion-gsap",
-      },
-      {
-        id: 4,
-        category: "SEO",
-        date: "January 12, 2025",
-        title: "SEO Strategies to Rank Higher in 2025",
-        image: "/mainpage/image3.png",
-        link: "/Blog/seo-nextjs",
-      },
-      {
-        id: 5,
-        category: "E-Commerce",
-        date: "January 20, 2025",
-        title: "E-Commerce Website Development with Next.js, Framer Motion & GSAP",
-        image: "/mainpage/image6.png",
-        link: "/Blog/ecommerce-website-development-nextjs-framer-motion-gsap",
-      },
-      {
-        id: 6,
-        category: "Performance Optimization",
-        date: "January 28, 2025",
-        title: "How to Optimize Your Website for Speed and Performance",
-        image: "/mainpage/image7.png",
-        link: "/Blog/performance-optimization-nextjs-framer-motion-gsap",
-      },
-];
+import allBlogs from "@/app/lib/data"; // Update path if needed
 
 export default function HeroSection() {
-      const [hasAnimated, setHasAnimated] = useState(false);
-    
-      useEffect(() => {
-        setHasAnimated(true);
-      }, []);
-    
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 6;
+
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  useEffect(() => {
+    setHasAnimated(true);
+  }, []);
+  const [imageError, setImageError] = useState(false);
+
+  // Get unique categories from all blogs
+  const categories = ["All", ...new Set(allBlogs.map((blog) => blog.category))];
+
+  // Filter blogs based on selected category
+  const filteredBlogs =
+    selectedCategory === "All"
+      ? allBlogs
+      : allBlogs.filter((blog) => blog.category === selectedCategory);
+
+  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+  const startIndex = (currentPage - 1) * blogsPerPage;
+  const visibleBlogs = filteredBlogs.slice(
+    startIndex,
+    startIndex + blogsPerPage
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
   return (
     <section className="py-20 text-white">
       <div className="container mx-auto px-6 md:px-20 max-w-9xl">
         <motion.div
-              key={hasAnimated ? "Prising-section" : ""}
-
+          key={hasAnimated ? "Hero-section" : ""}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -88,21 +62,41 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
+        {/* Category Filter */}
+        <div className="flex flex-wrap gap-4 justify-center mt-10 mb-6">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setSelectedCategory(category);
+                setCurrentPage(1);
+              }}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                selectedCategory === category
+                  ? "bg-acua-marine text-white"
+                  : "bg-gray-800 text-gray-300 hover:bg-acua-marine hover:text-white"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         {/* Blog List */}
         <div className="mt-12 grid md:grid-cols-2 gap-6">
-          {blogs.map((blog, index) => (
+          {visibleBlogs.map((blog, index) => (
             <motion.div
-              key={blog.id}
+              key={blog.slug}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-[linear-gradient(#181823,#101017)] rounded-4xl group  border border-transparent hover:border-[var(--acua-marine)] overflow-hidden"
+              className="bg-[linear-gradient(#181823,#101017)] rounded-4xl group border border-transparent hover:border-[var(--acua-marine)] overflow-hidden"
             >
               <div className="p-6">
                 <div className="relative w-full h-[600px] overflow-hidden rounded-4xl">
                   <Image
-                    src={blog.image}
+                    src={imageError ? "/mainpage/image.png" : blog.image}
                     alt={blog.title}
                     fill
                     className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
@@ -118,7 +112,7 @@ export default function HeroSection() {
                 </div>
                 <h3 className="text-lg font-semibold">{blog.title}</h3>
                 <Link
-                  href={blog.link}
+                  href={`/Blog/${blog.slug}`}
                   className="text-acua-marine font-bold text-lg mt-2 inline-block"
                 >
                   Read More
@@ -127,6 +121,25 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Pagination Dots */}
+        {totalPages > 1 && (
+          <div className="flex justify-center mt-10 space-x-2">
+            {[...Array(totalPages)].map((_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => handlePageChange(i + 1)}
+                className={`w-8 h-8 rounded-full text-sm font-medium flex items-center justify-center transition-all ${
+                  currentPage === i + 1
+                    ? "bg-acua-marine text-white"
+                    : "bg-gray-700 text-gray-300 hover:bg-acua-marine hover:text-white"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
