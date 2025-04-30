@@ -19,9 +19,16 @@ export default function Pagination({
     onPageChange?.(currentPage);
   }, [currentPage, onPageChange]);
 
-  const handlePageChange = (page: number): void => {
-    if (page >= 1 && page <= totalPages) setCurrentPage(page);
+  const handlePageChange = (page: number) => {
+    if (page === totalPages) {
+      setCurrentPage(1); // Change to the first page when the last page is reached
+    } else if (page === 0) {
+      setCurrentPage(totalPages); // Change to the last page when the first page is reached
+    } else {
+      setCurrentPage(page);
+    }
   };
+  
 
   const handlePrev = (): void => {
     setCurrentPage(currentPage > 1 ? currentPage - 1 : totalPages);
