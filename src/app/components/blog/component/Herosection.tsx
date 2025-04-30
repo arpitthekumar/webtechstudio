@@ -6,11 +6,12 @@ import Image from "next/image";
 import Chip from "../../main/chip/chip";
 import { useEffect, useState } from "react";
 import allBlogs from "@/app/lib/data";
+import Pagination from "./pagination-component";
 
 export default function HeroSection() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 6;
+  const blogsPerPage = 4;
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
@@ -27,7 +28,10 @@ export default function HeroSection() {
 
   const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
   const startIndex = (currentPage - 1) * blogsPerPage;
-  const visibleBlogs = filteredBlogs.slice(startIndex, startIndex + blogsPerPage);
+  const visibleBlogs = filteredBlogs.slice(
+    startIndex,
+    startIndex + blogsPerPage
+  );
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -123,24 +127,11 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex justify-center mt-10 space-x-2">
-            {[...Array(totalPages)].map((_, i) => (
-              <button
-                key={i + 1}
-                onClick={() => handlePageChange(i + 1)}
-                className={`w-8 h-8 rounded-full text-sm font-medium flex items-center justify-center transition-all ${
-                  currentPage === i + 1
-                    ? "bg-acua-marine text-white"
-                    : "bg-gray-700 text-gray-300 hover:bg-acua-marine hover:text-white"
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
-          </div>
-        )}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
       </div>
     </section>
   );
