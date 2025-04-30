@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Button from "./button/Button";
 import Chip from "./chip/chip";
+import Image from "next/image";
 
 const HeroSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -14,20 +15,27 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative flex items-center"
-      style={{
-        backgroundImage: `url('/mainpage/image.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "680px",
-      }}
+      // className="relative flex items-center"
+      className="relative flex items-center h-[680px] overflow-hidden"
+      // style={{
+      //   backgroundImage: `url('/mainpage/image.png')`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   height: "680px",
+      // }}
     >
+      <Image
+        src="/mainpage/image.png"
+        alt="Background image"
+        fill
+        priority
+        className="object-cover z-0"
+      />
       {/* Dark overlay only on the background */}
-      <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black/20 z-0 pointer-events-none"></div>
 
       {/* Content */}
       <div className="relative  md:top-50 flex flex-col md:flex-row justify-center md:justify-between items-center text-white text-center md:text-left px-6 md:px-20 w-full">
-        
         {/* Left Side */}
         <motion.div
           key={hasAnimated ? "hero-section" : ""}
@@ -36,7 +44,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col justify-center items-center md:items-start mb-6 md:mb-0"
         >
-          <Chip text="Empowering Agencies" isDark={false} className="z-10 font-bold" />
+          <Chip
+            text="Empowering Agencies"
+            isDark={false}
+            className="z-10 font-bold"
+          />
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}

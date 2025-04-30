@@ -5,24 +5,21 @@ import Link from "next/link";
 import Image from "next/image";
 import Chip from "../../main/chip/chip";
 import { useEffect, useState } from "react";
-import allBlogs from "@/app/lib/data"; // Update path if needed
+import allBlogs from "@/app/lib/data";
 
 export default function HeroSection() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
-
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     setHasAnimated(true);
   }, []);
-  const [imageError, setImageError] = useState(false);
 
-  // Get unique categories from all blogs
   const categories = ["All", ...new Set(allBlogs.map((blog) => blog.category))];
 
-  // Filter blogs based on selected category
   const filteredBlogs =
     selectedCategory === "All"
       ? allBlogs
@@ -30,10 +27,7 @@ export default function HeroSection() {
 
   const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
   const startIndex = (currentPage - 1) * blogsPerPage;
-  const visibleBlogs = filteredBlogs.slice(
-    startIndex,
-    startIndex + blogsPerPage
-  );
+  const visibleBlogs = filteredBlogs.slice(startIndex, startIndex + blogsPerPage);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -42,6 +36,7 @@ export default function HeroSection() {
   return (
     <section className="py-20 text-white">
       <div className="container mx-auto px-6 md:px-20 max-w-9xl">
+        {/* Header */}
         <motion.div
           key={hasAnimated ? "Hero-section" : ""}
           initial={{ opacity: 0, y: 50 }}
@@ -55,14 +50,12 @@ export default function HeroSection() {
               Flexible Pricing for Every Need
             </h1>
             <p className="max-w-2xl mx-auto text-sm md:text-base">
-              Choose a plan that fits your project's scale and budget. Whether
-              you need essential services or a complete digital solution, we've
-              got you covered.
+              Choose a plan that fits your project's scale and budget.
             </p>
           </div>
         </motion.div>
 
-        {/* Category Filter */}
+        {/* Filter Buttons */}
         <div className="flex flex-wrap gap-4 justify-center mt-10 mb-6">
           {categories.map((category) => (
             <button
@@ -82,7 +75,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Blog List */}
+        {/* Blog Cards */}
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           {visibleBlogs.map((blog, index) => (
             <motion.div
@@ -96,9 +89,17 @@ export default function HeroSection() {
               <div className="p-6">
                 <div className="relative w-full h-[600px] overflow-hidden rounded-4xl">
                   <Image
-                    src={imageError ? "/mainpage/image.png" : blog.image}
+                    src={
+                      imageErrors[blog.slug]
+                        ? "/mainpage/image.png"
+                        : blog.image
+                    }
                     alt={blog.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    onError={() =>
+                      setImageErrors((prev) => ({ ...prev, [blog.slug]: true }))
+                    }
                     className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                   />
                 </div>
@@ -122,7 +123,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Pagination Dots */}
+        {/* Pagination */}
         {totalPages > 1 && (
           <div className="flex justify-center mt-10 space-x-2">
             {[...Array(totalPages)].map((_, i) => (
