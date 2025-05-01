@@ -185,7 +185,7 @@ export default function HeroSection() {
                   href={`/Blog/${blog.slug}`}
                   className="text-acua-marine font-bold text-lg mt-2 inline-block"
                 >
-                  Read More
+                  Read More →
                 </Link>
               </div>
             </motion.div>
@@ -193,6 +193,7 @@ export default function HeroSection() {
 
           {/* Skeletons while loading */}
           {loading &&
+            page < totalPages &&
             Array.from({ length: 2 }).map((_, i) => (
               <div
                 key={i}
@@ -209,18 +210,29 @@ export default function HeroSection() {
           <div className="text-center mt-10">
             <button
               onClick={handleManualLoad}
-              className="bg-acua-marine hover:bg-acua-marine/80 text-white px-6 py-3 rounded-full font-semibold transition"
+              className="text-acua-marine px-6 py-3 font-semibold "
             >
-              Load More
+              Load More →
             </button>
           </div>
         )}
 
         {/* No more blogs */}
         {page >= totalPages && (
-          <div className="text-center text-gray-400 mt-8">
-            🎉 You’ve reached the end of the blog list.
-          </div>
+          <>
+            <div className="text-center mt-10">
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="text-acua-marine px-6 py-3  font-semibold "
+              >
+                Back to Top →
+              </button>
+            </div>
+
+            <div className="text-center text-gray-400 mt-8">
+              🎉 You’ve reached the end of the blog list.
+            </div>
+          </>
         )}
       </div>
     </section>
