@@ -143,53 +143,56 @@ export default function HeroSection() {
 
         {/* Blog Cards */}
         <div className="mt-12 grid md:grid-cols-2 gap-6">
-          {visibleBlogs.map((blog) => (
-            <motion.div
-              key={blog.slug}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="bg-[linear-gradient(#181823,#101017)] rounded-4xl group border border-transparent hover:border-[var(--acua-marine)] overflow-hidden"
-            >
-              <div className="p-6">
-                <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden rounded-4xl">
-                  <Image
-                    src={
-                      imageErrors[blog.slug]
-                        ? "/mainpage/image.png"
-                        : blog.image
-                    }
-                    alt={blog.title}
-                    fill
-                    // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-                    onError={() =>
-                      setImageErrors((prev) => ({
-                        ...prev,
-                        [blog.slug]: true,
-                      }))
-                    }
-                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                  />
+          {visibleBlogs.map((blog, index) => {
+            const blogIndex = (page - 1) * blogsPerPage + index + 1; // Calculate the blog index
+
+            return (
+              <motion.div
+                key={`${blog.slug}-${blogIndex}`} // Adding index or count in key
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="bg-[linear-gradient(#181823,#101017)] rounded-4xl group border border-transparent hover:border-[var(--acua-marine)] overflow-hidden"
+              >
+                <div className="p-6">
+                  <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden rounded-4xl">
+                    <Image
+                      src={
+                        imageErrors[blog.slug]
+                          ? "/mainpage/image.png"
+                          : blog.image
+                      }
+                      alt={blog.title}
+                      fill
+                      onError={() =>
+                        setImageErrors((prev) => ({
+                          ...prev,
+                          [blog.slug]: true,
+                        }))
+                      }
+                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between text-bluish-gray text-lg mb-8">
-                  <span className="bg-text-bg px-4 py-2 text-base rounded-4xl text-white">
-                    {blog.category}
-                  </span>
-                  <span>{blog.date}</span>
+                <div className="p-6">
+                  <div className="flex justify-between text-bluish-gray text-lg mb-8">
+                    <span className="bg-text-bg px-4 py-2 text-base rounded-4xl text-white">
+                      {blog.category}
+                    </span>
+                    <span>{blog.date}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold">{blog.title}</h3>
+                  <Link
+                    href={`/Blog/${blog.slug}`}
+                    className="text-acua-marine font-bold text-lg mt-2 inline-block"
+                  >
+                    Read More → {blogIndex} {/* Display the blog index */}
+                  </Link>
                 </div>
-                <h3 className="text-lg font-semibold">{blog.title}</h3>
-                <Link
-                  href={`/Blog/${blog.slug}`}
-                  className="text-acua-marine font-bold text-lg mt-2 inline-block"
-                >
-                  Read More →
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
 
           {/* Skeletons while loading */}
           {loading &&
