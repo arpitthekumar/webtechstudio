@@ -6,9 +6,19 @@ import Image from "next/image";
 import Chip from "../../main/chip/chip";
 import { useEffect, useState } from "react";
 import allBlogs from "@/app/lib/data";
-import Pagination from "./pagination-component";
+import Select from "react-select";
 
 export default function HeroSection() {
+  // Extract unique categories from your blogs
+  const rawCategories = allBlogs.map((blog) => blog.category);
+  const uniqueCategories = Array.from(new Set(rawCategories)).sort();
+  // const categories = ["All", ...uniqueCategories];
+
+  const categories = ["All", ...new Set(allBlogs.map((blog) => blog.category))];
+  const categoryOptions = categories.map((cat) => ({
+    value: cat,
+    label: cat,
+  }));
   const [hasAnimated, setHasAnimated] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 4;
@@ -19,7 +29,6 @@ export default function HeroSection() {
     setHasAnimated(true);
   }, []);
 
-  const categories = ["All", ...new Set(allBlogs.map((blog) => blog.category))];
 
   const filteredBlogs =
     selectedCategory === "All"
@@ -49,18 +58,19 @@ export default function HeroSection() {
           viewport={{ once: true }}
         >
           <div className="flex flex-col items-center text-center">
-            <Chip text="Our Plans" isDark={true} />
+            <Chip text="Our Blogs" isDark={true} />
             <h1 className="text-3xl md:text-5xl font-bold pb-3">
-              Flexible Pricing for Every Need
+              Discover Insights, Tips & Trends
             </h1>
             <p className="max-w-2xl mx-auto text-sm md:text-base">
-              Choose a plan that fits your project's scale and budget.
+              Stay updated with our latest articles on development, design,
+              marketing, and more.
             </p>
           </div>
         </motion.div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center mt-10 mb-6">
+        <div className="md:flex flex-wrap gap-4 hidden  justify-center mt-10 mb-6">
           {categories.map((category) => (
             <button
               key={category}
@@ -77,6 +87,40 @@ export default function HeroSection() {
               {category}
             </button>
           ))}
+        </div>
+        <div className="max-w-xs md:hidden mx-auto my-10">
+          <Select
+            options={categoryOptions}
+            value={{ value: selectedCategory, label: selectedCategory }}
+            onChange={(selected) => {
+              const value = selected?.value || "All";
+              setSelectedCategory(value);
+              setCurrentPage(1);
+            }}
+            className="text-black"
+            isSearchable
+            styles={{
+              control: (base) => ({
+                ...base,
+                backgroundColor: "#1f2937", // gray-800
+                borderColor: "transparent",
+                color: "white",
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              menu: (base) => ({
+                ...base,
+                backgroundColor: "#1f2937", // gray-800
+              }),
+              option: (base, state) => ({
+                ...base,
+                backgroundColor: state.isFocused ? "#56dcad" : "#1f2937", // acua-marine or gray-800
+                color: "white",
+              }),
+            }}
+          />
         </div>
 
         {/* Blog Cards */}
@@ -126,12 +170,49 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </div>
+        {/* Pagination Controls */}
+        <div className="mt-10 flex justify-center items-center gap-2 flex-wrap">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className={`px-4 py-2 rounded-full text-sm font-semibold ${
+              currentPage === 1
+                ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+                : "bg-gray-800 text-white hover:bg-acua-marine"
+            }`}
+          >
+            Previous
+          </button>
 
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+          {[...Array(totalPages)].map((_, index) => {
+            const page = index + 1;
+            return (
+              <button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                className={`px-4 py-2 rounded-full text-sm font-semibold ${
+                  currentPage === page
+                    ? "bg-acua-marine text-white"
+                    : "bg-gray-800 text-gray-300 hover:bg-acua-marine hover:text-white"
+                }`}
+              >
+                {page}
+              </button>
+            );
+          })}
+
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className={`px-4 py-2 rounded-full text-sm font-semibold ${
+              currentPage === totalPages
+                ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+                : "bg-gray-800 text-white hover:bg-acua-marine"
+            }`}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </section>
   );
