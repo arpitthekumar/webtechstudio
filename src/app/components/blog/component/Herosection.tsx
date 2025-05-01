@@ -153,7 +153,7 @@ export default function HeroSection() {
               className="bg-[linear-gradient(#181823,#101017)] rounded-4xl group border border-transparent hover:border-[var(--acua-marine)] overflow-hidden"
             >
               <div className="p-6">
-                <div className="relative w-full h-[600px] overflow-hidden rounded-4xl">
+                <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden rounded-4xl">
                   <Image
                     src={
                       imageErrors[blog.slug]
