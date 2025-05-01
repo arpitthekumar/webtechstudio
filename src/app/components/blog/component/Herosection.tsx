@@ -131,10 +131,10 @@ export default function HeroSection() {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="w-full p-2 rounded bg-gray-800 text-white border-none"
+            className="w-full p-3 rounded-4xl bg-gray-800 text-white border-none shadow-lg focus:outline-none focus:ring-2 focus:ring-acua-marine transition-all duration-300 ease-in-out"
           >
             {categories.map((cat) => (
-              <option key={cat} value={cat}>
+              <option key={cat} value={cat} className="bg-gray-800">
                 {cat}
               </option>
             ))}
@@ -162,7 +162,7 @@ export default function HeroSection() {
                     }
                     alt={blog.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                    // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
                     onError={() =>
                       setImageErrors((prev) => ({
                         ...prev,
