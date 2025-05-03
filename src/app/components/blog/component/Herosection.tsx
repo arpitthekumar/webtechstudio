@@ -11,7 +11,7 @@ export default function HeroSection() {
   const categories = ["All", ...new Set(allBlogs.map((b) => b.category))];
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [visibleBlogs, setVisibleBlogs] = useState<any[]>([]);
-  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+  const [image, setImage] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [page, setPage] = useState(1);
@@ -149,7 +149,7 @@ export default function HeroSection() {
                     {(() => {
                       const isExternal = /^https?:\/\//.test(blog.image);
                       const imageSrc =
-                        imageErrors[blog.slug] || isExternal
+                        image[blog.slug] || isExternal
                           ? "/mainpage/image.png"
                           : blog.image;
 
@@ -158,12 +158,15 @@ export default function HeroSection() {
                           src={imageSrc}
                           alt={blog.title}
                           fill
-                          onError={() =>
-                            setImageErrors((prev) => ({
+                          onError={(e) => {
+                            // Set the fallback image if the image fails to load
+                            const target = e.target as HTMLImageElement;
+                            target.src = "/mainpage/default-image.png"; // Fallback image
+                            setImage((prev) => ({
                               ...prev,
                               [blog.slug]: true,
-                            }))
-                          }
+                            }));
+                          }}
                           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                         />
                       );
