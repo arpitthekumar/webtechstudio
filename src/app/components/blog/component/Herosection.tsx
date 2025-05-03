@@ -35,7 +35,6 @@ export default function HeroSection() {
     setVisibleBlogs((prev) => [...prev, ...newBlogs]);
   }, [page, filteredBlogs]);
 
-  // Load blogs on category change or page change
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -44,7 +43,6 @@ export default function HeroSection() {
     }, 500);
   }, [page, selectedCategory]);
 
-  // Re-enable visibleBlogs & reset page when category changes
   useEffect(() => {
     setHasAnimated(true);
     setVisibleBlogs([]);
@@ -52,7 +50,6 @@ export default function HeroSection() {
     setStopAutoLoad(false);
   }, [selectedCategory]);
 
-  // Infinite Scroll Observer
   useEffect(() => {
     if (stopAutoLoad || !loadMoreRef.current) return;
 
@@ -79,18 +76,16 @@ export default function HeroSection() {
     };
   }, [loadMoreRef, stopAutoLoad, page, totalPages]);
 
-  // Manual Load More button
   const handleManualLoad = () => {
     if (page < totalPages) {
       setPage((prev) => prev + 1);
-      setStopAutoLoad(false); // Resume auto scroll
+      setStopAutoLoad(false);
     }
   };
 
   return (
     <section className="py-20 text-white">
       <div className="container mx-auto px-6 md:px-20 max-w-9xl">
-        {/* Header */}
         <motion.div
           key={hasAnimated ? "Hero-section" : ""}
           initial={{ opacity: 0, y: 50 }}
@@ -109,7 +104,6 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Filter Buttons */}
         <div className="hidden md:flex flex-wrap gap-4 justify-center mt-10 mb-6">
           {categories.map((category) => (
             <button
@@ -126,7 +120,6 @@ export default function HeroSection() {
           ))}
         </div>
 
-        {/* Mobile Dropdown */}
         <div className="max-w-xs md:hidden mx-auto my-10">
           <select
             value={selectedCategory}
@@ -141,38 +134,40 @@ export default function HeroSection() {
           </select>
         </div>
 
-        {/* Blog Cards */}
         <div className="mt-12 grid md:grid-cols-2 gap-6">
-          {visibleBlogs.map((blog, index) => {
-            const blogIndex = (page - 1) * blogsPerPage + index + 1; // Calculate the blog index
+          {visibleBlogs.map((blog) => {
+            const blogIndex =
+              visibleBlogs.findIndex((b) => b.slug === blog.slug) + 1;
 
             return (
               <motion.div
-                key={`${blog.slug}-${blogIndex}`} // Adding index or count in key
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                key={`${blog.slug}-${blogIndex}`}
                 className="bg-[linear-gradient(#181823,#101017)] rounded-4xl group border border-transparent hover:border-[var(--acua-marine)] overflow-hidden"
               >
                 <div className="p-6">
                   <div className="relative w-full h-[300px] md:h-[600px] overflow-hidden rounded-4xl">
-                    <Image
-                      src={
-                        imageErrors[blog.slug]
+                    {(() => {
+                      const isExternal = /^https?:\/\//.test(blog.image);
+                      const imageSrc =
+                        imageErrors[blog.slug] || isExternal
                           ? "/mainpage/image.png"
-                          : blog.image
-                      }
-                      alt={blog.title}
-                      fill
-                      onError={() =>
-                        setImageErrors((prev) => ({
-                          ...prev,
-                          [blog.slug]: true,
-                        }))
-                      }
-                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                    />
+                          : blog.image;
+
+                      return (
+                        <Image
+                          src={imageSrc}
+                          alt={blog.title}
+                          fill
+                          onError={() =>
+                            setImageErrors((prev) => ({
+                              ...prev,
+                              [blog.slug]: true,
+                            }))
+                          }
+                          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                        />
+                      );
+                    })()}
                   </div>
                 </div>
                 <div className="p-6">
@@ -187,14 +182,13 @@ export default function HeroSection() {
                     href={`/Blog/${blog.slug}`}
                     className="text-acua-marine font-bold text-lg mt-2 inline-block"
                   >
-                    Read More → {blogIndex} {/* Display the blog index */}
+                    Read More → {blogIndex}
                   </Link>
                 </div>
               </motion.div>
             );
           })}
 
-          {/* Skeletons while loading */}
           {loading &&
             page < totalPages &&
             Array.from({ length: 2 }).map((_, i) => (
@@ -205,28 +199,25 @@ export default function HeroSection() {
             ))}
         </div>
 
-        {/* Load More trigger */}
         <div ref={loadMoreRef} className="h-12 mt-10" />
 
-        {/* Manual Load More Button */}
         {stopAutoLoad && page < totalPages && (
           <div className="text-center mt-10">
             <button
               onClick={handleManualLoad}
-              className="text-acua-marine px-6 py-3 font-semibold "
+              className="text-acua-marine px-6 py-3 font-semibold"
             >
               Load More →
             </button>
           </div>
         )}
 
-        {/* No more blogs */}
         {page >= totalPages && (
           <>
             <div className="text-center mt-10">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="text-acua-marine px-6 py-3  font-semibold "
+                className="text-acua-marine px-6 py-3 font-semibold"
               >
                 Back to Top →
               </button>
