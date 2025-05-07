@@ -62,7 +62,6 @@ const PricingPage = () => {
         { text: "Performance Optimization", included: false },
         { text: "Social Media Integration", included: false },
         { text: "Backup & Restore", included: false },
-
       ],
     },
     {
@@ -87,7 +86,6 @@ const PricingPage = () => {
         { text: "Social Media Integration", included: true },
         { text: "Backup & Restore", included: false },
         { text: "Priority Support", included: false },
-
       ],
     },
     {
@@ -179,9 +177,12 @@ const PricingPage = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  {plan.price}
+                  <span className="text-[var(--acua-marine)] text-2xl md:text-4xl font-bold mr-2">
+                    Contact For Pricing
+                  </span>
+                  {/* {plan.price} */}
                 </motion.span>
-                /one-time
+                {/* /one-time */}
               </h3>
 
               <div className="space-y-3 md:space-y-4">

@@ -152,7 +152,6 @@ export default function HeroSection() {
                         image[blog.slug] || isExternal
                           ? "/mainpage/image.png"
                           : blog.image;
-
                       return (
                         <Image
                           src={imageSrc}
