@@ -19,8 +19,7 @@ const AboutSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="flex-1"
       >
-                <Chip text="Who We Are" isDark={true} />
-        
+        <Chip text="Who We Are" isDark={true} />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -30,10 +29,11 @@ const AboutSection = () => {
           className="text-lg mb-4"
         >
           At
-          <span className="font-bold text-2xl"> WebTechStudio</span>, we provide custom digital
-          solutions designed to help agencies grow. Our team blends creativity,
-          innovation, and expertise to deliver exceptional results, empowering
-          brands to succeed in a rapidly evolving digital world.
+          <span className="font-bold text-2xl"> WebTechStudio</span>, we provide
+          custom digital solutions designed to help agencies grow. Our team
+          blends creativity, innovation, and expertise to deliver exceptional
+          results, empowering brands to succeed in a rapidly evolving digital
+          world.
         </motion.p>
 
         {/* Stats */}
@@ -70,7 +70,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           viewport={{ once: true }}
         >
-          <Button text="Discover Our Story" mode="light" href="/contact" />
+          <Button text="Discover Our Story" mode="light" href="/Contact" />
         </motion.div>
       </motion.div>
 

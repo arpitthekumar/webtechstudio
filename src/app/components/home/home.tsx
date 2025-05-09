@@ -13,7 +13,7 @@ import ProcessSection from "../main/processsection/ProcessSection";
 import ShowcaseExpertise from "../main/ShowcaseExpertise";
 import Team from "../main/team/Team";
 import Link from "next/link";
-
+import ContactPage from "../contact/component/HeroSection";
 const HomePage: React.FC = () => {
   return (
     <>
@@ -44,6 +44,7 @@ const HomePage: React.FC = () => {
       <div className="bg-black min-h-screen">
         <Navbar />
         <HeroSection />
+        <ContactPage/>
         <AboutSection />
         <DevelopmentSection />
         <ShowcaseExpertise />
