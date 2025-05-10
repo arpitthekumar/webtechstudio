@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import blogs from "../../lib/data";
-import Navbar from "@/app/components/main/Navbar";
-import Footer from "@/app/components/main/Footer";
-import Cta from "@/app/components/main/cta/Cta";
-import Breadcrumb from "@/app/components/Breadcrumb";
+import blogs from "@/lib/data";
+import Navbar from "@/components/home/main/Navbar";
+import Footer from "@/components/home/main/Footer";
+import Cta from "@/components/home/main/cta/Cta";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export async function generateMetadata() {
   const blog = blogs[0];

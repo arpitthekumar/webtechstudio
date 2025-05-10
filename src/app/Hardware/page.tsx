@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Metadata } from "next";
-import HardwarePage from "../components/hardware/Hardware";
+import HardwarePage from "../../components/hardware/Hardware";
 
 // ✅ App Router Metadata
 export const metadata: Metadata = {

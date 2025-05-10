@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Metadata } from "next";
-import TermsAndConditionsPage from "../components/termsandconditions/TermsAndConditions";
+import TermsAndConditionsPage from "../../components/termsandconditions/TermsAndConditions";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions - WebTechStudio",

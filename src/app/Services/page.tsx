@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Metadata } from "next";
-import ServicesPage from "../components/services/Services";
+import ServicesPage from "../../components/services/Services";
 
 export const metadata: Metadata = {
   title: "Our Services - WebTechStudio",

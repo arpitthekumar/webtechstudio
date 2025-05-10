@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Metadata } from "next";
-import ContactSection from "../components/contact/Contact";
+import ContactSection from "../../components/contact/Contact";
 
 export const metadata: Metadata = {
   title: "Contact Us - WebTechStudio",

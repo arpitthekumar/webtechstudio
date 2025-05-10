@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Metadata } from "next";
-import BlogPage from "../components/blog/Blog";
+import BlogPage from "../../components/blog/Blog";
 
 export const metadata: Metadata = {
   title: "Our Blog - WebTechStudio",

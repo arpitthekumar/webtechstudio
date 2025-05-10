@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomePage from "./components/home/home";
+import HomePage from "../components/home/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

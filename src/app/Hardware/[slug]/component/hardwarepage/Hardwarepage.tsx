@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Chip from "@/app/components/main/chip/chip";
-import Navbar from "@/app/components/main/Navbar";
-import Footer from "@/app/components/main/Footer";
-import Cta from "@/app/components/main/cta/Cta";
-import { HardwareProduct } from "@/app/lib/hardware";
-import Breadcrumb from "@/app/components/Breadcrumb";
+import Chip from "@/components/home/main/chip/chip";
+import Navbar from "@/components/home/main/Navbar";
+import Footer from "@/components/home/main/Footer";
+import Cta from "@/components/home/main/cta/Cta";
+import { HardwareProduct } from "@/lib/hardware";
+import Breadcrumb from "@/components/Breadcrumb";
 
 type Props = {
   product: HardwareProduct;

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Metadata } from "next";
-import PricingPage from "../components/pricing/Pricing";
+import PricingPage from "../../components/pricing/Pricing";
 
 export const metadata: Metadata = {
   title: "Pricing - Affordable Web Development Packages | WebTechStudio",

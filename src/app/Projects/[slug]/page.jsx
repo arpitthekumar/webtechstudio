@@ -2,14 +2,14 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import Navbar from "@/app/components/main/Navbar";
-import Cta from "@/app/components/main/cta/Cta";
-import Footer from "@/app/components/main/Footer";
-import Chip from "@/app/components/main/chip/chip";
-import Breadcrumb from "@/app/components/Breadcrumb";
+import Navbar from "@/components/home/main/Navbar";
+import Cta from "@/components/home/main/cta/Cta";
+import Footer from "@/components/home/main/Footer";
+import Chip from "@/components/home/main/chip/chip";
+import Breadcrumb from "@/components/Breadcrumb";
 
 async function getProject(slug) {
-  const projectsData = await import("@/app/lib/projects.json");
+  const projectsData = await import("@/lib/projects.json");
   return projectsData.projects.find((p) => p.id === slug);
 }
 
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }) {
 
 // Static Params for Dynamic Routes
 export function generateStaticParams() {
-  const projectsData = require("@/app/lib/projects.json");
+  const projectsData = require("@/lib/projects.json");
   return projectsData.projects.map((project) => ({
     slug: project.id,
   }));

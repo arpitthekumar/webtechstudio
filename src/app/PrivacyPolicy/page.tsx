@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Metadata } from "next";
-    import PrivacyPolicyPage from "../components/privacypolicy/PrivacyPolicy";
+    import PrivacyPolicyPage from "../../components/privacypolicy/PrivacyPolicy";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - WebTechStudio",

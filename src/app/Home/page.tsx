@@ -1,7 +1,7 @@
 import Head from "next/head";
-import HomePage from "../components/home/home";
+import HomePage from "../../components/home/home";
 import { Metadata } from "next";
-import { seoData } from "@/app/lib/seo";
+import { seoData } from "@/lib/seo";
 
 // Get a random index based on the available titles
 const randomIndex = Math.floor(Math.random() * seoData.titles.length);

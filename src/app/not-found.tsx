@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Cta from "./components/main/cta/Cta";
-import Footer from "./components/main/Footer";
-import Navbar from "./components/main/Navbar";
+import Cta from "../components/home/main/cta/Cta";
+import Footer from "../components/home/main/Footer";
+import Navbar from "../components/home/main/Navbar";
 
 export default function NotFoundPage() {
   return (
