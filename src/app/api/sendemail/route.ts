@@ -1,35 +1,46 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
-  const { name, mobile } = await req.json();
-
-  if (!name || !mobile) {
-    return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
-  }
-
   try {
+    const { name, mobile } = await req.json();
+
+    if (!name || !mobile) {
+      return new Response(
+        JSON.stringify({ error: "Name and mobile are required." }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
-      service: 'Gmail', // or use 'smtp.ethereal.email' for testing
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
-    await transporter.sendMail({
-      from: `"Promo Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_RECEIVER, // Your email
-      subject: 'New Promo Form Submission',
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_RECEIVER || process.env.EMAIL_USER,
+      subject: "New Promo Discount Submission",
       html: `
-        <h3>New Promo Inquiry</h3>
+        <h3>Promo Discount Request</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Mobile:</strong> ${mobile}</p>
       `,
-    });
+    };
 
-    return NextResponse.json({ success: true });
-  } catch (err) {
-    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+    await transporter.sendMail(mailOptions);
+
+    return new Response(
+      JSON.stringify({ success: true, message: "Email sent successfully!" }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (error) {
+    console.error("Email send error:", error);
+    return new Response(
+      JSON.stringify({ error: "Failed to send email." }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
   }
 }

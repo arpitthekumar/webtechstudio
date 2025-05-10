@@ -5,36 +5,63 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 
 const PromoPopup: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [errors, setErrors] = useState<{ name?: string; mobile?: string }>({});
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setShowPopup(true);
     }, 500);
+    return () => clearTimeout(timer);
   }, []);
+
+  const validateForm = () => {
+    const newErrors: { name?: string; mobile?: string } = {};
+
+    if (!name.trim()) {
+      newErrors.name = "Name is required.";
+    } else if (!/^[a-zA-Z\s]+$/.test(name.trim())) {
+      newErrors.name = "Only letters and spaces allowed.";
+    }
+
+    if (!mobile.trim()) {
+      newErrors.mobile = "Mobile number is required.";
+    } else if (!/^[6-9]\d{9}$/.test(mobile.trim())) {
+      newErrors.mobile = "Enter a valid 10-digit mobile number.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-    const mobile = (form.elements.namedItem("mobile") as HTMLInputElement)
-      .value;
+    if (!validateForm()) return;
 
     try {
-      const res = await fetch("/api/send-email", {
+      setLoading(true);
+      const res = await fetch("/api/sendemail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, mobile }),
       });
 
       if (res.ok) {
-        alert("Discount Activated! We'll contact you shortly.");
         setShowPopup(false);
+        setName("");
+        setMobile("");
+        setErrors({});
       } else {
-        alert("Failed to send. Please try again.");
+        const data = await res.json();
+        setErrors({ mobile: data?.error || "Something went wrong." });
       }
     } catch (err) {
       console.error(err);
-      alert("An error occurred.");
+      setErrors({ mobile: "Server error. Please try again." });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -42,7 +69,7 @@ const PromoPopup: React.FC = () => {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 flex justify-center items-center">
-      <div className="relative bg-black bg-[url('/gears-bg.png')] bg-cover text-white p-6 rounded-lg w-full max-w-md shadow-xl border border-gray-700">
+      <div className="relative bg-black bg-cover text-white p-6 rounded-lg w-full max-w-md shadow-xl border border-gray-700">
         <button
           onClick={() => setShowPopup(false)}
           className="absolute top-3 right-4 text-white text-2xl"
@@ -51,40 +78,55 @@ const PromoPopup: React.FC = () => {
         </button>
 
         <h2 className="text-acua-marine font-bold text-xl text-center">
-          Get 50% OFF on web development!
+          Get 20% OFF on web development!
         </h2>
         <p className="text-center mt-2">CALL NOW FOR FREE QUOTE</p>
 
-        <p className="group text-center font-bold text-3xl my-1 flex items-center justify-center gap-2">
-          <FiPhoneCall className="text-4xl text-acua-marine hover:text-white" />
+        <p className="group text-center font-bold text-3xl my-1 flex items-center justify-center gap-2 cursor-pointer">
+          <FiPhoneCall className="text-4xl text-acua-marine group-hover:text-white transition duration-200" />
           <a
             href="tel:+919259493075"
-            className="text-white hover:text-[var(--acua-marine)]"
+            className="text-white group-hover:text-[var(--acua-marine)] transition duration-200"
           >
             +91 92594 93075
           </a>
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-4 space-y-3">
-          <input
-            name="name"
-            type="text"
-            placeholder="Name"
-            className="w-full px-4 py-2 rounded bg-white text-black"
-            required
-          />
-          <input
-            name="mobile"
-            type="tel"
-            placeholder="Mobile Number"
-            className="w-full px-4 py-2 rounded bg-white text-black"
-            required
-          />
+        <form onSubmit={handleSubmit} className="mt-4 space-y-4">
+          <div>
+            <input
+              name="name"
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-4 py-2 rounded bg-white text-black"
+            />
+            {errors.name && (
+              <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+            )}
+          </div>
+
+          <div>
+            <input
+              name="mobile"
+              type="tel"
+              placeholder="Mobile Number"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+              className="w-full px-4 py-2 rounded bg-white text-black"
+            />
+            {errors.mobile && (
+              <p className="text-red-400 text-sm mt-1">{errors.mobile}</p>
+            )}
+          </div>
+
           <button
             type="submit"
-            className="w-full bg-acua-marine py-2 hover:bg-white text-black rounded-full  transition duration-200 "
+            disabled={loading}
+            className="w-full bg-acua-marine py-2 hover:bg-white text-black rounded-full transition duration-200"
           >
-            ACTIVATE DISCOUNT
+            {loading ? "Sending..." : "ACTIVATE DISCOUNT"}
           </button>
         </form>
 
@@ -92,7 +134,7 @@ const PromoPopup: React.FC = () => {
           24*7 HELPLINE{" "}
           <a
             href="tel:+919259493075"
-            className="text-acua-marine font-semibold "
+            className="text-acua-marine font-semibold"
           >
             +91 92594 93075
           </a>
