@@ -32,7 +32,7 @@ const HeroSection = () => {
         className="object-cover z-0"
       />
       {/* Dark overlay only on the background */}
-      <div className="absolute inset-0 bg-black/20 z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black/15 z-0 pointer-events-none"></div>
 
       {/* Content */}
       <div className="relative  md:top-50 flex flex-col md:flex-row justify-center md:justify-between items-center text-white text-center md:text-left px-6 md:px-20 w-full">

@@ -14,6 +14,7 @@ import ShowcaseExpertise from "./main/ShowcaseExpertise";
 import Team from "./main/team/Team";
 import Link from "next/link";
 import ContactPage from "../contact/component/HeroSection";
+import PopupModal from "./main/adpopup";
 const HomePage: React.FC = () => {
   return (
     <>
@@ -44,6 +45,7 @@ const HomePage: React.FC = () => {
       <div className="bg-black min-h-screen">
         <Navbar />
         <HeroSection />
+        <PopupModal/>
         <ContactPage/>
         <AboutSection />
         <DevelopmentSection />
