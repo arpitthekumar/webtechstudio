@@ -633,6 +633,241 @@
         "/project/pkpcb/image1.png",
         "/project/pkpcb/image3.png"
       ]
+    },
+    {
+      "id": "flextra-cables",
+      "name": "Flextra Cables",
+      "tagline": "Powering Industries with a Digital-First Brand Presence",
+      "agency": "Web Tech Studio",
+      "introduction": "Flextra Cables, a premium cable manufacturing brand, partnered with Web Tech Studio to establish a high-performance website that reflects their industrial strength, product range, and trustworthiness. Our mission was to create a digital presence that’s as durable and efficient as the cables they manufacture.",
+      "website_url": "https://flextracables.netlify.app/",
+      "category": [
+        "Web Development",
+        "Branding",
+        "UI/UX Design"
+      ],
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Image Optimization"
+      ],
+      "features": [
+        {
+          "details": "Responsive Next.js website with fast load times and industrial-grade reliability."
+        },
+        {
+          "details": "Dynamic sections for showcasing certifications, cable types, and company mission."
+        },
+        {
+          "details": "Framer Motion used to deliver smooth animations and interactive UI elements."
+        },
+        {
+          "details": "SEO-friendly content structure for higher visibility in B2B search results."
+        },
+        {
+          "details": "Optimized gallery and hero banners for enhanced branding and product visibility."
+        }
+      ],
+      "challenges_overview": "Flextra Cables needed a robust online presence to match their reputation in the industrial sector. Their old site lacked visual identity, failed to communicate value, and was difficult to navigate on mobile devices.",
+      "challenges": [
+        {
+          "title": "Lack of Visual Identity",
+          "details": "The old digital presence didn’t communicate the brand’s strengths or product superiority."
+        },
+        {
+          "title": "No Responsive Experience",
+          "details": "The previous layout didn’t support mobile or tablet viewing properly, limiting engagement."
+        },
+        {
+          "title": "Minimal Product Showcase",
+          "details": "Potential clients couldn’t explore the product range or understand certifications easily."
+        },
+        {
+          "title": "Low Conversion Potential",
+          "details": "There were no clear calls to action or trust signals to drive leads or inquiries."
+        }
+      ],
+      "solutions_overview": "We delivered a custom-designed website that combines industrial aesthetics with functional design. It includes performance optimizations, responsive design, and strategically placed call-to-actions to encourage engagement.",
+      "solutions": [
+        {
+          "title": "Industrial-Inspired Design",
+          "details": "Created a visual style matching the strength and reliability of Flextra’s product range."
+        },
+        {
+          "title": "Fully Responsive Build",
+          "details": "Ensured accessibility and performance across all screen sizes and devices."
+        },
+        {
+          "title": "Modular Product Showcases",
+          "details": "Dedicated sections for cable types, features, and downloadable catalogs."
+        },
+        {
+          "title": "Certifications & Trust Signals",
+          "details": "Displayed key certifications with clarity to increase brand credibility."
+        },
+        {
+          "title": "Performance & Speed Optimization",
+          "details": "Optimized assets, code, and interactions for a blazing-fast experience."
+        }
+      ],
+      "results": [
+        {
+          "title": "Improved User Experience",
+          "details": "A clean, focused layout led to a 60% increase in time spent on site by visitors."
+        },
+        {
+          "title": "Mobile Engagement Boost",
+          "details": "Mobile visits increased by 75% thanks to responsive design and fast load speeds."
+        },
+        {
+          "title": "Stronger Brand Trust",
+          "details": "Certifications, product visuals, and structured info built a more professional image."
+        },
+        {
+          "title": "Increased Lead Generation",
+          "details": "Clear CTAs and contact forms improved inquiry rates from B2B buyers."
+        }
+      ],
+      "why_stand_out": [
+        {
+          "title": "Designed for Industrial Confidence",
+          "details": "A solid, professional look that builds trust in the manufacturing industry."
+        },
+        {
+          "title": "Built with Scalability in Mind",
+          "details": "Future-ready structure that can integrate a product catalog or e-commerce system."
+        },
+        {
+          "title": "Optimized for B2B Conversion",
+          "details": "Strategic layout, performance, and SEO ensure business visibility and growth."
+        }
+      ],
+      "thumbnail": "/project/flextra/image1.png",
+      "gallery": [
+        "/project/flextra/image2.png",
+        "/project/flextra/image3.png",
+        "/project/flextra/image4.png",
+        "/project/flextra/image5.png",
+        "/project/flextra/image6.png"
+      ]
+    },
+    {
+      "id": "gapellu-pdf-editor",
+      "name": "Gapellu PDF Editor",
+      "tagline": "Seamless Online PDF Editing & Invoice Generation Tool",
+      "agency": "Web Tech Studio",
+      "introduction": "Gapellu PDF Editor is a full-fledged browser-based PDF automation platform designed for businesses that frequently generate official documents such as invoices and purchase orders. Unlike traditional editors, Gapellu simplifies the process with dynamic inputs, real-time previews, and pixel-perfect, print-ready exports. Developed by Web Tech Studio, this SaaS tool combines design precision with powerful PDF manipulation features—all in the cloud.",
+      "website_url": "https://gapellu.com",
+      "category": [
+        "SaaS",
+        "PDF Automation",
+        "Business Tools"
+      ],
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "React-PDF",
+        "PDF-Lib",
+        "Framer Motion"
+      ],
+      "features": [
+        {
+          "details": "Fillable templates for Invoices and Purchase Orders with editable text fields and dynamic tables."
+        },
+        {
+          "details": "Live preview feature that updates in real-time as users type, ensuring WYSIWYG fidelity."
+        },
+        {
+          "details": "Easy PDF export with fields embedded and locked for professional use."
+        },
+        {
+          "details": "Dynamic row addition in tables for itemized billing, with automatic calculations."
+        },
+        {
+          "details": "Mobile-responsive and touch-optimized UI for teams working on the go."
+        }
+      ],
+      "challenges_overview": "Gapellu was built to solve the pain of offline PDF editing and manual document prep. Challenges included creating real-time editable overlays on fixed templates, ensuring accurate export layout, and designing a fast, accessible UI for all device types.",
+      "challenges": [
+        {
+          "title": "Precision in Field Mapping",
+          "details": "Accurately aligning input fields with pre-existing template coordinates was essential for professionalism."
+        },
+        {
+          "title": "User-First Form Experience",
+          "details": "Simplifying complex document structures (like dynamic rows) into a smooth UX."
+        },
+        {
+          "title": "Consistent Output Across Browsers",
+          "details": "Ensuring consistency in downloaded PDFs regardless of OS or device type."
+        },
+        {
+          "title": "Performance with PDF Rendering",
+          "details": "Rendering high-resolution templates and handling user inputs without lag or stutter."
+        }
+      ],
+      "solutions_overview": "By leveraging a combination of React hooks, coordinate-mapped fields, and PDF-Lib, we built a system that allows users to edit business documents with confidence and ease. The UI was fine-tuned for performance, simplicity, and cross-platform usability.",
+      "solutions": [
+        {
+          "title": "Template-Driven PDF Editing",
+          "details": "Mapped input positions over static PDFs using absolute positioning and form state binding."
+        },
+        {
+          "title": "Preview-As-You-Type Interface",
+          "details": "Created a real-time rendering interface using React-PDF that visually updates with every keystroke."
+        },
+        {
+          "title": "Clean UI with Mobile Optimization",
+          "details": "Implemented a responsive, minimalist UI for optimal interaction on phones, tablets, and desktops."
+        },
+        {
+          "title": "Locked Export with PDF-Lib",
+          "details": "Used PDF-Lib to generate non-editable, professional-grade PDFs from filled templates."
+        },
+        {
+          "title": "Expandable Row Logic",
+          "details": "Added dynamic rows in invoice templates with real-time total calculations for each entry."
+        }
+      ],
+      "results": [
+        {
+          "title": "Used by SMEs and Admin Teams",
+          "details": "Businesses in logistics, retail, and services use Gapellu to streamline document generation."
+        },
+        {
+          "title": "Improved Workflow Efficiency",
+          "details": "Reduced document prep time by over 60% compared to manual editing or Word-based templates."
+        },
+        {
+          "title": "Consistent, Branded Output",
+          "details": "Output files are aligned with standard layouts, maintaining branding and professionalism."
+        },
+        {
+          "title": "Positive Reception from Early Users",
+          "details": "Praised for its clean interface, ease of use, and the accuracy of final exports."
+        }
+      ],
+      "why_stand_out": [
+        {
+          "title": "Truly No-Code PDF Editing",
+          "details": "No setup, no downloads—just fill and export right in the browser."
+        },
+        {
+          "title": "Scalable & Ready for Integration",
+          "details": "Designed for future integration with CRMs or inventory systems via APIs."
+        },
+        {
+          "title": "Precision & Usability Combined",
+          "details": "Marries a highly visual UI with reliable PDF processing under the hood."
+        }
+      ],
+      "thumbnail": "/project/gapellu/image1.png",
+      "gallery": [
+        "/project/gapellu/image2.png",
+        "/project/gapellu/image3.png",
+        "/project/gapellu/image4.png"
+      ]
     }
   ]
 }
