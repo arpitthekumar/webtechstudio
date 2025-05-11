@@ -20,9 +20,9 @@ const teamMembers = [
     role: "Senior UI/UX Designer",
     image: "/mainpage/image2.png",
     socials: {
-      github: "https://github.com/alex",
-      instagram: "https://instagram.com/alex",
-      linkedin: "https://linkedin.com/in/alex",
+      github: "https://github.com",
+      instagram: "https://instagram.com",
+      linkedin: "https://linkedin.com/in",
     },
   },
   {
@@ -31,7 +31,7 @@ const teamMembers = [
     image: "/mainpage/image.png",
     socials: {
       github: "https://github.com/Anshkumar1611",
-      instagram: "https://instagram.com/rachel",
+      instagram: "https://instagram.com",
       linkedin: "https://www.linkedin.com/in/ansh-kumar-064b43198/",
     },
   },
@@ -41,7 +41,7 @@ const teamMembers = [
     image: "/mainpage/image3.png",
     socials: {
       github: "https://github.com/aksingh-codes",
-      instagram: "https://instagram.com/michael",
+      instagram: "https://instagram.com",
       linkedin: "https://www.linkedin.com/in/aksingh-codes/",
     },
   },
@@ -51,8 +51,8 @@ const teamMembers = [
     image: "/mainpage/image.png",
     socials: {
       github: "https://github.com/mohitkumar7895",
-      instagram: "https://instagram.com/rachel",
-      linkedin: "https://linkedin.com/in/rachel",
+      instagram: "https://instagram.com",
+      linkedin: "https://www.linkedin.com/in/mohit-kumar7895/",
     },
   },
 ];
