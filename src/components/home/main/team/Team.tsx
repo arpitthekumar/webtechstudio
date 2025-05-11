@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Chip from "../chip/chip";
 
 const teamMembers = [
@@ -12,7 +12,7 @@ const teamMembers = [
     socials: {
       github: "https://github.com/sophia",
       instagram: "https://instagram.com/sophia",
-      youtube: "https://youtube.com/sophia",
+      linkedin: "https://linkedin.com/in/sophia",
     },
   },
   {
@@ -22,27 +22,27 @@ const teamMembers = [
     socials: {
       github: "https://github.com/alex",
       instagram: "https://instagram.com/alex",
-      youtube: "https://youtube.com/alex",
+      linkedin: "https://linkedin.com/in/alex",
     },
   },
   {
-    name: "Abishek Shingh",
-    role: "Project Manager",
+    name: "Ashwani Shing",
+    role: "Frontend Developer",
     image: "/mainpage/image3.png",
     socials: {
       github: "https://github.com/michael",
       instagram: "https://instagram.com/michael",
-      youtube: "https://youtube.com/michael",
+      linkedin: "https://linkedin.com/in/michael",
     },
   },
   {
-    name: "Daksh",
-    role: "Branding Specialist",
+    name: "Ansh Gupta",
+    role: "Frontend Developer",
     image: "/mainpage/image.png",
     socials: {
       github: "https://github.com/rachel",
       instagram: "https://instagram.com/rachel",
-      youtube: "https://youtube.com/rachel",
+      linkedin: "https://linkedin.com/in/rachel",
     },
   },
 ];
@@ -62,7 +62,6 @@ const Team: React.FC = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      {/* Section Header */}
       <motion.div
         className="flex flex-col items-center"
         initial={{ opacity: 0, y: -20 }}
@@ -80,7 +79,6 @@ const Team: React.FC = () => {
         </p>
       </motion.div>
 
-      {/* Team Members */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
         {teamMembers.map((member, index) => (
           <motion.div
@@ -93,7 +91,6 @@ const Team: React.FC = () => {
             transition={{ delay: index * 0.2 }}
             className="relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border group border-gray-600/60 hover:border-[var(--acua-marine)] duration-300 group"
           >
-            {/* Member Image */}
             <div className="relative group">
               <Image
                 src={member.image}
@@ -103,7 +100,6 @@ const Team: React.FC = () => {
                 className="w-full p-5 h-[400px] rounded-4xl group object-cover"
               />
 
-              {/* Gradient Overlay (Appears on Hover) */}
               <div className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
               <div className="absolute top-32 left-29 w-full h-full inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -125,20 +121,17 @@ const Team: React.FC = () => {
                     <FaInstagram size={20} />
                   </a>
                   <a
-                    href={member.socials.youtube}
+                    href={member.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white rounded-full hover:text-[var(--acua-marine)]"
                   >
-                    <FaYoutube size={20} />
+                    <FaLinkedin size={20} />
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Social Links (Appear on Hover) */}
-
-            {/* Member Info */}
             <div className="p-4 text-center">
               <h2 className="text-xl font-semibold">{member.name}</h2>
               <p className="text-gray-400 text-sm">{member.role}</p>
