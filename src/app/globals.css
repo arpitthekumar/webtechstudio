@@ -111,3 +111,11 @@
 #nprogress .peg {
   box-shadow: 0 0 10px #56dcad, 0 0 5px #56dcad !important;
 }
+/* globals.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

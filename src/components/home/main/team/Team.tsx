@@ -10,9 +10,9 @@ const teamMembers = [
     role: "Lead Developer",
     image: "/mainpage/image1.png",
     socials: {
-      github: "https://github.com/sophia",
-      instagram: "https://instagram.com/sophia",
-      linkedin: "https://linkedin.com/in/sophia",
+      github: "https://github.com/Arpitthedamager",
+      instagram: "https://www.instagram.com/mr.damager",
+      linkedin: "https://www.linkedin.com/in/arpit-kumar-467689356/",
     },
   },
   {
@@ -26,21 +26,31 @@ const teamMembers = [
     },
   },
   {
-    name: "Ashwani Shing",
-    role: "Frontend Developer",
-    image: "/mainpage/image3.png",
-    socials: {
-      github: "https://github.com/michael",
-      instagram: "https://instagram.com/michael",
-      linkedin: "https://linkedin.com/in/michael",
-    },
-  },
-  {
     name: "Ansh Gupta",
     role: "Frontend Developer",
     image: "/mainpage/image.png",
     socials: {
-      github: "https://github.com/rachel",
+      github: "https://github.com/Anshkumar1611",
+      instagram: "https://instagram.com/rachel",
+      linkedin: "https://www.linkedin.com/in/ansh-kumar-064b43198/",
+    },
+  },
+  {
+    name: "Ashwani Shing",
+    role: "Frontend Developer",
+    image: "/mainpage/image3.png",
+    socials: {
+      github: "https://github.com/aksingh-codes",
+      instagram: "https://instagram.com/michael",
+      linkedin: "https://www.linkedin.com/in/aksingh-codes/",
+    },
+  },
+  {
+    name: "Mohit Gupta",
+    role: "Frontend Developer",
+    image: "/mainpage/image.png",
+    socials: {
+      github: "https://github.com/mohitkumar7895",
       instagram: "https://instagram.com/rachel",
       linkedin: "https://linkedin.com/in/rachel",
     },
@@ -79,65 +89,93 @@ const Team: React.FC = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-        {teamMembers.map((member, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            whileHover="hover"
-            transition={{ delay: index * 0.2 }}
-            className="relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border group border-gray-600/60 hover:border-[var(--acua-marine)] duration-300 group"
-          >
-            <div className="relative group">
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={400}
-                height={300}
-                className="w-full p-5 h-[400px] rounded-4xl group object-cover"
-              />
+      <div className="relative mt-12">
+        <button
+          onClick={() => {
+            document
+              .getElementById("carousel")
+              ?.scrollBy({ left: -300, behavior: "smooth" });
+          }}
+          className="hidden lg:flex absolute top-1/2 -translate-y-1/2 left-0 z-10 h-16 w-10 items-center justify-center bg-black/60 hover:bg-black/80 transition-colors rounded-r-2xl"
+        >
+          <span className="text-2xl text-white">&#8592;</span>
+        </button>
 
-              <div className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+        {/* Scrollable container */}
+        <div
+          id="carousel"
+          className="flex overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory gap-6 px-2 lg:px-10"
+        >
+          {teamMembers.map((member, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover="hover"
+              transition={{ delay: index * 0.2 }}
+              className="w-[360px] snap-start flex-shrink-0 relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border group border-gray-600/60 hover:border-[var(--acua-marine)] duration-300"
+            >
+              <div className="relative group">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={400}
+                  height={300}
+                  className="w-full p-5 h-[400px] rounded-4xl group object-cover"
+                />
 
-              <div className="absolute top-32 left-29 w-full h-full inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="flex flex-col bg-[#121212] p-2 rounded-3xl gap-2">
-                  <a
-                    href={member.socials.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white rounded-full hover:text-[var(--acua-marine)]"
-                  >
-                    <FaGithub size={20} />
-                  </a>
-                  <a
-                    href={member.socials.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white rounded-full hover:text-[var(--acua-marine)]"
-                  >
-                    <FaInstagram size={20} />
-                  </a>
-                  <a
-                    href={member.socials.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white rounded-full hover:text-[var(--acua-marine)]"
-                  >
-                    <FaLinkedin size={20} />
-                  </a>
+                <div className="absolute inset-0 m-5 rounded-lg bg-[linear-gradient(#0000,#000)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+                <div className="absolute top-32 left-29 w-full h-full inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="flex flex-col bg-[#121212] p-2 rounded-3xl gap-2">
+                    <a
+                      href={member.socials.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white rounded-full hover:text-[var(--acua-marine)]"
+                    >
+                      <FaGithub size={20} />
+                    </a>
+                    <a
+                      href={member.socials.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white rounded-full hover:text-[var(--acua-marine)]"
+                    >
+                      <FaInstagram size={20} />
+                    </a>
+                    <a
+                      href={member.socials.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white rounded-full hover:text-[var(--acua-marine)]"
+                    >
+                      <FaLinkedin size={20} />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="p-4 text-center">
-              <h2 className="text-xl font-semibold">{member.name}</h2>
-              <p className="text-gray-400 text-sm">{member.role}</p>
-            </div>
-          </motion.div>
-        ))}
+              <div className="p-4 text-center">
+                <h2 className="text-xl font-semibold">{member.name}</h2>
+                <p className="text-gray-400 text-sm">{member.role}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => {
+            document
+              .getElementById("carousel")
+              ?.scrollBy({ left: 300, behavior: "smooth" });
+          }}
+          className="hidden lg:flex absolute top-1/2 -translate-y-1/2 right-0 z-10 h-16 w-10 items-center justify-center bg-black/60 hover:bg-black/80 transition-colors rounded-l-2xl"
+        >
+          <span className="text-2xl text-white">&#8594;</span>
+        </button>
       </div>
     </motion.section>
   );
