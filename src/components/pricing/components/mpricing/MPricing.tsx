@@ -39,8 +39,8 @@ const MaintenancePricing = () => {
   const plans = [
     {
       title: "Basic Maintenance",
-      price: "₹499",
-      years: "₹5,499",
+      // price: "₹499",
+      // years: "₹5,499",
       features: [
         { text: "Security Updates", included: true },
         { text: "Bug Fixes (Unlimited)", included: true },
@@ -56,8 +56,8 @@ const MaintenancePricing = () => {
     },
     {
       title: "Standard Maintenance",
-      price: "₹999",
-      years: "₹10,999",
+      // price: "₹999",
+      // years: "₹10,999",
       features: [
         { text: "Security Updates", included: true },
         { text: "Bug Fixes (Unlimited)", included: true },
@@ -73,8 +73,8 @@ const MaintenancePricing = () => {
     },
     {
       title: "Premium Maintenance",
-      price: "₹1,999",
-      years: "₹21,999",
+      // price: "₹1,999",
+      // years: "₹21,999",
       features: [
         { text: "Security Updates", included: true },
         { text: "Bug Fixes (Unlimited Fixes/Month)", included: true },
@@ -109,7 +109,7 @@ const MaintenancePricing = () => {
           Keep your website secure and optimized with our flexible maintenance
           plans.
         </p>
-        <div className="flex mt-6 space-x-4 p-2 rounded-full">
+        {/* <div className="flex mt-6 space-x-4 p-2 rounded-full">
           <button
             className={`px-4 py-2 rounded-full transition-all ${
               billingCycle === "month" ? "bg-[var(--acua-marine)]" : "bg-text-bg"
@@ -126,7 +126,7 @@ const MaintenancePricing = () => {
           >
             Yearly (20% Off)
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mt-12  max-w-8xl mx-auto">
@@ -145,7 +145,7 @@ const MaintenancePricing = () => {
               }`}
           >
             <h2 className="text-lg md:text-2xl font-semibold">{plan.title}</h2>
-            <h3 className="text-lg md:text-xl font-bold">
+            {/* <h3 className="text-lg md:text-xl font-bold">
               <motion.span
                 className="text-acua-marine text-4xl md:text-6xl"
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -156,7 +156,9 @@ const MaintenancePricing = () => {
               </motion.span>
               {billingCycle === "year" ? "/year" : ""}{" "}
               {billingCycle === "month" ? "/month" : ""}
-            </h3>
+            </h3> */}  <span className="text-[var(--acua-marine)] text-2xl md:text-4xl font-bold mr-2">
+                    Contact For Pricing
+                  </span>
             <div className="space-y-3 md:space-y-4">
               {plan.features
                 .slice(0, expanded === index ? plan.features.length : 7)
