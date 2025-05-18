@@ -17,10 +17,14 @@ const PromoPopup: React.FC = () => {
   const [errors, setErrors] = useState<{ name?: string; mobile?: string }>({});
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 500);
-    return () => clearTimeout(timer);
+    const alreadyShown = sessionStorage.getItem("promo_shown");
+    if (!alreadyShown) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        sessionStorage.setItem("promo_shown", "true");
+      }, 500);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const validateForm = () => {

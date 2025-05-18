@@ -28,6 +28,14 @@ export default function HeroSection() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const gtag_report_conversion = () => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-16974052698/PGUWCJeM5MkaENr67Z0_", // Replace with your actual ID
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -42,6 +50,7 @@ export default function HeroSection() {
 
       const data = await res.json();
       if (res.ok) {
+        gtag_report_conversion();
         setMessage({ type: "success", text: "Message sent successfully! 🎉" });
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
@@ -87,7 +96,7 @@ export default function HeroSection() {
                 value: "Agra, India",
                 href: null,
               },
-               {
+              {
                 title: "Email Address",
                 value: "webtechstudio37@gmail.com",
                 href: "mailto:webtechstudio37@gmail.com",
@@ -99,7 +108,6 @@ export default function HeroSection() {
                   { number: "+91 63982 17416", href: "tel:+916398217416" },
                 ],
               },
-             
             ].map((item, index) => (
               <motion.div
                 key={index}
