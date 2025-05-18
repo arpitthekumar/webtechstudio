@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Chip from "../../home/main/chip/chip";
+import { gtag_report_conversions } from "@/lib/gtag"; 
 
 export default function HeroSection() {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -31,7 +32,7 @@ export default function HeroSection() {
   const gtag_report_conversion = () => {
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("event", "conversion", {
-        send_to: "AW-16974052698/PGUWCJeM5MkaENr67Z0_", // Replace with your actual ID
+        send_to: "AW-16974052698/ZDR1CLjT78kaENr67Z0_",
       });
     }
   };
@@ -50,6 +51,7 @@ export default function HeroSection() {
 
       const data = await res.json();
       if (res.ok) {
+        gtag_report_conversions("AW-16974052698/ZDR1CLjT78kaENr67Z0_");
         gtag_report_conversion();
         setMessage({ type: "success", text: "Message sent successfully! 🎉" });
         setFormData({ name: "", email: "", phone: "", message: "" });

@@ -1,4 +1,5 @@
 "use client";
+import { gtag_report_conversions } from "@/lib/gtag"; 
 import { useEffect, useState } from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { RiSecurePaymentLine } from "react-icons/ri";
@@ -68,6 +69,7 @@ const PromoPopup: React.FC = () => {
 
       if (res.ok) {
         gtag_report_conversion();
+        gtag_report_conversions("AW-16974052698/PGUWCJeM5MkaENr67Z0_");
         setShowPopup(false);
         setName("");
         setMobile("");
