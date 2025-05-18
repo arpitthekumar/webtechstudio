@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 const PromoPopup: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -36,6 +42,14 @@ const PromoPopup: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+  const gtag_report_conversion = () => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-16974052698/PGUWCJeM5MkaENr67Z0_", // Replace with your actual ID
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -49,6 +63,7 @@ const PromoPopup: React.FC = () => {
       });
 
       if (res.ok) {
+        gtag_report_conversion();
         setShowPopup(false);
         setName("");
         setMobile("");

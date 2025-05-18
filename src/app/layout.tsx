@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LoadingBar from "./LoadingBar";
+import Script from "next/script";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,7 +75,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -81,38 +82,66 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="avlaj4hsl80raElN6J_6Do1K39M50iybjbBXr-HebmM"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Web Tech Studio",
+              url: "https://webtechstudio.site",
+              logo: "https://webtechstudio.site/logo.png",
+              alternateName: [
+                "Web Tech Studio",
+                "Web-Tech Studio",
+                "WebTechStudio",
+              ],
+              sameAs: [
+                "https://www.linkedin.com/company/webtechstudio",
+                "https://twitter.com/WebTechStudio",
+                "https://www.instagram.com/web_tech_studio/",
+              ],
+              description:
+                "Web Tech Studio is a top-rated web development agency in Agra, India, specializing in website design, SEO, and branding.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Your Address Here",
+                addressLocality: "Agra",
+                addressCountry: "IN",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91 92594 93075",
+                contactType: "customer service",
+              },
+            }),
+          }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Web Tech Studio",
-        "url": "https://webtechstudio.site",
-        "logo": "https://webtechstudio.site/logo.png",
-        "alternateName": ["Web Tech Studio", "Web-Tech Studio", "WebTechStudio"],
-        "sameAs": [
-          "https://www.linkedin.com/company/webtechstudio",
-          "https://twitter.com/WebTechStudio",
-          "https://www.instagram.com/web_tech_studio/"
-        ],
-        "description": "Web Tech Studio is a top-rated web development agency in Agra, India, specializing in website design, SEO, and branding.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Your Address Here",
-          "addressLocality": "Agra",
-          "addressCountry": "IN"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91 92594 93075",
-          "contactType": "customer service"
-        }
-      }) }} />
-      
-        {" "}<meta name="google-site-verification" content="avlaj4hsl80raElN6J_6Do1K39M50iybjbBXr-HebmM" />
         <LoadingBar />
         {children}
+
+        {/* Google Analytics Script (Only Once) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16974052698"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16974052698');
+          `}
+        </Script>
       </body>
     </html>
   );
