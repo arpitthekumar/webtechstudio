@@ -118,7 +118,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <Chip text={item.title} isDark={true} />
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-lg text-gray-400 break-words">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-base text-gray-400 break-words">
                   {Array.isArray(item.value) ? (
                     item.value.map((phone, i) => (
                       <a key={i} href={phone.href} className="hover:underline">
