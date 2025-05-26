@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Chip from "../../home/main/chip/chip";
-import { gtag_report_conversions } from "@/lib/gtag"; 
+import { gtag_report_conversions } from "@/lib/gtag";
 
 export default function HeroSection() {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -97,7 +97,7 @@ export default function HeroSection() {
                 href: null,
               },
               {
-                title: "Email Address",
+                title: "Email",
                 value: "webtechstudio37@gmail.com",
                 href: "mailto:webtechstudio37@gmail.com",
               },
