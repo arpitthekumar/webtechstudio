@@ -73,7 +73,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto"
+        className="max-w-9xl mx-auto"
       >
         {/* ✅ Header */}
         <div className="flex flex-col space-y-6 md:space-y-6 text-left">
@@ -89,8 +89,6 @@ export default function HeroSection() {
 
         {/* ✅ Contact & Form Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 md:mt-20">
-          {/* Left - Contact Details */}
-          {/* Left - Contact Details */}
           <div className="space-y-6">
             {[
               {
