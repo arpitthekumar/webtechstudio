@@ -104,17 +104,13 @@ const Team: React.FC = () => {
         {/* Scrollable container */}
         <div
           id="carousel"
-          className="flex overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory gap-6 px-2 lg:px-10"
+          className="flex overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory gap-6 px-2 lg:px-10  "
         >
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
               whileHover="hover"
-              transition={{ delay: index * 0.2 }}
+              variants={cardVariants}
               className="w-[360px] snap-start flex-shrink-0 relative bg-[#121212] rounded-4xl overflow-hidden shadow-lg transition-all border group border-gray-600/60 hover:border-[var(--acua-marine)] duration-300"
             >
               <div className="relative group">

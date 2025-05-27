@@ -129,18 +129,18 @@ export default function RootLayout({
         <LoadingBar />
         {children}
 
-        {/* Google Analytics Script (Only Once) */}
+        {/* Google Analytics Script - Load lazily after all critical resources */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16974052698"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="lazyOnload">
           {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-16974052698');
-        `}
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16974052698');
+  `}
         </Script>
       </body>
     </html>
