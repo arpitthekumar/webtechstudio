@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Chip from "../../home/main/chip/chip";
 import Button from "../../home/main/button/Button";
+import Image from "next/image";
+import heroImage from "../../../../public/mainpage/image.png";
 
 
 const HeroSection = () => {
@@ -14,21 +16,21 @@ const HeroSection = () => {
   }, []); // Runs only once when component mounts
 
   return (
-    <section
-      className="relative flex items-center"
-      style={{
-        backgroundImage: `url('/mainpage/image.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "680px",
-      }}
-    >
+      <section className="relative flex items-center h-[680px] overflow-hidden">
+      {/* Optimized hero image */}
+      <Image
+        src={heroImage}
+        alt="Background image"
+        fill
+        priority
+        placeholder="blur"
+        className="object-cover z-0"
+      />
       {/* Dark overlay only on the background */}
       <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
 
       {/* Content */}
       <div className="relative flex flex-col md:flex-row justify-center md:justify-between items-center text-white text-center md:top-50  md:text-left px-6 md:px-20 w-full">
-        
         {/* Left Side */}
         <motion.div
           key={hasAnimated ? "hero-section" : ""} // Ensures reset on navigation
@@ -44,7 +46,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl md:text-5xl font-bold leading-tight"
           >
-            Where Creativity 
+            Where Creativity
             <br />
             Meets Strategy
           </motion.h1>
@@ -63,7 +65,9 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mb-6"
           >
-            At WebTechStudio, we blend creativity and technology to deliver powerful digital solutions. Our team is dedicated to helping brands stand out and succeed.
+            At WebTechStudio, we blend creativity and technology to deliver
+            powerful digital solutions. Our team is dedicated to helping brands
+            stand out and succeed.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
