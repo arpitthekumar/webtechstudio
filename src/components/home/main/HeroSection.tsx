@@ -6,36 +6,36 @@ import Button from "./button/Button";
 import Chip from "./chip/chip";
 import Image from "next/image";
 
+// Import static image directly for better bundling (optional)
+import heroImage from "../../../../public/mainpage/image.png";
+
 const HeroSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     setHasAnimated(true);
-  }, []); // Runs only once when component mounts
+  }, []);
 
   return (
-    <section
-      // className="relative flex items-center"
-      className="relative flex items-center h-[680px] overflow-hidden"
-      // style={{
-      //   backgroundImage: `url('/mainpage/image.png')`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   height: "680px",
-      // }}
-    >
+    <section className="relative flex items-center h-[680px] overflow-hidden">
+      {/* Optimized hero image */}
       <Image
-        src="/mainpage/image.png"
+        src={heroImage}
         alt="Background image"
         fill
         priority
+        placeholder="blur"
         className="object-cover z-0"
       />
-      {/* Dark overlay only on the background */}
+
+      {/* Optional preload in _document.tsx if not importing statically */}
+      {/* <link rel="preload" as="image" href="/mainpage/image.png" /> */}
+
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/15 z-0 pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative  md:top-50 flex flex-col md:flex-row justify-center md:justify-between items-center text-white text-center md:text-left px-6 md:px-20 w-full">
+      <div className="relative md:top-50 flex flex-col md:flex-row justify-center md:justify-between items-center text-white text-center md:text-left px-6 md:px-20 w-full">
         {/* Left Side */}
         <motion.div
           key={hasAnimated ? "hero-section" : ""}
