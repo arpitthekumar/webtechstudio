@@ -76,7 +76,7 @@ const ProcessSection: React.FC = () => {
           <ProcessCard
             key={index}
             {...step}
-            offset={index === 1 ? "mt-10" : index === 2 ? "mt-20" : ""}
+            offset={index === 1 ? "md:mt-10" : index === 2 ? "md:mt-20" : ""}
           />
         ))}
       </div>
