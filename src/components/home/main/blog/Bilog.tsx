@@ -88,15 +88,17 @@ export default function BlogSection() {
                   <span className="bg-text-bg px-4 py-2 text-base rounded-4xl text-white">
                     {blog.category}
                   </span>
-                  <span>{blog.date}</span>
                 </div>
                 <h3 className="text-lg font-semibold">{blog.title}</h3>
-                <Link
-                  href={blog.link}
-                  className="text-acua-marine font-bold text-lg mt-2 inline-block"
-                >
-                  Read More
-                </Link>
+                    <div className="flex items-center justify-between mt-4 text-bluish-gray">
+                    <Link
+                      href={`/Blog/${blog.link}`}
+                      className="text-acua-marine font-bold text-lg mt-2 inline-block"
+                    >
+                      Read More →{/* {blogIndex} */}
+                    </Link>
+                    <span>{blog.date}</span>
+                  </div>
               </div>
             </motion.div>
           ))}
