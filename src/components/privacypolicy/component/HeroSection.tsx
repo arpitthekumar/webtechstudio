@@ -18,11 +18,23 @@ const PrivacyPolicy = () => {
         </p>
 
         {/* Information We Collect */}
-        <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
-          1. Information We Collect
+        <h2 className="text-3xl font-bold text-[var(--acua-marine)] mt-8">
+           Information We Collect
         </h2>
         <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
-          3. Required Client Details
+          1. Use of Your Personal Data
+        </h2>
+        <ul className="list-disc pl-5 text-gray-300 mt-2">
+          <li>To provide, maintain, and improve our services.</li>
+          <li>To contact with you regarding inquiries or support.</li>
+          <li>
+            To personalize user experience and improve site functionality.
+          </li>
+          <li>To comply with legal obligations and enforce our policies.</li>
+          <li>To analyze trends and track user engagement.</li>
+        </ul>
+        <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
+          2. Required Client Details
         </h2>
         <p className="text-gray-300 mt-2">
           Before starting the project, the client must provide:
@@ -38,18 +50,6 @@ const PrivacyPolicy = () => {
         </ul>
 
         {/* Use of Your Personal Data */}
-        <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
-          2. Use of Your Personal Data
-        </h2>
-        <ul className="list-disc pl-5 text-gray-300 mt-2">
-          <li>To provide, maintain, and improve our services.</li>
-          <li>To communicate with you regarding inquiries or support.</li>
-          <li>
-            To personalize user experience and improve site functionality.
-          </li>
-          <li>To comply with legal obligations and enforce our policies.</li>
-          <li>To analyze trends and track user engagement.</li>
-        </ul>
 
         {/* Data Protection */}
         <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
@@ -61,8 +61,8 @@ const PrivacyPolicy = () => {
           safe browsing practices.
         </p>
         {/* Payment Terms & Late Fees */}
-        <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
-          1. Payment Terms & Late Fees
+        {/* <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
+          4. Payment Terms & Late Fees
         </h2>
         <p className="text-gray-300 mt-2">
           To begin any project, we require a{" "}
@@ -79,11 +79,11 @@ const PrivacyPolicy = () => {
         <p className="text-gray-300 mt-2">
           By proceeding with our services, you acknowledge and agree to these
           payment terms.
-        </p>
+        </p> */}
 
         {/* Disclosure of Your Personal Data */}
         <h2 className="text-2xl font-semibold text-[var(--acua-marine)] mt-8">
-          4. Disclosure of Your Personal Data
+          5. Disclosure of Your Personal Data
         </h2>
         <p className="text-gray-300 mt-2">
           Your personal data may be shared in the following cases:
@@ -142,9 +142,8 @@ const PrivacyPolicy = () => {
           of any changes by posting the updated Privacy Policy on this page.
         </p>
         <p className="text-gray-300 mt-2">
-          We will inform you via email and/or a prominent notice on our website
-          before the changes take effect and update the "Last updated" date at
-          the top of this policy.
+          the newly updated privacy policy will be enforced moment it's updated. 
+          the "Last updated" date at the top of this policy.
         </p>
         <p className="text-gray-300 mt-2">
           You are encouraged to review this Privacy Policy periodically for
@@ -156,7 +155,7 @@ const PrivacyPolicy = () => {
           8. Contact Us
         </h2>
         <p className="text-gray-300 mt-2">
-          If you have any questions about our Privacy Policy, contact us via our{" "}
+          If you have any inquires about our Privacy Policy, contact us via our{" "}
           <Link href="/Contact" className="text-[var(--acua-marine)] underline">
             Contact Form
           </Link>

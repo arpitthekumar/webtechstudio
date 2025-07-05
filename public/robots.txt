@@ -1,9 +1,7 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://webtechstudio.site
-
-# Sitemaps
-Sitemap: https://webtechstudio.site/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://webtechstudio.site/sitemap-0-0.xml</loc></sitemap>
+  <sitemap><loc>https://webtechstudio.site/sitemap-0.xml</loc></sitemap>
+  <sitemap><loc>https://webtechstudio.in/sitemap-1-0.xml</loc></sitemap>
+  <sitemap><loc>https://webtechstudio.in/sitemap-1.xml</loc></sitemap>
+</sitemapindex>

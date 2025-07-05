@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
           Terms & Conditions
         </h1>
         <p className="text-gray-300 mb-6">
-          Last updated: <span className="font-semibold">March 22, 2025</span>
+          Last updated: <span className="font-semibold">October 08, 2024</span>
         </p>
 
         <p className="text-gray-300">
