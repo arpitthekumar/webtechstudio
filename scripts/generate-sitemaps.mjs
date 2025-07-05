@@ -1,18 +1,17 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path';
 
-// Generate sitemaps for both domains
+// Step 1: Generate both domain sitemaps
 execSync('npx next-sitemap --config next-sitemap.config.site.js', { stdio: 'inherit' });
 execSync('npx next-sitemap --config next-sitemap.config.in.js', { stdio: 'inherit' });
 
-// Read the public directory to find all sitemap files
+// Step 2: Find all generated sitemap XML files
 const sitemapFiles = fs
   .readdirSync('./public')
   .filter((file) => file.startsWith('sitemap-') && file.endsWith('.xml'));
 
-// Build full sitemapindex XML
-const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+// Step 3: Build sitemapindex content for sitemap.xml
+const sitemapXmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapFiles
   .map((file) => {
@@ -23,6 +22,19 @@ ${sitemapFiles
   .join('\n')}
 </sitemapindex>`;
 
-// Write it as robots.txt (as a sitemapindex)
-fs.writeFileSync('./public/robots.txt', sitemapIndex);
-console.log("✅ robots.txt with all sitemap files generated successfully!");
+// Step 4: Write sitemap.xml
+fs.writeFileSync('./public/sitemap.xml', sitemapXmlContent);
+console.log('✅ sitemap.xml created successfully!');
+
+// Step 5: Write plain-text robots.txt (classic format)
+const robotsTxtContent = `User-agent: *
+Allow: /
+
+Host: https://webtechstudio.in
+
+Sitemap: https://webtechstudio.site/sitemap.xml
+Sitemap: https://webtechstudio.in/sitemap.xml
+`;
+
+fs.writeFileSync('./public/robots.txt', robotsTxtContent);
+console.log('✅ robots.txt (classic format) created successfully!');
