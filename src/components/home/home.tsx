@@ -22,7 +22,7 @@ import Clarity from "@microsoft/clarity";
 
 const HomePage: React.FC = () => {
   useEffect(() => {
-    Clarity.init("YOUR_PROJECT_ID");
+    Clarity.init("sdlqym662t");
   }, []);
   return (
     <>
