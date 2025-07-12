@@ -82,6 +82,63 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PZ5KXCXN35"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-main" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PZ5KXCXN35');
+          `}
+        </Script>
+
+        {/* ✅ Microsoft Clarity */}
+        <Script id="clarity-init" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "sdlqym662t");
+          `}
+        </Script>
+
+        {/* ✅ JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Web Tech Studio",
+              url: "https://webtechstudio.site",
+              logo: "https://webtechstudio.site/logo.png",
+              sameAs: [
+                "https://www.linkedin.com/company/webtechstudio",
+                "https://twitter.com/WebTechStudio",
+                "https://www.instagram.com/web_tech_studio/",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Your Address Here",
+                addressLocality: "Agra",
+                addressCountry: "IN",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91 92594 93075",
+                contactType: "customer service",
+              },
+            }),
+          }}
+        />
+      </head>
       <Head>
         <meta
           name="google-site-verification"
