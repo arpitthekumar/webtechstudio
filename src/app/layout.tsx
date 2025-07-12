@@ -86,7 +86,7 @@ export default function RootLayout({
         {/* ✅ Google Analytics */}
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-PZ5KXCXN35"
+          src="https://www.googletagmanager.com/gtag/js?id=G-C075N9LL5R"
           strategy="afterInteractive"
         />
         <Script id="gtag-main" strategy="afterInteractive">
@@ -94,7 +94,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-PZ5KXCXN35');
+            gtag('config', 'G-C075N9LL5R');
           `}
         </Script>
 
@@ -146,7 +146,7 @@ export default function RootLayout({
         />
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-PZ5KXCXN35"
+          src="https://www.googletagmanager.com/gtag/js?id=G-C075N9LL5R"
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -154,13 +154,13 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-PZ5KXCXN35');
+              gtag('config', 'G-C075N9LL5R');
             `,
           }}
         />
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-PZ5KXCXN35"
+          src="https://www.googletagmanager.com/gtag/js?id=G-C075N9LL5R"
         ></Script>
         <Script
           dangerouslySetInnerHTML={{
@@ -168,7 +168,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-PZ5KXCXN35');
+              gtag('config', 'G-C075N9LL5R');
             `,
           }}
         />
