@@ -87,6 +87,34 @@ export default function RootLayout({
           name="google-site-verification"
           content="avlaj4hsl80raElN6J_6Do1K39M50iybjbBXr-HebmM"
         />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PZ5KXCXN35"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PZ5KXCXN35');
+            `,
+          }}
+        />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PZ5KXCXN35"
+        ></Script>
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PZ5KXCXN35');
+            `,
+          }}
+        />
         <Script
           dangerouslySetInnerHTML={{
             __html: `
