@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     title: "Terms & Conditions - WebTechStudio",
     description:
       "Learn about WebTechStudio's Terms & Conditions regarding our web development, SEO, and design services.",
-    url: "https://webtechstudio.in/terms-and-conditions",
+    url: "https://webtechstudio.in/terms",
     images: [
       {
-        url: "https://webtechstudio.in/terms-og-image.jpg",
+        url: "https://webtechstudio.in/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "WebTechStudio - Terms & Conditions",
@@ -41,8 +41,8 @@ export default function Terms() {
           property="og:description"
           content="Learn about WebTechStudio's Terms & Conditions regarding our web development, SEO, and design services."
         />
-        <meta property="og:image" content="/legal/terms-og-image.jpg" />
-        <meta property="og:url" content="https://webtechstudio.in/terms-and-conditions" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
+        <meta property="og:url" content="https://webtechstudio.in/terms" />
         <meta property="og:type" content="website" />
 
         {/* ✅ Twitter Meta Tags */}
@@ -52,7 +52,7 @@ export default function Terms() {
           name="twitter:description"
           content="Understand the policies of WebTechStudio for web development, SEO, payments, and services."
         />
-        <meta name="twitter:image" content="/legal/terms-twitter-image.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

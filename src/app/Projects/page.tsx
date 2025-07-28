@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://webtechstudio.in/projects",
     images: [
       {
-        url: "https://webtechstudio.in/projects-og-image.jpg",
+        url: "https://webtechstudio.in/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "WebTechStudio - Projects Page",
@@ -52,7 +52,7 @@ export default function Projects() {
           name="twitter:description"
           content="We create modern websites and innovative solutions for businesses. Check our latest projects."
         />
-        <meta name="twitter:image" content="/projects/projects-twitter-image.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

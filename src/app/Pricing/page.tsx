@@ -44,7 +44,7 @@ export default function Pricing() {
           property="og:description"
           content="Check out our pricing for web development, UI/UX design, and digital marketing services. Get top-notch solutions at competitive rates."
         />
-        <meta property="og:image" content="/mainpage/webtechstudio-pricing-og.jpg" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
         <meta property="og:url" content="https://webtechstudio.com/pricing" />
         <meta property="og:type" content="website" />
 
@@ -55,7 +55,7 @@ export default function Pricing() {
           name="twitter:description"
           content="Get high-quality websites, UI/UX design, and SEO services at affordable prices. Choose the best plan for your business."
         />
-        <meta name="twitter:image" content="/mainpage/webtechstudio-pricing-twitter.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

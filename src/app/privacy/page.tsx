@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     title: "Privacy Policy - WebTechStudio",
     description:
       "Understand how WebTechStudio handles your personal data and privacy.",
-    url: "https://webtechstudio.in/privacy-policy",
+    url: "https://webtechstudio.in/privacy",
     images: [
       {
-        url: "https://webtechstudio.in/privacy-og-image.jpg",
+        url: "https://webtechstudio.in/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Privacy Policy - WebTechStudio",
@@ -44,8 +44,8 @@ export default function PrivacyPolicy() {
           property="og:description"
           content="Understand how WebTechStudio handles your personal data and privacy."
         />
-        <meta property="og:image" content="/mainpage/webtechstudio-privacy-og.jpg" />
-        <meta property="og:url" content="https://webtechstudio.com/privacy-policy" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
+        <meta property="og:url" content="https://webtechstudio.com/privacy" />
         <meta property="og:type" content="website" />
 
         {/* ✅ Twitter Meta Tags */}
@@ -55,7 +55,7 @@ export default function PrivacyPolicy() {
           name="twitter:description"
           content="Learn about WebTechStudio’s privacy policies and how we protect your data."
         />
-        <meta name="twitter:image" content="/mainpage/webtechstudio-privacy-twitter.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://webtechstudio.site/Blog",
     images: [
       {
-        url: "https://webtechstudio.site/blog-og-image.jpg",
+        url: "https://webtechstudio.site/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "WebTechStudio - Blog Page",
@@ -41,7 +41,7 @@ export default function Blog() {
           property="og:description"
           content="Explore WebTechStudio's blog for the latest trends, tips, and insights in web development and design."
         />
-        <meta property="og:image" content="/blog/blog-og-image.jpg" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
         <meta property="og:url" content="https://webtechstudio.site/Blog" />
         <meta property="og:type" content="website" />
 
@@ -52,7 +52,7 @@ export default function Blog() {
           name="twitter:description"
           content="Check out the latest web development trends, insights, and expert advice on our blog."
         />
-        <meta name="twitter:image" content="/blog/blog-twitter-image.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

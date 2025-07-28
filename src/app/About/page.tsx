@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       url: "https://webtechstudio.in/about",
       images: [
         {
-          url: "https://webtechstudio.in/about-og-image.jpg",
+          url: "https://webtechstudio.in/opengraph-image.jpg",
           width: 1200,
           height: 630,
           alt: "WebTechStudio - About Page",
@@ -44,7 +44,7 @@ export default function About() {
           property="og:description"
           content="Get high-quality websites and digital solutions from WebTechStudio, the top web development company in Agra, India."
         />
-        <meta property="og:image" content="/mainpage/webtechstudio-og-image.jpg" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
         <meta property="og:url" content="https://webtechstudio.com/" />
         <meta property="og:type" content="website" />
 
@@ -55,7 +55,7 @@ export default function About() {
           name="twitter:description"
           content="We create high-performing websites and digital solutions for businesses in Agra, India."
         />
-        <meta name="twitter:image" content="/mainpage/webtechstudio-twitter-image.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

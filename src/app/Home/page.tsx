@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://webtechstudio.site",
     images: [
       {
-        url: "https://webtechstudio.site/opengraph-image.jpg",
+        url: "https://webtechstudio.in/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: seoData.titles[randomIndex],
@@ -42,7 +42,7 @@ export default function Home() {
         {/* ✅ Open Graph for Social Media (Facebook, LinkedIn) */}
         <meta property="og:title" content={seoData.titles[randomIndex]} />
         <meta property="og:description" content={seoData.descriptions[randomIndex]} />
-        <meta property="og:image" content="/mainpage/webtechstudio-og-image.jpg" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
         <meta property="og:url" content="https://webtechstudio.site" />
         <meta property="og:type" content="website" />
         
@@ -50,7 +50,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.titles[randomIndex]} />
         <meta name="twitter:description" content={seoData.descriptions[randomIndex]} />
-        <meta name="twitter:image" content="/mainpage/webtechstudio-twitter-image.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
         
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

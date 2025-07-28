@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://webtechstudio.site/Contact",
     images: [
       {
-        url: "https://webtechstudio.site/contact-og-image.jpg",
+        url: "https://webtechstudio.site/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "WebTechStudio - Contact Page",
@@ -41,7 +41,7 @@ export default function Contact() {
           property="og:description"
           content="Reach out to WebTechStudio for web development services, project inquiries, or collaborations."
         />
-        <meta property="og:image" content="/contact/contact-og-image.jpg" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
         <meta property="og:url" content="https://webtechstudio.site/Contact" />
         <meta property="og:type" content="website" />
 
@@ -52,7 +52,7 @@ export default function Contact() {
           name="twitter:description"
           content="Have questions? Contact WebTechStudio for web development services, inquiries, and support."
         />
-        <meta name="twitter:image" content="/contact/contact-twitter-image.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" />

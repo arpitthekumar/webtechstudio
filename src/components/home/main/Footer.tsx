@@ -27,8 +27,8 @@ const Footer = () => {
       items: [
         // { name: "Styleguide", href: "/Styleguide" },
         // { name: "Changelog", href: "/Changelog" },
-        { name: "Privacy Policy", href: "/PrivacyPolicy" },
-        { name: "Terms & Conditions", href: "/TermsAndConditions" },
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms & Conditions", href: "/terms" },
 
         // { name: "License", href: "/License" },
         // { name: "YouTube", href: "https://youtube.com" },

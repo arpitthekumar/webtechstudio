@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     title: "Business Hardware Devices | WebTechStudio",
     description:
       "Discover professional hardware devices for businesses — including scanners, ID systems, and more. Buy reliable tech at great prices.",
-    url: "https://webtechstudio.site/HardWare",
+    url: "https://webtechstudio.site/Hardware",
     type: "website",
     images: [
       {
-        url: "https://webtechstudio.site/hardware/hardware-og-image.jpg",
+        url: "https://webtechstudio.site/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "WebTechStudio Hardware",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Business Hardware for Sale | WebTechStudio",
     description:
       "Buy reliable and affordable hardware devices for your business including scanners, biometric systems, and more.",
-    images: ["https://webtechstudio.site/hardware/hardware-twitter-image.jpg"],
+    images: ["https://webtechstudio.site/opengraph-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -65,8 +65,8 @@ export default function Hardware() {
           property="og:description"
           content="Discover professional hardware devices for businesses — including scanners, ID systems, and more. Buy reliable tech at great prices."
         />
-        <meta property="og:image" content="/hardware/hardware-og-image.jpg" />
-        <meta property="og:url" content="https://webtechstudio.site/HardWare" />
+        <meta property="og:image" content="/opengraph-image.jpg" />
+        <meta property="og:url" content="https://webtechstudio.site/Hardware" />
         <meta property="og:type" content="website" />
 
         {/* ✅ Twitter */}
@@ -76,7 +76,7 @@ export default function Hardware() {
           name="twitter:description"
           content="Buy reliable and affordable hardware devices for your business including scanners, biometric systems, and more."
         />
-        <meta name="twitter:image" content="/hardware/hardware-twitter-image.jpg" />
+        <meta name="twitter:image" content="/opengraph-image.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
