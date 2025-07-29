@@ -90,7 +90,7 @@ const FAQ = () => {
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
-              <h3 className="text-lg">{faq.question}</h3>
+              <h2 className="text-lg">{faq.question}</h2>
               <motion.span
                 className="text-2xl border border-bluish-gray rounded-full px-3 py-1"
                 animate={{ rotate: activeIndex === index ? 180 : 0 }}

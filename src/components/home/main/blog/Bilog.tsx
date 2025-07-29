@@ -89,7 +89,7 @@ export default function BlogSection() {
                     {blog.category}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold">{blog.title}</h3>
+                <h2 className="text-lg font-semibold">{blog.title}</h2>
                     <div className="flex items-center justify-between mt-4 text-bluish-gray">
                     <Link
                       href={`/Blog/${blog.link}`}
