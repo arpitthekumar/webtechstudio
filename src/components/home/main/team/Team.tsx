@@ -130,6 +130,7 @@ const Team: React.FC = () => {
                       href={member.socials.github}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`GitHub profile of ${member.name}`}
                       className="text-white rounded-full hover:text-[var(--acua-marine)]"
                     >
                       <FaGithub size={20} />
@@ -138,6 +139,7 @@ const Team: React.FC = () => {
                       href={member.socials.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Instagram profile of ${member.name}`}
                       className="text-white rounded-full hover:text-[var(--acua-marine)]"
                     >
                       <FaInstagram size={20} />
@@ -146,6 +148,7 @@ const Team: React.FC = () => {
                       href={member.socials.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`LinkedIn profile of ${member.name}`}
                       className="text-white rounded-full hover:text-[var(--acua-marine)]"
                     >
                       <FaLinkedin size={20} />

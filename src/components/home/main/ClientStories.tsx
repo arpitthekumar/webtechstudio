@@ -141,9 +141,9 @@ const ClientSuccessStories = () => {
                   className="w-12 h-12 rounded-full border-2 border-gray-700"
                 />
                 <div>
-                  <h4 className="text-white font-semibold">
+                  <h3 className="text-white font-semibold">
                     {testimonial.name}
-                  </h4>
+                  </h3>
                   <p className="text-white text-sm">{testimonial.position}</p>
                 </div>
               </div>

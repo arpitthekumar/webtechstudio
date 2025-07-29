@@ -11,13 +11,20 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const navItems = ["About", "Projects", "Services", "Pricing", "Blog","Hardware"];
+  const navItems = [
+    "About",
+    "Projects",
+    "Services",
+    "Pricing",
+    "Blog",
+    "Hardware",
+  ];
 
   return (
     <nav className="sticky top-0 z-20 bg-black text-white p-6 px-6 md:px-20 flex justify-between items-center">
       {/* Logo */}
       <Link href="/">
-      <div className="text-2xl font-bold">WebTechStudio</div>
+        <div className="text-2xl font-bold">WebTechStudio</div>
       </Link>
 
       {/* Desktop Menu */}
@@ -30,7 +37,9 @@ const Navbar = () => {
               key={index}
               href={href}
               className={`px-4 pb-2 transition-all border-b-2 ${
-                isActive ? "border-[var(--acua-marine)]" : "border-transparent hover:border-[var(--acua-marine)]"
+                isActive
+                  ? "border-[var(--acua-marine)]"
+                  : "border-transparent hover:border-[var(--acua-marine)]"
               }`}
             >
               {item}
@@ -46,6 +55,9 @@ const Navbar = () => {
 
       {/* Hamburger Button (Mobile) */}
       <motion.button
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-controls="mobile-menu"
+        aria-expanded={isOpen}
         className="md:hidden text-acua-marine"
         onClick={() => setIsOpen(!isOpen)}
         animate={{ rotate: isOpen ? 180 : 0 }}
@@ -58,6 +70,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -72,7 +85,9 @@ const Navbar = () => {
                   key={index}
                   href={href}
                   className={`${
-                    isActive ? "text-[var(--acua-marine)]" : "hover:text-gray-400"
+                    isActive
+                      ? "text-[var(--acua-marine)]"
+                      : "hover:text-gray-400"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
