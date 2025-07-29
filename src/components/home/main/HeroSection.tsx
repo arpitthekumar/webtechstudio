@@ -6,7 +6,6 @@ import Button from "./button/Button";
 import Chip from "./chip/chip";
 import Image from "next/image";
 
-// Import static image directly for better bundling (optional)
 import heroImage from "../../../../public/mainpage/image.webp";
 
 const HeroSection = () => {
@@ -18,7 +17,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative flex items-center h-[680px] overflow-hidden">
-      {/* Optimized hero image */}
       <Image
         src={heroImage}
         alt="Background image"
@@ -27,12 +25,9 @@ const HeroSection = () => {
         placeholder="blur"
         className="object-cover z-0"
       />
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/15 z-0 pointer-events-none"></div>
 
-      {/* Content */}
       <div className="relative md:top-50 flex flex-col md:flex-row justify-center md:justify-between items-center text-white text-center md:text-left px-6 md:px-20 w-full">
-        {/* Left Side */}
         <motion.div
           key={hasAnimated ? "hero-section" : ""}
           initial={{ opacity: 0, y: 50 }}
@@ -57,7 +52,6 @@ const HeroSection = () => {
           </motion.h1>
         </motion.div>
 
-        {/* Right Side */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
