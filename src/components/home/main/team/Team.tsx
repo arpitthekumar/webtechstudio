@@ -10,9 +10,9 @@ const teamMembers = [
     role: "Lead Developer",
     image: "/mainpage/image1.png",
     socials: {
-      github: "https://github.com/Arpitthedamager",
+      github: "https://github.com/arpitthekumar",
       instagram: "https://www.instagram.com/mr.damager",
-      linkedin: "https://www.linkedin.com/in/arpit-kumar-467689356/",
+      linkedin: "https://www.linkedin.com/in/arpitthekumar/",
     },
   },
   {
@@ -20,9 +20,9 @@ const teamMembers = [
     role: "Senior UI/UX Designer",
     image: "/mainpage/image2.png",
     socials: {
-      github: "https://github.com",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com/in",
+      github: "https://www.linkedin.com/in/arpitthekumar/",
+      instagram: "https://www.instagram.com/udaychauhan2005/",
+      linkedin: "https://www.linkedin.com/in/webtech-studio-5a2752376/",
     },
   },
   {
