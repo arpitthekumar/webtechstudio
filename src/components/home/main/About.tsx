@@ -86,7 +86,7 @@ const AboutSection = () => {
         <Image
           width={800}
           height={800}
-          src="/mainpage/image.png"
+          src="/mainpage/image.webp"
           alt="Video"
           className="rounded-2xl shadow-lg"
         />

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Chip from "../../home/main/chip/chip";
 import Button from "../../home/main/button/Button";
 import Image from "next/image";
-import heroImage from "../../../../public/mainpage/image.png";
+import heroImage from "../../../../public/mainpage/image.webp";
 
 
 const HeroSection = () => {

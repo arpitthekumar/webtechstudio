@@ -7,7 +7,7 @@ import Chip from "./chip/chip";
 import Image from "next/image";
 
 // Import static image directly for better bundling (optional)
-import heroImage from "../../../../public/mainpage/image.png";
+import heroImage from "../../../../public/mainpage/image.webp";
 
 const HeroSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -27,10 +27,6 @@ const HeroSection = () => {
         placeholder="blur"
         className="object-cover z-0"
       />
-
-      {/* Optional preload in _document.tsx if not importing statically */}
-      {/* <link rel="preload" as="image" href="/mainpage/image.png" /> */}
-
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/15 z-0 pointer-events-none"></div>
 

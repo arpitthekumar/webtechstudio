@@ -48,7 +48,7 @@ const Journey = () => {
         >
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="/mainpage/image3.png"
+              src="/mainpage/image3.webp"
               alt="Our Journey"
               width={600}
               height={500}

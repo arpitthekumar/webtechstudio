@@ -10,7 +10,7 @@ const blogs = [
       "core web vitals",
     ],
     category: "Web Development",
-    image: "/mainpage/image.png",
+    image: "/mainpage/image.webp",
     sections: [
       {
         heading: "Introduction",
@@ -108,7 +108,7 @@ const blogs = [
       "loading speed",
       "core web vitals",
     ],
-    image: "/mainpage/image1.png",
+    image: "/mainpage/image1.webp",
     sections: [
       {
         heading: "Introduction",
@@ -209,7 +209,7 @@ const blogs = [
       "loading speed",
       "core web vitals",
     ],
-    image: "/mainpage/image3.png",
+    image: "/mainpage/image3.webp",
     sections: [
       {
         heading: "Introduction",
@@ -344,7 +344,7 @@ const blogs = [
       "core web vitals",
     ],
     category: "Performance",
-    image: "/mainpage/image7.png",
+    image: "/mainpage/image7.webp",
     sections: [
       {
         heading: "Introduction",
@@ -482,7 +482,7 @@ const blogs = [
       "core web vitals",
     ],
     category: "UI/UX Design",
-    image: "/mainpage/image2.png",
+    image: "/mainpage/image2.webp",
     sections: [
       {
         heading: "Introduction",
@@ -606,7 +606,7 @@ const blogs = [
       "core web vitals",
     ],
     category: "E-Commerce",
-    image: "/mainpage/image6.png",
+    image: "/mainpage/image6.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1349,7 +1349,7 @@ const blogs = [
     date: "April 30, 2025",
     key: ["headless cms", "frontend dev", "api-first", "next.js development"],
     category: "Web Development",
-    image: "/mainpage/headlesscms.png",
+    image: "/mainpage/image8.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1442,7 +1442,7 @@ const blogs = [
       "seo for developers",
     ],
     category: "SEO & Performance Optimization",
-    image: "/mainpage/voice.png",
+    image: "/mainpage/image9.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1534,7 +1534,7 @@ const blogs = [
       "fast-loading websites",
     ],
     category: "Web Development",
-    image: "/mainpage/pwa.png",
+    image: "/mainpage/image.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1627,7 +1627,7 @@ const blogs = [
       "frontend performance",
     ],
     category: "Development Techniques & Tools",
-    image: "/mainpage/tailwind-css.png",
+    image: "/mainpage/image1.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1719,7 +1719,7 @@ const blogs = [
       "Google metrics",
     ],
     category: "SEO & Performance Optimization",
-    image: "/mainpage/core-web-vitals.png",
+    image: "/mainpage/image2.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1808,7 +1808,7 @@ const blogs = [
       "ux best practices",
     ],
     category: "Design & UX Trends",
-    image: "/mainpage/inclusive-design.png",
+    image: "/mainpage/image6.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1895,7 +1895,7 @@ const blogs = [
     date: "April 30, 2025",
     key: ["motion ui", "user engagement", "web dev tips", "frontend animation"],
     category: "Design & UX Trends",
-    image: "/mainpage/motion-ui.png",
+    image: "/mainpage/image9.webp",
     sections: [
       {
         heading: "Introduction",
@@ -1983,7 +1983,7 @@ const blogs = [
     date: "April 30, 2025",
     key: ["UI design", "neumorphism", "frontend trends", "modern web UI"],
     category: "Design & UX Trends",
-    image: "/mainpage/neumorphism.png",
+    image: "/mainpage/image.webp",
     sections: [
       {
         heading: "Introduction",
@@ -2075,7 +2075,7 @@ const blogs = [
       "web interactions",
     ],
     category: "Design & UX Trends",
-    image: "/mainpage/motion-ui.png",
+    image: "/mainpage/image1.webp",
     sections: [
       {
         heading: "Introduction",
@@ -2162,7 +2162,7 @@ const blogs = [
     date: "April 30, 2025",
     key: ["git", "version control", "codebase management", "web dev tips"],
     category: "Development Techniques & Tools",
-    image: "/mainpage/git.png",
+    image: "/mainpage/image2.webp",
     sections: [
       {
         heading: "Introduction",
@@ -2249,7 +2249,7 @@ const blogs = [
     date: "April 30, 2025",
     key: ["glassmorphism", "UI design", "frontend trends", "modern web UI"],
     category: "Design & UX Trends",
-    image: "/mainpage/glassmorphism.png",
+    image: "/mainpage/image3.webp",
     sections: [
       {
         heading: "Introduction",
@@ -2336,7 +2336,7 @@ const blogs = [
     date: "April 30, 2025",
     key: ["inclusive design", "web accessibility", "WCAG", "a11y"],
     category: "Design & UX Trends",
-    image: "/mainpage/inclusive-design.png",
+    image: "/mainpage/image8.webp",
     sections: [
       {
         heading: "Introduction",

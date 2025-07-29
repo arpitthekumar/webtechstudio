@@ -16,7 +16,7 @@ const sections = [
       "Responsive Design",
       "CMS Integration",
     ],
-    image: "/mainpage/image2.png",
+    image: "/mainpage/image2.webp",
   },
   {
     title: "UI/UX Design",
@@ -28,7 +28,7 @@ const sections = [
       "UI Design",
       "UX Optimization",
     ],
-    image: "/mainpage/image1.png",
+    image: "/mainpage/image1.webp",
   },
   {
     title: "Branding & Identity",
@@ -40,7 +40,7 @@ const sections = [
       "Brand Strategy",
       "Marketing Collateral",
     ],
-    image: "/mainpage/image3.png",
+    image: "/mainpage/image3.webp",
   },
 ];
 

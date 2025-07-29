@@ -73,7 +73,7 @@ export default async function BlogPage({ params }) {
   const blog = blogs.find((b) => b.slug === decodedSlug);
 
   if (!blog) return notFound();
-  const imageSrc = blog.imageExists ? blog.image : "/mainpage/image.png";
+  const imageSrc = blog.imageExists ? blog.image : "/mainpage/image.webp";
 
   return (
     <>

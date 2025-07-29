@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Arpit Kumar",
     role: "Lead Developer",
-    image: "/mainpage/image1.png",
+    image: "/mainpage/image1.webp",
     socials: {
       github: "https://github.com/arpitthekumar",
       instagram: "https://www.instagram.com/mr.damager",
@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Uday chauhan",
     role: "Senior UI/UX Designer",
-    image: "/mainpage/image2.png",
+    image: "/mainpage/image2.webp",
     socials: {
       github: "https://www.linkedin.com/in/arpitthekumar/",
       instagram: "https://www.instagram.com/udaychauhan2005/",
@@ -28,7 +28,7 @@ const teamMembers = [
   {
     name: "Ansh Gupta",
     role: "Frontend Developer",
-    image: "/mainpage/image.png",
+    image: "/mainpage/image.webp",
     socials: {
       github: "https://github.com/Anshkumar1611",
       instagram: "https://instagram.com",
@@ -38,7 +38,7 @@ const teamMembers = [
   {
     name: "Ashwani Shing",
     role: "Frontend Developer",
-    image: "/mainpage/image3.png",
+    image: "/mainpage/image3.webp",
     socials: {
       github: "https://github.com/aksingh-codes",
       instagram: "https://instagram.com",
@@ -48,7 +48,7 @@ const teamMembers = [
   {
     name: "Mohit Gupta",
     role: "Frontend Developer",
-    image: "/mainpage/image.png",
+    image: "/mainpage/image.webp",
     socials: {
       github: "https://github.com/mohitkumar7895",
       instagram: "https://instagram.com",

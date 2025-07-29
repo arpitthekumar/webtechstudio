@@ -12,7 +12,7 @@ const blogs = [
     category: "Web Development",
     date: "December 28, 2024",
     title: "Mastering Next.js Performance Optimization",
-    image: "/mainpage/image.png",
+    image: "/mainpage/image.webp",
     link: "/Blog/nextjs-performance-optimization",
   },
   {
@@ -20,7 +20,7 @@ const blogs = [
     category: "Animations",
     date: "December 28, 2024",
     title: "Mastering Animations with Framer Motion and GSAP",
-    image: "/mainpage/image1.png",
+    image: "/mainpage/image1.webp",
     link: "/Blog/animation-framer-motion-gsap",
   },
   

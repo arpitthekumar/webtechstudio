@@ -150,7 +150,7 @@ export default function HeroSection() {
                       const isExternal = /^https?:\/\//.test(blog.image);
                       const imageSrc =
                         image[blog.slug] || isExternal
-                          ? "/mainpage/image.png"
+                          ? "/mainpage/image.webp"
                           : blog.image;
                       return (
                         <Image
@@ -160,7 +160,7 @@ export default function HeroSection() {
                           onError={(e) => {
                             // Set the fallback image if the image fails to load
                             const target = e.target as HTMLImageElement;
-                            target.src = "/mainpage/default-image.png"; // Fallback image
+                            target.src = "/mainpage/image.webp"; // Fallback image
                             setImage((prev) => ({
                               ...prev,
                               [blog.slug]: true,

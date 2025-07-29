@@ -8,7 +8,7 @@ export default function NotFoundPage() {
     <>
       <Navbar />
       <section className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
-        <Image src="/notfound/image.png" alt="404" width={400} height={400} />
+        <Image src="/notfound/image.webp" alt="404" width={400} height={400} />
         <h1 className="text-5xl font-bold">404</h1>
         <h1 className="text-5xl font-bold">Page not found.</h1>
         <p className="text-lg text-bluish-gray mt-2">
