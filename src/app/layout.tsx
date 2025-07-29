@@ -83,7 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ✅ Google Analytics */}
+        {/* ✅ Google Analytics
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-C075N9LL5R"
@@ -96,7 +96,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-C075N9LL5R');
           `}
-        </Script>
+        </Script> */}
 
         {/* ✅ Microsoft Clarity */}
         <Script id="clarity-init" strategy="afterInteractive">
@@ -158,7 +158,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <Script
+        {/* <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-C075N9LL5R"
         ></Script>
@@ -171,7 +171,7 @@ export default function RootLayout({
               gtag('config', 'G-C075N9LL5R');
             `,
           }}
-        />
+        /> */}
         <Script
           dangerouslySetInnerHTML={{
             __html: `

@@ -3,9 +3,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Chip from "./chip/chip";
 import { useEffect, useState } from "react";
-
-
-
+import Image from "next/image";
 
 const testimonials = [
   // Triguna Coaching Classes
@@ -41,7 +39,7 @@ const testimonials = [
     position: "Head of Operations, Gurukul Skills",
     image: "/clientphoto/gurukul.webp",
   },
-  
+
   // Universal Taekwondo Academy
   {
     text: "The website now reflects the energy and discipline of Taekwondo. The bold, action-packed visuals are exactly what we needed!",
@@ -76,9 +74,6 @@ const testimonials = [
   },
 ];
 
-
-
-
 const ClientSuccessStories = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -86,19 +81,18 @@ const ClientSuccessStories = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     handleResize(); // Run on mount
     window.addEventListener("resize", handleResize);
-    
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const duplicatedTestimonials = isMobile
     ? [...testimonials, ...testimonials, ...testimonials] // More items for mobile
-    : [...testimonials, ...testimonials,  ...testimonials]; // Default for desktop
+    : [...testimonials, ...testimonials, ...testimonials]; // Default for desktop
   return (
     <div className="bg-black text-white overflow-auto py-20 px-6 md:px-20">
-      {/* ✅ Section Header */}
       <div className="flex flex-col items-center text-center pb-12">
         <Chip text="What Our Clients Say" isDark={true} />
 
@@ -110,8 +104,8 @@ const ClientSuccessStories = () => {
 
       {/* ✅ Testimonials Box */}
       <div className="relative w-full max-w-9xl mx-auto overflow-hidden  rounded-4xl">
-      <div className="absolute top-0 left-0 h-full w-12 md:w-96 bg-gradient-to-r from-black via-transparent to-transparent z-10 pointer-events-none" />
-        
+        <div className="absolute top-0 left-0 h-full w-12 md:w-96 bg-gradient-to-r from-black via-transparent to-transparent z-10 pointer-events-none" />
+
         {/* ✅ Right Gradient Shadow */}
         <div className="absolute top-0 right-0 h-full w-12 md:w-96 bg-gradient-to-l from-black via-transparent to-transparent z-10 pointer-events-none" />
 
@@ -120,7 +114,7 @@ const ClientSuccessStories = () => {
           animate={{ x: ["0%", "-100%"] }}
           transition={{
             repeat: Infinity,
-            duration: isMobile ? 15 : 10, // Slower on mobile for smoothness
+            duration: isMobile ? 15 : 10,
             ease: "linear",
           }}
         >
@@ -129,16 +123,16 @@ const ClientSuccessStories = () => {
               key={index}
               className="min-w-[300px] max-w-[320px] bg-[linear-gradient(#181823,#101017)] p-6 rounded-4xl border border-transparent hover:border-[var(--acua-marine)]  flex-shrink-0"
             >
-              {/* ✅ Quote Icon */}
               <FaQuoteLeft className="text-gray-500 opacity-25 text-3xl" />
               <p className="pt-6 text-bluish-gray">{testimonial.text}</p>
 
-              {/* ✅ Author Section */}
               <div className="flex items-center gap-4 mt-6">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full border-2 border-gray-700"
+                  width={48}
+                  height={48}
+                  className="rounded-full border-2 border-gray-700 object-cover"
                 />
                 <div>
                   <h3 className="text-white font-semibold">
