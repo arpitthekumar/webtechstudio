@@ -109,11 +109,11 @@
           "details": "A sleek, professional design that reflects credibility and reliability."
         }
       ],
-      "thumbnail": "/project/triguna/image1.png",
+      "thumbnail": "/project/triguna/image1.webp",
       "gallery": [
-        "/project/triguna/image2.png",
-        "/project/triguna/image.png",
-        "/project/triguna/image3.png"
+        "/project/triguna/image2.webp",
+        "/project/triguna/image.webp",
+        "/project/triguna/image3.webp"
       ]
     },
     {
@@ -223,13 +223,13 @@
           "details": "A beautifully crafted website that delivers a seamless user experience."
         }
       ],
-      "thumbnail": "/project/gurukul/image1.png",
+      "thumbnail": "/project/gurukul/image1.webp",
       "gallery": [
-        "/project/gurukul/image2.png",
-        "/project/gurukul/image3.png",
-        "/project/gurukul/image4.png",
-        "/project/gurukul/image.png",
-        "/project/gurukul/image5.png"
+        "/project/gurukul/image2.webp",
+        "/project/gurukul/image3.webp",
+        "/project/gurukul/image4.webp",
+        "/project/gurukul/image.webp",
+        "/project/gurukul/image5.webp"
       ]
     },
     {
@@ -340,11 +340,11 @@
           "details": "A bold and dynamic design that captures the intensity of martial arts."
         }
       ],
-      "thumbnail": "/project/tkw/image.png",
+      "thumbnail": "/project/tkw/image.webp",
       "gallery": [
-        "/project/tkw/image1.png",
-        "/project/tkw/image2.png",
-        "/project/tkw/image3.png"
+        "/project/tkw/image1.webp",
+        "/project/tkw/image2.webp",
+        "/project/tkw/image3.webp"
       ]
     },
     {
@@ -432,11 +432,11 @@
           "details": "Every design element was crafted to enhance interactions and conversions."
         }
       ],
-      "thumbnail": "/project/adsuper/image.png",
+      "thumbnail": "/project/adsuper/image.webp",
       "gallery": [
-        "/project/adsuper/image1.png",
-        "/project/adsuper/image2.png",
-        "/project/adsuper/image3.png"
+        "/project/adsuper/image1.webp",
+        "/project/adsuper/image2.webp",
+        "/project/adsuper/image3.webp"
       ]
     },
     {
@@ -530,11 +530,11 @@
           "details": "Designed to attract high-value clients and showcase technical skills effectively."
         }
       ],
-      "thumbnail": "/project/mrdamager/image.png",
+      "thumbnail": "/project/mrdamager/image.webp",
       "gallery": [
-        "/project/mrdamager/image1.png",
-        "/project/mrdamager/image2.png",
-        "/project/mrdamager/image3.png"
+        "/project/mrdamager/image1.webp",
+        "/project/mrdamager/image2.webp",
+        "/project/mrdamager/image3.webp"
       ]
     },
     {
@@ -627,11 +627,11 @@
           "details": "Built with both Next.js and Vue.js in harmony, using TypeScript and pure CSS."
         }
       ],
-      "thumbnail": "/project/pkpcb/image2.png",
+      "thumbnail": "/project/pkpcb/image2.webp",
       "gallery": [
-        "/project/pkpcb/image2.png",
-        "/project/pkpcb/image1.png",
-        "/project/pkpcb/image3.png"
+        "/project/pkpcb/image2.webp",
+        "/project/pkpcb/image1.webp",
+        "/project/pkpcb/image3.webp"
       ]
     },
     {
@@ -743,13 +743,13 @@
           "details": "Strategic layout, performance, and SEO ensure business visibility and growth."
         }
       ],
-      "thumbnail": "/project/flextra/image1.png",
+      "thumbnail": "/project/flextra/image1.webp",
       "gallery": [
-        "/project/flextra/image2.png",
-        "/project/flextra/image3.png",
-        "/project/flextra/image4.png",
-        "/project/flextra/image5.png",
-        "/project/flextra/image6.png"
+        "/project/flextra/image2.webp",
+        "/project/flextra/image3.webp",
+        "/project/flextra/image4.webp",
+        "/project/flextra/image5.webp",
+        "/project/flextra/image6.webp"
       ]
     },
     {
@@ -862,11 +862,11 @@
           "details": "Marries a highly visual UI with reliable PDF processing under the hood."
         }
       ],
-      "thumbnail": "/project/gapellu/image1.png",
+      "thumbnail": "/project/gapellu/image1.webp",
       "gallery": [
-        "/project/gapellu/image2.png",
-        "/project/gapellu/image3.png",
-        "/project/gapellu/image4.png"
+        "/project/gapellu/image2.webp",
+        "/project/gapellu/image3.webp",
+        "/project/gapellu/image4.webp"
       ]
     }
   ]
