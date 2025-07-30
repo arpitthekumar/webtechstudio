@@ -83,22 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ✅ Google Analytics
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-C075N9LL5R"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-main" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-C075N9LL5R');
-          `}
-        </Script> */}
 
-        {/* ✅ Microsoft Clarity */}
         <Script id="clarity-init" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
@@ -158,20 +143,7 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-C075N9LL5R"
-        ></Script>
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-C075N9LL5R');
-            `,
-          }}
-        /> */}
+
         <Script
           dangerouslySetInnerHTML={{
             __html: `
@@ -236,7 +208,6 @@ export default function RootLayout({
         <LoadingBar />
         {children}
 
-        {/* Google Analytics Script - Load lazily after all critical resources */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16974052698"
           strategy="lazyOnload"

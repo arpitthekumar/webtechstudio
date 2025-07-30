@@ -84,12 +84,15 @@ const AboutSection = () => {
         onClick={() => setIsOpen(true)}
       >
         <Image
-          width={800}
-          height={800}
           src="/mainpage/image.webp"
           alt="Video"
+          width={800}
+          height={800}
+          quality={75}
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="rounded-2xl shadow-lg"
         />
+
         <div className="absolute inset-0 flex justify-center items-center cursor-pointer">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}

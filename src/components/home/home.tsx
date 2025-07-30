@@ -20,6 +20,7 @@ import ContactPage from "../contact/component/HeroSection";
 import PopupModal from "./main/adpopup";
 import Clarity from "@microsoft/clarity";
 
+
 const HomePage: React.FC = () => {
   useEffect(() => {
     Clarity.init("sdlqym662t");
