@@ -24,6 +24,7 @@ const HeroSection = () => {
         priority
         placeholder="blur"
         fetchPriority="high"
+        sizes="(max-width: 768px) 100vw, 364px"
         className="object-cover z-0"
       />
       <div className="absolute inset-0 bg-black/15 z-0 pointer-events-none"></div>
