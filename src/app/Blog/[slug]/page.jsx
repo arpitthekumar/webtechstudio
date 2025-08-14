@@ -94,12 +94,12 @@ export default async function BlogPage({ params }) {
             </div>
           </header>
 
-          <div className="mt-6 w-full h-64 md:h-96 lg:h-[500px] relative rounded-3xl overflow-hidden">
+          <div className="relative w-full h-[600px] overflow-hidden rounded-4xl">
             <Image
-              src={imageSrc}
+              src={blog.image}
               alt={blog.title}
               fill
-              className="object-cover"
+              className=" transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
           </div>
 

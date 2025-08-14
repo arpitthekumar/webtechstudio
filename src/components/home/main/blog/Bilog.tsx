@@ -12,7 +12,7 @@ const blogs = [
     category: "Web Development",
     date: "December 28, 2024",
     title: "Mastering Next.js Performance Optimization",
-    image: "/mainpage/image.webp",
+    image: "/blog/nextjsoptimizing.webp",
     link: "/Blog/nextjs-performance-optimization",
   },
   {
@@ -20,7 +20,7 @@ const blogs = [
     category: "Animations",
     date: "December 28, 2024",
     title: "Mastering Animations with Framer Motion and GSAP",
-    image: "/mainpage/image1.webp",
+    image: "/blog/framer.webp",
     link: "/Blog/animation-framer-motion-gsap",
   },
   
@@ -79,7 +79,7 @@ export default function BlogSection() {
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  className=" transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
               </div>
               </div>

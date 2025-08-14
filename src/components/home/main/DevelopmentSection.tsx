@@ -16,7 +16,7 @@ const sections = [
       "Responsive Design",
       "CMS Integration",
     ],
-    image: "/mainpage/image2.webp",
+    image: "/mainpage/WebDevelopment.webp",
   },
   {
     title: "UI/UX Design",
@@ -28,7 +28,7 @@ const sections = [
       "UI Design",
       "UX Optimization",
     ],
-    image: "/mainpage/image1.webp",
+    image: "/mainpage/ui.webp",
   },
   {
     title: "Branding & Identity",
@@ -40,7 +40,7 @@ const sections = [
       "Brand Strategy",
       "Marketing Collateral",
     ],
-    image: "/mainpage/image3.webp",
+    image: "/mainpage/branding.webp",
   },
 ];
 
@@ -82,7 +82,7 @@ const Section = ({ title, description, features, image, reverse }: any) => (
         alt={title}
         width={500}
         height={320}
-        className="rounded-3xl group border border-gray-700/50 w-full h-100 object-cover"
+        className="rounded-3xl group border border-gray-700/50 w-full h-100 "
       />
     </motion.div>
 
@@ -112,8 +112,8 @@ const DevelopmentSection = () => {
           transition={{ duration: 0.9, delay: 0.3 }}
           className="text-lg mb-4 text-bluish-gray"
         >
-          Our expertise spans across development, UI/UX design, and branding,
-          providing everything agencies need to thrive in the digital space.
+          We specialize in development, UI/UX design, and branding—delivering
+          everything agencies need to excel in the digital world.
         </motion.p>
       </div>
 

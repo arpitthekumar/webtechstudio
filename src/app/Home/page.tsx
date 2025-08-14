@@ -2,6 +2,7 @@ import Head from "next/head";
 import HomePage from "../../components/home/home";
 import { Metadata } from "next";
 import { seoData } from "@/lib/seo";
+import PromoPopup from "@/components/home/main/adpopup";
 
 // Get a random index based on the available titles
 const randomIndex = Math.floor(Math.random() * seoData.titles.length);
@@ -58,6 +59,7 @@ export default function Home() {
 
       {/* ✅ Render the HomePage Component */}
       <HomePage />
+      <PromoPopup/>
     </>
   );
 }

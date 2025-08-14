@@ -7,7 +7,7 @@ import Chip from "../chip/chip";
 const teamMembers = [
   {
     name: "Arpit Kumar",
-    role: "Lead Developer",
+    role: "Lead Developer(Founder)",
     image: "/mainpage/image1.webp",
     socials: {
       github: "https://github.com/arpitthekumar",
@@ -17,7 +17,7 @@ const teamMembers = [
   },
   {
     name: "Uday chauhan",
-    role: "Senior UI/UX Designer",
+    role: "Senior UI/UX Designer(Founder)",
     image: "/mainpage/image2.webp",
     socials: {
       github: "https://www.linkedin.com/in/arpitthekumar/",
@@ -36,7 +36,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Ashwani Shing",
+    name: "Ashwani singh",
     role: "Frontend Developer",
     image: "/mainpage/image3.webp",
     socials: {
@@ -46,7 +46,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Mohit Gupta",
+    name: "Mohit Kumar",
     role: "Frontend Developer",
     image: "/mainpage/image.webp",
     socials: {

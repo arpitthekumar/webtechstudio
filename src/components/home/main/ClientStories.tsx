@@ -98,7 +98,7 @@ const ClientSuccessStories = () => {
 
         <h2 className="text-5xl font-bold pb-3">Client Success Stories</h2>
         <p className="text-bluish-gray max-w-xl mx-auto">
-          Hear from those who've experienced our Kairos firsthand.
+          Discover the impact we’ve made for our clients at WebTech Studio.{" "}
         </p>
       </div>
 

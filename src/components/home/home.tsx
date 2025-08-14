@@ -80,13 +80,12 @@ const HomePage: React.FC = () => {
       <div className="bg-black min-h-screen">
         <Navbar />
         <HeroSection />
-        <PopupModal />
         <ContactPage />
         <AboutSection />
         <DevelopmentSection />
         <ShowcaseExpertise />
         <ProcessSection />
-        <PricingPage />
+        {/* <PricingPage /> */}
         <Link
           href="/Pricing#Maintenance"
           className="text-white hover:text-[var(--acua-marine)] text-center block mt-4 underline"
