@@ -85,7 +85,7 @@ export default function HeroSection() {
 
   return (
     <section className="py-20 text-white">
-      <div className="container mx-auto px-6 md:px-20 max-w-9xl">
+      <div className="container mx-auto px-6 ">
         <motion.div
           key={hasAnimated ? "Hero-section" : ""}
           initial={{ opacity: 0, y: 50 }}

@@ -440,6 +440,119 @@
       ]
     },
     {
+      "id": "webtechstudio-dental-app",
+      "name": "Good Smiles Dental Website",
+      "tagline": "Transforming Dental Care into a Modern Digital Experience",
+      "agency": "Web Tech Studio",
+      "introduction": "At Web Tech Studio, we craft high-performing, visually captivating websites that connect brands with their audience. Good Smiles Dental is a fully responsive, SEO-friendly, and interactive platform designed to showcase dental services, build trust with potential patients, and streamline appointment bookings.",
+      "website_url": "https://webtechstudio-dentalapp.vercel.app/",
+      "category": [
+        "Web Development",
+        "Branding",
+        "SEO"
+      ],
+      "technologies": [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Responsive Design"
+      ],
+      "features": [
+        {
+          "details": "Developed using Next.js for lightning-fast performance and smooth navigation."
+        },
+        {
+          "details": "Fully responsive design optimized for desktop, tablet, and mobile users."
+        },
+        {
+          "details": "Framer Motion animations for an engaging and modern browsing experience."
+        },
+        {
+          "details": "Informative sections including services, team, testimonials, FAQs, and blog."
+        },
+        {
+          "details": "SEO-friendly structure to help boost visibility in search engines."
+        }
+      ],
+      "challenges_overview": "Good Smiles Dental needed a digital presence that matched their professionalism and care. Their previous website lacked modern aesthetics, had no strong branding, and didn’t clearly convey trustworthiness or make appointment booking easy.",
+      "challenges": [
+        {
+          "title": "Lack of Modern Branding",
+          "details": "The brand’s online presence didn’t match its quality of service, resulting in low patient trust."
+        },
+        {
+          "title": "Limited User Engagement",
+          "details": "The old site failed to showcase services, team members, and patient testimonials effectively."
+        },
+        {
+          "title": "Poor SEO Optimization",
+          "details": "The website had low search visibility, limiting its reach to potential patients."
+        },
+        {
+          "title": "No Strong Conversion Flow",
+          "details": "Appointment booking and inquiry processes were not clearly highlighted."
+        }
+      ],
+      "solutions_overview": "We designed and developed a modern, patient-friendly website with a clear structure, interactive visuals, and strong calls to action. The platform was optimized for SEO and performance to attract more visitors and improve conversions.",
+      "solutions": [
+        {
+          "title": "Modern, Trust-Building Design",
+          "details": "Clean, professional visuals with strategic color usage to inspire trust and comfort."
+        },
+        {
+          "title": "Patient-Centric Navigation",
+          "details": "Clear sections for services, testimonials, and FAQs to answer patient needs quickly."
+        },
+        {
+          "title": "Interactive UI with Framer Motion",
+          "details": "Smooth animations and transitions to keep visitors engaged."
+        },
+        {
+          "title": "SEO & Performance Optimization",
+          "details": "On-page SEO best practices and fast-loading pages for better search rankings."
+        }
+      ],
+      "results": [
+        {
+          "title": "Higher Patient Inquiries",
+          "details": "Improved design and CTAs led to more appointment bookings and contact form submissions."
+        },
+        {
+          "title": "Improved User Engagement",
+          "details": "Visitors explored more sections of the site, increasing time spent per session."
+        },
+        {
+          "title": "Boosted Local SEO",
+          "details": "Optimized content helped increase visibility for dental-related searches in the target area."
+        },
+        {
+          "title": "Mobile Usability",
+          "details": "Achieved a 95%+ mobile usability score ensuring accessibility for on-the-go users."
+        }
+      ],
+      "why_stand_out": [
+        {
+          "title": "Clean & Professional Branding",
+          "details": "Designed to inspire trust and reflect the dental clinic’s care-focused values."
+        },
+        {
+          "title": "Performance & SEO",
+          "details": "Built to load fast, rank well, and convert visitors into patients."
+        },
+        {
+          "title": "Engaging Experience",
+          "details": "Animations and smooth UI make exploring the site enjoyable."
+        }
+      ],
+      "thumbnail": "/project/dental/image3.webp",
+      "gallery": [
+        "/project/dental/image4.webp",
+        "/project/dental/image3.webp",
+        "/project/dental/image5.webp",
+        "/project/dental/image6.webp"
+      ]
+    },
+    {
       "id": "mrdamager_portfolio",
       "name": "Mr. Damager - Next.js Portfolio",
       "tagline": "Showcasing Cutting-Edge Animations & UI Excellence",

@@ -29,7 +29,7 @@ const blogs = [
 export default function BlogSection() {
   return (
     <section className="py-20 text-white">
-      <div className="container mx-auto px-6 md:px-20 max-w-9xl">
+      <div className="container mx-auto px-6 ">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
